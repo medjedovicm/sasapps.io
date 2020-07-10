@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import './style.scss'
 
 interface Props {
   clientId?: string | null

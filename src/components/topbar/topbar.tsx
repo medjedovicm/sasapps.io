@@ -8,7 +8,6 @@ import mobileSvg from '../../../assets/mobile.svg';
 import mailSvg from '../../../assets/mail.svg';
 import userSvg from '../../../assets/user.svg';
 
-import './style.scss'
 
 interface Props {
   title: string

@@ -1,0 +1,32 @@
+backend:
+  name: gitlab
+  repo: 300118.sasappwebsite/website
+  auth_type: implicit
+  app_id: 637797eec62a4bf1cae777f8a8ed94651a8f02575945e61a4edda266878dacc1
+  api_root: https://gitlab.analytium.co.uk/api/v4
+  base_url: https://gitlab.analytium.co.uk/
+  auth_endpoint: oauth/authorize
+
+media_folder: content/assets
+public_folder: ../assets
+
+collections:
+  - name: blog
+    label: Blog
+    folder: content/posts
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: Date, widget: date }
+      - { name: layout, label: Put 'post' }
+      - { name: path, label: Path }
+      - { name: description, label: Description }
+      - { name: category, label: Category }
+      - { 
+          label: Tags, 
+          name: tags,
+          widget: 'select',
+          options: ['a', 'b', 'c'],
+          multiple: true
+        }
+      - { name: body, label: Body, widget: markdown }

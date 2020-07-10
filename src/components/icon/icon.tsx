@@ -15,7 +15,6 @@ import {
   faTwitter,
   faVuejs,
 } from '@fortawesome/free-brands-svg-icons'
-import './style.scss'
 
 library.add(
   faApple,

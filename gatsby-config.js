@@ -11,10 +11,23 @@ module.exports = {
   pathPrefix: '/',
   plugins: [
     {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        enableIdentityWidget: true,
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/posts/`,
         name: 'posts',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
       },
     },
     {
@@ -73,27 +86,19 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-netlify',
-      options: {
-        mergeSecurityHeaders: true,
-        mergeLinkHeaders: true,
-        mergeCachingHeaders: true,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-graphql-codegen',
       options: {
         fileName: `types/graphql-types.d.ts`,
       },
     },
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-twitter',
     'gatsby-plugin-typescript',
+    `gatsby-plugin-offline`,
     'gatsby-transformer-sharp',
   ],
 }

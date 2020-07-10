@@ -697,6 +697,9 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___date'
   | 'childMarkdownRemark___frontmatter___layout'
   | 'childMarkdownRemark___frontmatter___path'
+  | 'childMarkdownRemark___frontmatter___description'
+  | 'childMarkdownRemark___frontmatter___category'
+  | 'childMarkdownRemark___frontmatter___tags'
   | 'childMarkdownRemark___frontmatter___image___sourceInstanceName'
   | 'childMarkdownRemark___frontmatter___image___absolutePath'
   | 'childMarkdownRemark___frontmatter___image___relativePath'
@@ -733,9 +736,6 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___image___publicURL'
   | 'childMarkdownRemark___frontmatter___image___id'
   | 'childMarkdownRemark___frontmatter___image___children'
-  | 'childMarkdownRemark___frontmatter___description'
-  | 'childMarkdownRemark___frontmatter___category'
-  | 'childMarkdownRemark___frontmatter___tags'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -1503,6 +1503,9 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___date'
   | 'frontmatter___layout'
   | 'frontmatter___path'
+  | 'frontmatter___description'
+  | 'frontmatter___category'
+  | 'frontmatter___tags'
   | 'frontmatter___image___sourceInstanceName'
   | 'frontmatter___image___absolutePath'
   | 'frontmatter___image___relativePath'
@@ -1564,9 +1567,6 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___image___childMarkdownRemark___timeToRead'
   | 'frontmatter___image___childMarkdownRemark___tableOfContents'
   | 'frontmatter___image___childMarkdownRemark___children'
-  | 'frontmatter___description'
-  | 'frontmatter___category'
-  | 'frontmatter___tags'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
@@ -1691,10 +1691,10 @@ export type MarkdownRemarkFrontmatter = {
   date?: Maybe<Scalars['Date']>;
   layout?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
-  image?: Maybe<File>;
   description?: Maybe<Scalars['String']>;
   category?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
+  image?: Maybe<File>;
 };
 
 
@@ -1710,10 +1710,10 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   date?: Maybe<DateQueryOperatorInput>;
   layout?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
-  image?: Maybe<FileFilterInput>;
   description?: Maybe<StringQueryOperatorInput>;
   category?: Maybe<StringQueryOperatorInput>;
   tags?: Maybe<StringQueryOperatorInput>;
+  image?: Maybe<FileFilterInput>;
 };
 
 export type MarkdownRemarkGroupConnection = {
@@ -2569,6 +2569,16 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___maxWidth'
   | 'pluginCreator___pluginOptions___linkImagesToOriginal'
   | 'pluginCreator___pluginOptions___wrapperStyle'
+  | 'pluginCreator___pluginOptions___pathPrefix'
+  | 'pluginCreator___pluginOptions___backgroundColor'
+  | 'pluginCreator___pluginOptions___showCaptions'
+  | 'pluginCreator___pluginOptions___markdownCaptions'
+  | 'pluginCreator___pluginOptions___withWebp'
+  | 'pluginCreator___pluginOptions___tracedSVG'
+  | 'pluginCreator___pluginOptions___loading'
+  | 'pluginCreator___pluginOptions___disableBgImageOnAlpha'
+  | 'pluginCreator___pluginOptions___disableBgImage'
+  | 'pluginCreator___pluginOptions___ignoreFileExtensions'
   | 'pluginCreator___pluginOptions___short_name'
   | 'pluginCreator___pluginOptions___description'
   | 'pluginCreator___pluginOptions___homepage_url'
@@ -2585,10 +2595,16 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___legacy'
   | 'pluginCreator___pluginOptions___theme_color_in_head'
   | 'pluginCreator___pluginOptions___trackingId'
-  | 'pluginCreator___pluginOptions___mergeSecurityHeaders'
-  | 'pluginCreator___pluginOptions___mergeLinkHeaders'
-  | 'pluginCreator___pluginOptions___mergeCachingHeaders'
   | 'pluginCreator___pluginOptions___fileName'
+  | 'pluginCreator___pluginOptions___importWorkboxFrom'
+  | 'pluginCreator___pluginOptions___globDirectory'
+  | 'pluginCreator___pluginOptions___globPatterns'
+  | 'pluginCreator___pluginOptions___modifyUrlPrefix____'
+  | 'pluginCreator___pluginOptions___cacheId'
+  | 'pluginCreator___pluginOptions___runtimeCaching'
+  | 'pluginCreator___pluginOptions___runtimeCaching___handler'
+  | 'pluginCreator___pluginOptions___skipWaiting'
+  | 'pluginCreator___pluginOptions___clientsClaim'
   | 'pluginCreator___pluginOptions___pathCheck'
   | 'pluginCreator___nodeAPIs'
   | 'pluginCreator___browserAPIs'
@@ -2783,6 +2799,16 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___plugins___pluginOptions___maxWidth'
   | 'pluginOptions___plugins___pluginOptions___linkImagesToOriginal'
   | 'pluginOptions___plugins___pluginOptions___wrapperStyle'
+  | 'pluginOptions___plugins___pluginOptions___pathPrefix'
+  | 'pluginOptions___plugins___pluginOptions___backgroundColor'
+  | 'pluginOptions___plugins___pluginOptions___showCaptions'
+  | 'pluginOptions___plugins___pluginOptions___markdownCaptions'
+  | 'pluginOptions___plugins___pluginOptions___withWebp'
+  | 'pluginOptions___plugins___pluginOptions___tracedSVG'
+  | 'pluginOptions___plugins___pluginOptions___loading'
+  | 'pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha'
+  | 'pluginOptions___plugins___pluginOptions___disableBgImage'
+  | 'pluginOptions___plugins___pluginOptions___ignoreFileExtensions'
   | 'pluginOptions___plugins___browserAPIs'
   | 'pluginOptions___plugins___pluginFilepath'
   | 'pluginOptions___path'
@@ -2790,6 +2816,16 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___maxWidth'
   | 'pluginOptions___linkImagesToOriginal'
   | 'pluginOptions___wrapperStyle'
+  | 'pluginOptions___pathPrefix'
+  | 'pluginOptions___backgroundColor'
+  | 'pluginOptions___showCaptions'
+  | 'pluginOptions___markdownCaptions'
+  | 'pluginOptions___withWebp'
+  | 'pluginOptions___tracedSVG'
+  | 'pluginOptions___loading'
+  | 'pluginOptions___disableBgImageOnAlpha'
+  | 'pluginOptions___disableBgImage'
+  | 'pluginOptions___ignoreFileExtensions'
   | 'pluginOptions___short_name'
   | 'pluginOptions___description'
   | 'pluginOptions___homepage_url'
@@ -2806,10 +2842,16 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___legacy'
   | 'pluginOptions___theme_color_in_head'
   | 'pluginOptions___trackingId'
-  | 'pluginOptions___mergeSecurityHeaders'
-  | 'pluginOptions___mergeLinkHeaders'
-  | 'pluginOptions___mergeCachingHeaders'
   | 'pluginOptions___fileName'
+  | 'pluginOptions___importWorkboxFrom'
+  | 'pluginOptions___globDirectory'
+  | 'pluginOptions___globPatterns'
+  | 'pluginOptions___modifyUrlPrefix____'
+  | 'pluginOptions___cacheId'
+  | 'pluginOptions___runtimeCaching'
+  | 'pluginOptions___runtimeCaching___handler'
+  | 'pluginOptions___skipWaiting'
+  | 'pluginOptions___clientsClaim'
   | 'pluginOptions___pathCheck'
   | 'nodeAPIs'
   | 'browserAPIs'
@@ -2929,6 +2971,16 @@ export type SitePluginPluginOptions = {
   maxWidth?: Maybe<Scalars['Int']>;
   linkImagesToOriginal?: Maybe<Scalars['Boolean']>;
   wrapperStyle?: Maybe<Scalars['String']>;
+  pathPrefix?: Maybe<Scalars['String']>;
+  backgroundColor?: Maybe<Scalars['String']>;
+  showCaptions?: Maybe<Scalars['Boolean']>;
+  markdownCaptions?: Maybe<Scalars['Boolean']>;
+  withWebp?: Maybe<Scalars['Boolean']>;
+  tracedSVG?: Maybe<Scalars['Boolean']>;
+  loading?: Maybe<Scalars['String']>;
+  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>;
+  disableBgImage?: Maybe<Scalars['Boolean']>;
+  ignoreFileExtensions?: Maybe<Array<Maybe<Scalars['String']>>>;
   short_name?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
   homepage_url?: Maybe<Scalars['String']>;
@@ -2942,10 +2994,15 @@ export type SitePluginPluginOptions = {
   legacy?: Maybe<Scalars['Boolean']>;
   theme_color_in_head?: Maybe<Scalars['Boolean']>;
   trackingId?: Maybe<Scalars['String']>;
-  mergeSecurityHeaders?: Maybe<Scalars['Boolean']>;
-  mergeLinkHeaders?: Maybe<Scalars['Boolean']>;
-  mergeCachingHeaders?: Maybe<Scalars['Boolean']>;
   fileName?: Maybe<Scalars['String']>;
+  importWorkboxFrom?: Maybe<Scalars['String']>;
+  globDirectory?: Maybe<Scalars['String']>;
+  globPatterns?: Maybe<Array<Maybe<Scalars['String']>>>;
+  modifyUrlPrefix?: Maybe<SitePluginPluginOptionsModifyUrlPrefix>;
+  cacheId?: Maybe<Scalars['String']>;
+  runtimeCaching?: Maybe<Array<Maybe<SitePluginPluginOptionsRuntimeCaching>>>;
+  skipWaiting?: Maybe<Scalars['Boolean']>;
+  clientsClaim?: Maybe<Scalars['Boolean']>;
   pathCheck?: Maybe<Scalars['Boolean']>;
 };
 
@@ -2956,6 +3013,16 @@ export type SitePluginPluginOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>;
   linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>;
   wrapperStyle?: Maybe<StringQueryOperatorInput>;
+  pathPrefix?: Maybe<StringQueryOperatorInput>;
+  backgroundColor?: Maybe<StringQueryOperatorInput>;
+  showCaptions?: Maybe<BooleanQueryOperatorInput>;
+  markdownCaptions?: Maybe<BooleanQueryOperatorInput>;
+  withWebp?: Maybe<BooleanQueryOperatorInput>;
+  tracedSVG?: Maybe<BooleanQueryOperatorInput>;
+  loading?: Maybe<StringQueryOperatorInput>;
+  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>;
+  disableBgImage?: Maybe<BooleanQueryOperatorInput>;
+  ignoreFileExtensions?: Maybe<StringQueryOperatorInput>;
   short_name?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
   homepage_url?: Maybe<StringQueryOperatorInput>;
@@ -2969,10 +3036,15 @@ export type SitePluginPluginOptionsFilterInput = {
   legacy?: Maybe<BooleanQueryOperatorInput>;
   theme_color_in_head?: Maybe<BooleanQueryOperatorInput>;
   trackingId?: Maybe<StringQueryOperatorInput>;
-  mergeSecurityHeaders?: Maybe<BooleanQueryOperatorInput>;
-  mergeLinkHeaders?: Maybe<BooleanQueryOperatorInput>;
-  mergeCachingHeaders?: Maybe<BooleanQueryOperatorInput>;
   fileName?: Maybe<StringQueryOperatorInput>;
+  importWorkboxFrom?: Maybe<StringQueryOperatorInput>;
+  globDirectory?: Maybe<StringQueryOperatorInput>;
+  globPatterns?: Maybe<StringQueryOperatorInput>;
+  modifyUrlPrefix?: Maybe<SitePluginPluginOptionsModifyUrlPrefixFilterInput>;
+  cacheId?: Maybe<StringQueryOperatorInput>;
+  runtimeCaching?: Maybe<SitePluginPluginOptionsRuntimeCachingFilterListInput>;
+  skipWaiting?: Maybe<BooleanQueryOperatorInput>;
+  clientsClaim?: Maybe<BooleanQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -2990,6 +3062,14 @@ export type SitePluginPluginOptionsIconsFilterInput = {
 
 export type SitePluginPluginOptionsIconsFilterListInput = {
   elemMatch?: Maybe<SitePluginPluginOptionsIconsFilterInput>;
+};
+
+export type SitePluginPluginOptionsModifyUrlPrefix = {
+  _?: Maybe<Scalars['String']>;
+};
+
+export type SitePluginPluginOptionsModifyUrlPrefixFilterInput = {
+  _?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginPluginOptionsPlugins = {
@@ -3020,12 +3100,44 @@ export type SitePluginPluginOptionsPluginsPluginOptions = {
   maxWidth?: Maybe<Scalars['Int']>;
   linkImagesToOriginal?: Maybe<Scalars['Boolean']>;
   wrapperStyle?: Maybe<Scalars['String']>;
+  pathPrefix?: Maybe<Scalars['String']>;
+  backgroundColor?: Maybe<Scalars['String']>;
+  showCaptions?: Maybe<Scalars['Boolean']>;
+  markdownCaptions?: Maybe<Scalars['Boolean']>;
+  withWebp?: Maybe<Scalars['Boolean']>;
+  tracedSVG?: Maybe<Scalars['Boolean']>;
+  loading?: Maybe<Scalars['String']>;
+  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>;
+  disableBgImage?: Maybe<Scalars['Boolean']>;
+  ignoreFileExtensions?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>;
   linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>;
   wrapperStyle?: Maybe<StringQueryOperatorInput>;
+  pathPrefix?: Maybe<StringQueryOperatorInput>;
+  backgroundColor?: Maybe<StringQueryOperatorInput>;
+  showCaptions?: Maybe<BooleanQueryOperatorInput>;
+  markdownCaptions?: Maybe<BooleanQueryOperatorInput>;
+  withWebp?: Maybe<BooleanQueryOperatorInput>;
+  tracedSVG?: Maybe<BooleanQueryOperatorInput>;
+  loading?: Maybe<StringQueryOperatorInput>;
+  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>;
+  disableBgImage?: Maybe<BooleanQueryOperatorInput>;
+  ignoreFileExtensions?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePluginPluginOptionsRuntimeCaching = {
+  handler?: Maybe<Scalars['String']>;
+};
+
+export type SitePluginPluginOptionsRuntimeCachingFilterInput = {
+  handler?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePluginPluginOptionsRuntimeCachingFilterListInput = {
+  elemMatch?: Maybe<SitePluginPluginOptionsRuntimeCachingFilterInput>;
 };
 
 export type SitePluginSortInput = {

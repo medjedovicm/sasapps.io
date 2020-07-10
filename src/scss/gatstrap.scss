@@ -91,3 +91,9 @@ a{
   background-repeat: no-repeat;
   background-position: 10px 6px;
 }
+
+
+@import './about.scss';
+@import './contact.scss';
+@import './home.scss';
+@import '../components/components.scss';

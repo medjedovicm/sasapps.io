@@ -7,7 +7,6 @@ import mobileSvg from '../../../assets/mobile.svg';
 import mailSvg from '../../../assets/mail.svg';
 import locSvg from '../../../assets/location.svg';
 
-import './style.scss'
 
 interface Props {
   author: string

@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 
 import arrowRightSvg from '../../../assets/arrow-right.svg';
 
-import './style.scss'
 
 interface NavLink {
   label: string
