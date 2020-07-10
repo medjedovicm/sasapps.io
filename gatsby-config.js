@@ -4,8 +4,8 @@ module.exports = {
     title: 'Gatstrap',
     description: 'Gatsby starter for bootstrap a blog',
     siteUrl: 'https://gatstrap.netlify.com',
-    author: 'jaxx2104',
-    twitter: 'jaxx2104',
+    author: '',
+    twitter: '',
     adsense: '',
   },
   pathPrefix: '/',
@@ -15,13 +15,6 @@ module.exports = {
       options: {
         path: `${__dirname}/content/posts/`,
         name: 'posts',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/images/`,
-        name: 'images',
       },
     },
     {

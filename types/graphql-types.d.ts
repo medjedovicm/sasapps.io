@@ -3069,6 +3069,19 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>;
 };
 
+export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type Unnamed_1_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+
+export type BlogIndexQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type BlogIndexQueryQuery = { remark: { posts: Array<{ post: (
+        Pick<MarkdownRemark, 'html'>
+        & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'layout' | 'title' | 'path' | 'category' | 'tags' | 'description' | 'date'>> }
+      ) }> } };
+
 export type IndexQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -3081,10 +3094,7 @@ export type PostByPathQueryVariables = Exact<{
 
 export type PostByPathQuery = { site?: Maybe<{ meta?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'siteUrl' | 'author' | 'twitter' | 'adsense'>> }>, post?: Maybe<(
     Pick<MarkdownRemark, 'id' | 'html'>
-    & { frontmatter?: Maybe<(
-      Pick<MarkdownRemarkFrontmatter, 'layout' | 'title' | 'path' | 'category' | 'tags' | 'description' | 'date'>
-      & { image?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> }
-    )> }
+    & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'layout' | 'title' | 'path' | 'category' | 'tags' | 'description' | 'date'>> }
   )> };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;

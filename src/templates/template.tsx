@@ -4,6 +4,7 @@ import React from 'react'
 import Post from './post/post'
 import Meta from '../components/meta/meta'
 import Layout from '../components/layout/layout'
+import Breadcrum from '../components/breadcrum/breadcrum'
 import Page from './page/page'
 import { PostByPathQuery } from '../../types/graphql-types'
 
@@ -14,24 +15,32 @@ interface Props {
 
 const Template: React.FC<Props> = ({ data, location }: Props) => {
   const isPage = data.post?.frontmatter?.layout != 'page'
+  const title = data.post?.frontmatter?.title || ''
   return (
     <div>
       <Layout location={location}>
         <Meta
-          title={data.post?.frontmatter?.title || ''}
+          title={title}
           site={data.site?.meta}
         />
-        {isPage ? (
-          <Post
-            data={data}
-            options={{
-              isIndex: false,
-              adsense: data.site?.meta?.adsense,
-            }}
-          />
-        ) : (
-          <Page data={data} location={location} />
-        )}
+        <Breadcrum links={[
+          {label: "Home", to: "/"},
+          {label: "Blogs", to: "/blogs"},
+          {label: title, to: "#"},
+          ]}/>
+        <div className="container">
+          {isPage ? (
+            <Post
+              data={data}
+              options={{
+                isIndex: false,
+                adsense: data.site?.meta?.adsense,
+              }}
+            />
+          ) : (
+            <Page data={data} location={location} />
+          )}
+        </div>
       </Layout>
     </div>
   )
@@ -62,13 +71,6 @@ export const pageQuery = graphql`
         tags
         description
         date(formatString: "YYYY/MM/DD")
-        image {
-          childImageSharp {
-            fluid(maxWidth: 500) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     }
   }
