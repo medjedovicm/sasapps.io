@@ -1,0 +1,17 @@
+nav.navbar {
+  padding: 0;
+}
+.nav-item{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #4C525E !important;
+  .nav-link{
+    padding-left: 0 !important;
+    padding-right: 2rem !important;
+    &.active{
+      color: #00A5D7 !important;
+    }
+  }
+}

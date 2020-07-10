@@ -1,0 +1,39 @@
+import React from 'react'
+import { Link } from 'gatsby'
+
+import arrowRightSvg from '../../../assets/arrow-right.svg';
+
+import './style.scss'
+
+interface NavLink {
+  label: string
+  to: string
+}
+
+interface Props {
+  links: NavLink[]
+  location: Location
+}
+
+const Breadcrum: React.FC<Props> = ({ location, links }: Props) => {
+  return (
+    <div className="container breadcrum">
+      {links.map((link, i) => {
+        if (i == 0 )
+          return (
+            <div key={i}>
+              <Link className="text-center" to={link.to}>{link.label}</Link>
+            </div>
+          );
+        return (
+          <div key={i}>
+            <img src={arrowRightSvg} />
+            <Link className="text-center" to={link.to}>{link.label}</Link>
+          </div>
+          );
+      })}
+    </div>
+  )
+}
+
+export default Breadcrum

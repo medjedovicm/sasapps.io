@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import './style.scss'
 
 interface Props {
   title: string
@@ -8,38 +9,26 @@ interface Props {
 
 const Navibar: React.FC<Props> = ({ location, title }: Props) => {
   return (
-    <nav className="navbar navbar-expand navbar-dark flex-column flex-md-row bg-primary">
-      <div className="container">
-        <Link className="text-center" to="/">
-          <h1 className="navbar-brand mb-0">{title}</h1>
-        </Link>
-        <div className="navbar-nav-scroll">
-          <ul className="navbar-nav bd-navbar-nav flex-row">
-            <li
-              className={
-                location.pathname === '/' ? 'nav-item active' : 'nav-item'
-              }
-            >
-              <Link to="/" className="nav-link">
-                Home
-              </Link>
-            </li>
-            <li
-              className={
-                location.pathname === '/profile/'
-                  ? 'nav-item active'
-                  : 'nav-item'
-              }
-            >
-              <Link to="/profile/" className="nav-link">
-                Profile
-              </Link>
-            </li>
+    <div className="container">
+      <nav className="navbar navbar-expand-lg navbar-light">
+        <button className="navbar-toggler" type="button" data-toggle="collapse" 
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+          aria-expanded="false" aria-label="Toggle navigation"
+          style={{position: "absolute", top: "-50px"}}>
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item"><a className={location.pathname === '/' ? 'nav-link active' : 'nav-link'} href="/">Home</a></li>
+            <li className="nav-item"><a className={location.pathname === '/solutions' ? 'nav-link active' : 'nav-link'} href="/solutions">Solutions</a></li>
+            <li className="nav-item"><a className={location.pathname === '/products' ? 'nav-link active' : 'nav-link'} href="/products">Products</a></li>
+            <li className="nav-item"><a className={location.pathname === '/contact-us' ? 'nav-link active' : 'nav-link'} href="/contact-us">Contact</a></li>
+            <li className="nav-item"><a className={location.pathname === '/about-us' ? 'nav-link active' : 'nav-link'} href="/about-us">About us</a></li>
           </ul>
         </div>
-        <div className="navbar-nav flex-row ml-md-auto d-none d-md-flex" />
-      </div>
-    </nav>
+      </nav>
+    </div>
   )
 }
 

@@ -1,0 +1,12 @@
+.btn-primary{
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  &:visited{ color: white; }
+  background: #00A5D7 !important;
+  min-width: 130px;
+  padding: 10px 15px;
+  border: none !important;
+  border-radius: 6px !important;
+  box-shadow: 1px 2px 4px rgba(52, 64, 75, 0.1) !important;
+}

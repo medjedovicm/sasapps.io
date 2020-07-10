@@ -1,9 +1,44 @@
 @import 'scss/colors.scss';
 
 .footer {
+  padding-top: 20px;
   hr {
     border-color: $red;
     border-width: 3px;
     max-width: 50px;
+  }
+  .content {
+    margin: 50px auto;
+    padding-left: 80px;
+    > div {
+      padding: 5px;
+    }
+    a > img {
+      padding-right: 15px;
+    }
+    label input{
+      width: 150px;
+    }
+  }
+  .content.quicklinks a{
+    display: inline-flex;
+    width: 50%;
+    margin-bottom: 15px;
+  }
+  .bottom{
+    text-align: center;
+    color: white;
+    background: #00A5D7;
+    font-size: 12px;
+    padding: 15px 30px;
+    p {margin: 0;}
+  }
+}
+
+.extra-space{
+  display: flex;
+  justify-content: space-around;
+  img{
+    min-width: 30px;
   }
 }

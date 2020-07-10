@@ -1,0 +1,26 @@
+input, textarea {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  margin-left: 5px !important;
+  width: 110px;
+  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: lightgray;
+    opacity: 1; /* Firefox */
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: lightgray;
+  }
+  &::-ms-input-placeholder { /* Microsoft Edge */
+    color: lightgray;
+  }
+}
+
+label.vertical{
+  font-weight: 500;
+  input, textarea {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-bottom: 10px !important;
+  }
+}

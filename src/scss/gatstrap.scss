@@ -35,12 +35,12 @@ $enable-print-styles: true !default;
 //
 // Define the maximum width of `.container` for different screen sizes.
 
-$container-max-widths: (
-  sm: 540px,
-  md: 640px,
-  lg: 710px,
-  xl: 780px,
-) !default;
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 640px,
+//   lg: 710px,
+//   xl: 780px,
+// ) !default;
 
 // Body
 //
@@ -67,6 +67,11 @@ html,
 body {
   height: 100%;
   width: 100%;
+  color: #4C525E;
+  background: #FBFDFF;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
 }
 
 * {
@@ -74,17 +79,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
+a{
+  color: #4C525E;
+  &:visited{ color: #4C525E; }
 }
 
-img {
-  margin-bottom: 15px;
-  max-width: 100%;
-}
-
-img:hover {
-  animation: pulse 0.5s;
+.custom-heading{
+  color: #00A5D7;
+  padding-left: 80px;
+  background-image: url('../../assets/heading.svg');
+  background-repeat: no-repeat;
+  background-position: 10px 6px;
 }
