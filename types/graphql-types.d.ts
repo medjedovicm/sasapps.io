@@ -697,9 +697,6 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___date'
   | 'childMarkdownRemark___frontmatter___layout'
   | 'childMarkdownRemark___frontmatter___path'
-  | 'childMarkdownRemark___frontmatter___description'
-  | 'childMarkdownRemark___frontmatter___category'
-  | 'childMarkdownRemark___frontmatter___tags'
   | 'childMarkdownRemark___frontmatter___image___sourceInstanceName'
   | 'childMarkdownRemark___frontmatter___image___absolutePath'
   | 'childMarkdownRemark___frontmatter___image___relativePath'
@@ -736,6 +733,9 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___image___publicURL'
   | 'childMarkdownRemark___frontmatter___image___id'
   | 'childMarkdownRemark___frontmatter___image___children'
+  | 'childMarkdownRemark___frontmatter___description'
+  | 'childMarkdownRemark___frontmatter___category'
+  | 'childMarkdownRemark___frontmatter___tags'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -1503,9 +1503,6 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___date'
   | 'frontmatter___layout'
   | 'frontmatter___path'
-  | 'frontmatter___description'
-  | 'frontmatter___category'
-  | 'frontmatter___tags'
   | 'frontmatter___image___sourceInstanceName'
   | 'frontmatter___image___absolutePath'
   | 'frontmatter___image___relativePath'
@@ -1567,6 +1564,9 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___image___childMarkdownRemark___timeToRead'
   | 'frontmatter___image___childMarkdownRemark___tableOfContents'
   | 'frontmatter___image___childMarkdownRemark___children'
+  | 'frontmatter___description'
+  | 'frontmatter___category'
+  | 'frontmatter___tags'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
@@ -1691,10 +1691,10 @@ export type MarkdownRemarkFrontmatter = {
   date?: Maybe<Scalars['Date']>;
   layout?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
+  image?: Maybe<File>;
   description?: Maybe<Scalars['String']>;
   category?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
-  image?: Maybe<File>;
 };
 
 
@@ -1710,10 +1710,10 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   date?: Maybe<DateQueryOperatorInput>;
   layout?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
+  image?: Maybe<FileFilterInput>;
   description?: Maybe<StringQueryOperatorInput>;
   category?: Maybe<StringQueryOperatorInput>;
   tags?: Maybe<StringQueryOperatorInput>;
-  image?: Maybe<FileFilterInput>;
 };
 
 export type MarkdownRemarkGroupConnection = {
@@ -2564,6 +2564,7 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___plugins___version'
   | 'pluginCreator___pluginOptions___plugins___browserAPIs'
   | 'pluginCreator___pluginOptions___plugins___pluginFilepath'
+  | 'pluginCreator___pluginOptions___enableIdentityWidget'
   | 'pluginCreator___pluginOptions___path'
   | 'pluginCreator___pluginOptions___name'
   | 'pluginCreator___pluginOptions___maxWidth'
@@ -2596,15 +2597,6 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___theme_color_in_head'
   | 'pluginCreator___pluginOptions___trackingId'
   | 'pluginCreator___pluginOptions___fileName'
-  | 'pluginCreator___pluginOptions___importWorkboxFrom'
-  | 'pluginCreator___pluginOptions___globDirectory'
-  | 'pluginCreator___pluginOptions___globPatterns'
-  | 'pluginCreator___pluginOptions___modifyUrlPrefix____'
-  | 'pluginCreator___pluginOptions___cacheId'
-  | 'pluginCreator___pluginOptions___runtimeCaching'
-  | 'pluginCreator___pluginOptions___runtimeCaching___handler'
-  | 'pluginCreator___pluginOptions___skipWaiting'
-  | 'pluginCreator___pluginOptions___clientsClaim'
   | 'pluginCreator___pluginOptions___pathCheck'
   | 'pluginCreator___nodeAPIs'
   | 'pluginCreator___browserAPIs'
@@ -2811,6 +2803,7 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___plugins___pluginOptions___ignoreFileExtensions'
   | 'pluginOptions___plugins___browserAPIs'
   | 'pluginOptions___plugins___pluginFilepath'
+  | 'pluginOptions___enableIdentityWidget'
   | 'pluginOptions___path'
   | 'pluginOptions___name'
   | 'pluginOptions___maxWidth'
@@ -2843,15 +2836,6 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___theme_color_in_head'
   | 'pluginOptions___trackingId'
   | 'pluginOptions___fileName'
-  | 'pluginOptions___importWorkboxFrom'
-  | 'pluginOptions___globDirectory'
-  | 'pluginOptions___globPatterns'
-  | 'pluginOptions___modifyUrlPrefix____'
-  | 'pluginOptions___cacheId'
-  | 'pluginOptions___runtimeCaching'
-  | 'pluginOptions___runtimeCaching___handler'
-  | 'pluginOptions___skipWaiting'
-  | 'pluginOptions___clientsClaim'
   | 'pluginOptions___pathCheck'
   | 'nodeAPIs'
   | 'browserAPIs'
@@ -2966,6 +2950,7 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 
 export type SitePluginPluginOptions = {
   plugins?: Maybe<Array<Maybe<SitePluginPluginOptionsPlugins>>>;
+  enableIdentityWidget?: Maybe<Scalars['Boolean']>;
   path?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
   maxWidth?: Maybe<Scalars['Int']>;
@@ -2995,19 +2980,12 @@ export type SitePluginPluginOptions = {
   theme_color_in_head?: Maybe<Scalars['Boolean']>;
   trackingId?: Maybe<Scalars['String']>;
   fileName?: Maybe<Scalars['String']>;
-  importWorkboxFrom?: Maybe<Scalars['String']>;
-  globDirectory?: Maybe<Scalars['String']>;
-  globPatterns?: Maybe<Array<Maybe<Scalars['String']>>>;
-  modifyUrlPrefix?: Maybe<SitePluginPluginOptionsModifyUrlPrefix>;
-  cacheId?: Maybe<Scalars['String']>;
-  runtimeCaching?: Maybe<Array<Maybe<SitePluginPluginOptionsRuntimeCaching>>>;
-  skipWaiting?: Maybe<Scalars['Boolean']>;
-  clientsClaim?: Maybe<Scalars['Boolean']>;
   pathCheck?: Maybe<Scalars['Boolean']>;
 };
 
 export type SitePluginPluginOptionsFilterInput = {
   plugins?: Maybe<SitePluginPluginOptionsPluginsFilterListInput>;
+  enableIdentityWidget?: Maybe<BooleanQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
   maxWidth?: Maybe<IntQueryOperatorInput>;
@@ -3037,14 +3015,6 @@ export type SitePluginPluginOptionsFilterInput = {
   theme_color_in_head?: Maybe<BooleanQueryOperatorInput>;
   trackingId?: Maybe<StringQueryOperatorInput>;
   fileName?: Maybe<StringQueryOperatorInput>;
-  importWorkboxFrom?: Maybe<StringQueryOperatorInput>;
-  globDirectory?: Maybe<StringQueryOperatorInput>;
-  globPatterns?: Maybe<StringQueryOperatorInput>;
-  modifyUrlPrefix?: Maybe<SitePluginPluginOptionsModifyUrlPrefixFilterInput>;
-  cacheId?: Maybe<StringQueryOperatorInput>;
-  runtimeCaching?: Maybe<SitePluginPluginOptionsRuntimeCachingFilterListInput>;
-  skipWaiting?: Maybe<BooleanQueryOperatorInput>;
-  clientsClaim?: Maybe<BooleanQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -3062,14 +3032,6 @@ export type SitePluginPluginOptionsIconsFilterInput = {
 
 export type SitePluginPluginOptionsIconsFilterListInput = {
   elemMatch?: Maybe<SitePluginPluginOptionsIconsFilterInput>;
-};
-
-export type SitePluginPluginOptionsModifyUrlPrefix = {
-  _?: Maybe<Scalars['String']>;
-};
-
-export type SitePluginPluginOptionsModifyUrlPrefixFilterInput = {
-  _?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginPluginOptionsPlugins = {
@@ -3126,18 +3088,6 @@ export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>;
   disableBgImage?: Maybe<BooleanQueryOperatorInput>;
   ignoreFileExtensions?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SitePluginPluginOptionsRuntimeCaching = {
-  handler?: Maybe<Scalars['String']>;
-};
-
-export type SitePluginPluginOptionsRuntimeCachingFilterInput = {
-  handler?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SitePluginPluginOptionsRuntimeCachingFilterListInput = {
-  elemMatch?: Maybe<SitePluginPluginOptionsRuntimeCachingFilterInput>;
 };
 
 export type SitePluginSortInput = {

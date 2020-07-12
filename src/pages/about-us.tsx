@@ -6,8 +6,6 @@ import Layout from '../components/layout/layout'
 import Meta from '../components/meta/meta'
 import Breadcrum from '../components/breadcrum/breadcrum'
 
-import '../scss/about.scss'
-
 interface Props {
   location: Location
 }
@@ -25,7 +23,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
         <h3 className="custom-heading">About Us</h3>
         <h5>Analyse   Implement   Maximise</h5>
         <h6>Where does our name come from?</h6>
-        <p>Our name, alytium, comes from two words “Analytics” and the Latin suffix “ium”.</p>
+        <p>Our name, analytium, comes from two words “Analytics” and the Latin suffix “ium”.</p>
         <h6>What are the definitions of these words?</h6>
         <p>The definition of ‘Analytics’ is the systematic computational analysis of data or statistics, whilst ‘ium’ is a Latin suffix used in the formation of the names of metallic elements.</p>
         <h6>Why is this important?</h6>
@@ -39,7 +37,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
         <h3 className="custom-heading">Win-Win approach</h3>
         <p>To achieve a win-win outcome, we become an extended part of your business and commit ourselves as if it were one of our own.  We really understand that a win for you is also a win for us as much as a loss for you is also a loss for us. Your success ultimately leads to our success as a business. </p>
         <h3 className="custom-heading">Our Commitment to You</h3>
-        <p>At Analytium, we strive to deliver the best, through our people with their technical skills and their unwavering commitment to our customers. The technologies we work with and the operating models we use, afford our people the time to fully understand our customers’ needs, whilst maximising opportunities to evolve and also ensuring that we deliver above and beyond what is expected from us. We believe that delivering on all of these promises is not only key to your success, but it is also key to our success.</p>
+        <p>At <span className="aquamarine_text">{"{An}"}</span>alytium, we strive to deliver the best, through our people with their technical skills and their unwavering commitment to our customers. The technologies we work with and the operating models we use, afford our people the time to fully understand our customers’ needs, whilst maximising opportunities to evolve and also ensuring that we deliver above and beyond what is expected from us. We believe that delivering on all of these promises is not only key to your success, but it is also key to our success.</p>
       </div>
     </Layout>
   )

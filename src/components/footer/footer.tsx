@@ -53,7 +53,7 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
               moreSpacing={true} />
             </div>
             <div>
-              <Input name="" label="News Letter" placeholder="Enter your email"/>
+              <Input name="" label="Newsletter" placeholder="Enter your email"/>
             </div>
           </div>
         </div>

@@ -14,8 +14,6 @@ import inSvg from '../../assets/information.svg';
 import bgSvg from '../../assets/bar-graph.svg';
 import fiSvg from '../../assets/financing.svg';
 
-import '../scss/about.scss'
-
 interface Props {
   location: Location
 }
@@ -77,7 +75,7 @@ const Solutions: React.FC<Props> = ({ location }: Props) => {
           </div>
         </div>
         <div className="text-center">
-          <Button path={"/contact"} label="Contact Us" />
+          <Button path={"/contact-us"} label="Contact Us" />
         </div>
       </div>
     </Layout>

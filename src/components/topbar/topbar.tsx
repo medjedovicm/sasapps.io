@@ -10,48 +10,58 @@ import userSvg from '../../../assets/user.svg';
 
 
 interface Props {
-  title: string
+  mobile: boolean
   location: Location
 }
+interface Props2 {
+  mobile: boolean
+}
 
-const Navibar: React.FC<Props> = ({ location, title }: Props) => {
+const ContactLinks: React.FC<Props2> = ({ mobile }) => {
+  const classname = mobile ? "contact-links mobile" : "contact-links";
+  return (
+    <div className={classname}>
+      <div className="mobile">
+        <a href="tel:+4402039949849">
+          <img src={mobileSvg} />
+          +44 (0) 203 9949 849
+        </a>
+      </div>
+      <div className="email">
+        <a href="mailto:contact@sasapps.to">
+          <img src={mailSvg} />
+          contact@sasapps.to
+        </a>
+      </div>
+      <div className="subscribe">
+        <Input name="" label="Subscribe" placeholder="Enter your email"/>
+      </div>
+      <div className="sociallinks">
+        <SocialMedia
+        facebook={true}
+        linkedin={true}
+        twitter={true}
+        youtube={true} />
+      </div>
+      <div className="login">
+        <span><img src={userSvg} />Log In</span>
+      </div>
+    </div>
+  )
+}
+const Navibar: React.FC<Props> = ({ location, mobile }: Props) => {
+  if (mobile)
+    return <ContactLinks mobile={true} />
   return (
     <div className="container">
       <div className="row">
-        <div className="col-xl-3">
+        <div className="col-9 col-xl-3">
           <Link className="text-center" to="/">
-            <img src={analytiumSvg} />
+            <img src={analytiumSvg} style={{ maxWidth: "100%" }}/>
           </Link>
         </div>
         <div className="col-xl-9">
-          <div className="contact-links">
-            <div>
-              <a href="tel:+4402039949849">
-                <img src={mobileSvg} />
-                +44 (0) 203 9949 849
-              </a>
-            </div>
-            <div>
-              <a href="mailto:contact@sasapps.to">
-                <img src={mailSvg} />
-                contact@sasapps.to
-              </a>
-            </div>
-            <div>
-              <Input name="" label="Subscribe" placeholder="Enter your email"/>
-            </div>
-            <div>
-              <SocialMedia
-              facebook={true}
-              linkedin={true}
-              twitter={true}
-              youtube={true} />
-            </div>
-            <div>
-              <span><img src={userSvg} />Log In</span>
-            </div>
-            
-          </div>
+          <ContactLinks mobile={false} />
         </div>
       </div>
     </div>

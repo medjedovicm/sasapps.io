@@ -10,9 +10,6 @@ import Input from '..//components/input/input'
 
 import chSvg from '../../assets/contact-help.svg';
 
-import '../scss/about.scss'
-import '../scss/contact.scss'
-
 interface Props {
   location: Location
 }

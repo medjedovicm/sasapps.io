@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Topbar from '../topbar/topbar'
 
 interface Props {
   title: string
@@ -9,11 +10,11 @@ interface Props {
 const Navibar: React.FC<Props> = ({ location, title }: Props) => {
   return (
     <div className="container">
-      <nav className="navbar navbar-expand-lg navbar-light">
+      <nav className="navbar navbar-expand-xl navbar-light">
         <button className="navbar-toggler" type="button" data-toggle="collapse" 
           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
           aria-expanded="false" aria-label="Toggle navigation"
-          style={{position: "absolute", top: "-50px"}}>
+          style={{position: "absolute", top: "-60px", right: 0}}>
           <span className="navbar-toggler-icon"></span>
         </button>
 
@@ -26,6 +27,7 @@ const Navibar: React.FC<Props> = ({ location, title }: Props) => {
             <li className="nav-item"><a className={location.pathname === '/about-us' ? 'nav-link active' : 'nav-link'} href="/about-us">About us</a></li>
             <li className="nav-item"><a className={location.pathname === '/blogs' ? 'nav-link active' : 'nav-link'} href="/blogs">Blogs</a></li>
           </ul>
+          <Topbar mobile={true} />
         </div>
       </nav>
     </div>

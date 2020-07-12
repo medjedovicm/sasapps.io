@@ -9,16 +9,16 @@
 @import './colors.scss';
 
 // Reassign color vars to semantic color scheme
-$theme-colors: (
-  primary: $purple,
-  secondary: $gray-600,
-  success: $green,
-  info: $cyan,
-  warning: $yellow,
-  danger: $red,
-  light: $gray-100,
-  dark: $gray-800,
-) !default;
+// $theme-colors: (
+//   primary: $purple,
+//   secondary: $gray-600,
+//   success: $green,
+//   info: $cyan,
+//   warning: $yellow,
+//   danger: $red,
+//   light: $gray-100,
+//   dark: $gray-800,
+// ) !default;
 
 // Options
 //
@@ -78,14 +78,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.aquamarine_text{ color: $aquamarine; }
 a{
   color: #4C525E;
   &:visited{ color: #4C525E; }
 }
 
 .custom-heading{
-  color: #00A5D7;
+  color: $aquamarine;
   padding-left: 80px;
   background-image: url('../../assets/heading.svg');
   background-repeat: no-repeat;

@@ -1,16 +1,19 @@
 .main-background{
   background-image: url('../../assets/main-background.png');
   background-repeat: no-repeat;
-  background-position: right 30%;
+  background-position: right 23%;
   background-size: 80%;
   color: #00A5D7;
+  .card-gray{ margin-top: 170px; }
   @media only screen and (min-width: 768px) {
     background-position: right 25%;
     background-size: 83%;
+    .card-gray{ margin-top: 180px; }
   }
   @media only screen and (min-width: 992px) {
     background-position: right 7%;
     background-size: 83%;
+    .card-gray{ margin-top: 200px; }
   }
   @media only screen and (min-width: 1200px) {
     background-position: right -75px;
@@ -23,6 +26,33 @@
   h1{ font-size: 80px;font-weight: 500;}
   h4{ font-size: 38px;font-weight: 500;line-height: 48px;
     width: 70%;
+    @media only screen and (max-width: 991px) { width: 90%; }
+    @media only screen and (max-width: 767px) { width: 100%; }
+  }
+  @media only screen and (max-width: 600px) {
+    h1{font-size: 70px}
+    h4{font-size: 36px}
+    background-position: right 27%;
+    .card-gray{ margin-top: 90px;padding: 30px; }
+  }
+  @media only screen and (max-width: 550px) {
+    h1{font-size: 60px;}
+    h4{font-size: 34px}
+  }
+  @media only screen and (max-width: 500px) {
+    h1{font-size: 55px;}
+    h4{font-size: 32px}
+  }
+  @media only screen and (max-width: 450px) {
+    h1{font-size: 50px;}
+    h4{font-size: 30px; line-height: 1.3;}
+    background-position: right 25%;
+  }
+  @media only screen and (max-width: 400px) {
+    h1{font-size: 45px;}
+    h4{font-size: 28px; line-height: 1.2;}
+    .card-gray{ margin-top: 60px;padding: 20px; }
+    background-position: right 20%;
   }
 }
 h5 {
@@ -40,6 +70,9 @@ h5 {
   height: 100%;
   padding-bottom: 60px !important;
   &.no-button { padding-bottom: 35px !important;}
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
   h3{
     font-weight: normal;
     text-align: center;
@@ -71,8 +104,6 @@ h5 {
   }
   .info{
     color: #4C525E;
-    width: calc(100% - 150px);
-    display: inline-block;
   }
 }
 

@@ -11,8 +11,6 @@ import dtSvg from '../../assets/data.svg';
 import pcSvg from '../../assets/pencil.svg';
 import idSvg from '../../assets/idea.svg';
 
-import '../scss/about.scss'
-
 interface Props {
   location: Location
 }
