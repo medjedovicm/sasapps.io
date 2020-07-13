@@ -2,6 +2,7 @@ import { graphql } from 'gatsby'
 import React from 'react'
 
 import { IndexQueryQuery, PostByPathQuery } from '../../types/graphql-types'
+import { siteMetadata } from '../../gatsby-config'
 import Post from '../templates/post/post'
 import Meta from '../components/meta/meta'
 import Layout from '../components/layout/layout'
@@ -14,11 +15,10 @@ interface Props {
 
 const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
   const posts = data.remark.posts
-  const meta = data.site?.meta
 
   return (
     <Layout location={location}>
-      <Meta site={meta} title="Blogs" />
+      <Meta site={siteMetadata} title="Blogs" />
       <Breadcrum links={[
         {label: "Home", to: "/"},
         {label: "Blogs", to: "#"},

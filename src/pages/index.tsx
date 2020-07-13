@@ -20,8 +20,6 @@ interface Props {
 }
 
 const Home: React.FC<Props> = ({ data, location }: Props) => {
-  // const posts = data.remark.posts
-  // console.log(posts)
   const meta = data.site?.meta
 
   return (
@@ -98,16 +96,6 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
           </div>
         </div>
       </div>
-
-      {/*{posts.map((post, i) => (
-        <Post
-          data={post as PostByPathQuery}
-          options={{
-            isIndex: true,
-          }}
-          key={i}
-        />
-      ))}*/}
     </Layout>
   )
 }
