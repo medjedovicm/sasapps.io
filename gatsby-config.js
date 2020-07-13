@@ -1,11 +1,15 @@
 /* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
-    title: 'Gatstrap',
-    description: 'Gatsby starter for bootstrap a blog',
-    siteUrl: 'https://gatstrap.netlify.com',
-    author: '',
-    twitter: '',
+    title: 'SASApps | Analytium | Analytics For Every Business',
+    description:
+      'Experts in SAS Data Analytics and Management. Analyse Implement Maximise',
+    siteUrl: 'https://an-sasapps.netlify.app',
+    author: 'Allan Bowie',
+    twitter: 'https://twitter.com/analytium',
+    facebook: 'https://www.facebook.com/analytium/',
+    youtube: 'https://www.youtube.com/channel/UCo3g8hiOQk08N65nfOa9aCg',
+    linkedin: 'https://www.linkedin.com/company/analytium/',
     adsense: '',
   },
   pathPrefix: '/',
@@ -57,26 +61,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatstrap',
-        short_name: 'Gatstrap',
-        description: 'Gatsby starter for bootstrap a blog',
-        homepage_url: 'https://gatstrap.netlify.com',
+        name: 'SASApps | Analytium | Analytics For Every Business',
+        short_name: 'SASApps | Analytium',
+        description:
+          'Experts in SAS Data Analytics and Management. Analyse Implement Maximise',
+        homepage_url: 'https://an-sasapps.netlify.app',
         start_url: '/',
         background_color: '#fff',
-        theme_color: '#673ab7',
+        theme_color: '#00A5D7',
         display: 'standalone',
-        icons: [
-          {
-            src: '/img/android-chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/img/android-chrome-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
+        icon: 'assets/an-big.svg',
+        cache_busting_mode: 'none',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ['**/*'],
+        },
       },
     },
     {
@@ -98,7 +101,6 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-twitter',
     'gatsby-plugin-typescript',
-    `gatsby-plugin-offline`,
     'gatsby-transformer-sharp',
   ],
 }

@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import Input from '../input/input'
+import { siteMetadata } from '../../../gatsby-config'
 import SocialMedia from '../socialmedia/socialmedia'
 
 import mobileSvg from '../../../assets/mobile.svg';
@@ -45,11 +46,11 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
           <div className="content">
             <div>
             <SocialMedia
-              facebook={true}
-              linkedin={true}
-              twitter={true}
-              youtube={true}
-              instagram={true}
+              facebook={siteMetadata.facebook}
+              linkedin={siteMetadata.linkedin}
+              twitter={siteMetadata.twitter}
+              youtube={siteMetadata.youtube}
+              instagram={"#"}
               moreSpacing={true} />
             </div>
             <div>

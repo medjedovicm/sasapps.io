@@ -21,11 +21,11 @@ interface Props {
 const SocialMedia: React.FC<Props> = ({ youtube, facebook, linkedin, twitter, instagram, moreSpacing }: Props) => {
   return (
     <div className={moreSpacing ? "extra-space" : ""}>
-      { linkedin && <img src={linkedinSvg} /> }
-      { twitter && <img src={twitterSvg} /> }
-      { facebook && <img src={facebookSvg} /> }
-      { youtube && <img src={youtubeSvg} /> }
-      { instagram && <img src={instaSvg} /> }
+      { linkedin && <a href={linkedin} target="_blank" ><img src={linkedinSvg} /></a> }
+      { twitter && <a href={twitter} target="_blank" ><img src={twitterSvg} /></a> }
+      { facebook && <a href={facebook} target="_blank" ><img src={facebookSvg} /></a> }
+      { youtube && <a href={youtube} target="_blank" ><img src={youtubeSvg} /></a> }
+      { instagram && <a href={instagram} target="_blank" ><img src={instaSvg} /></a> }
     </div>
   )
 }

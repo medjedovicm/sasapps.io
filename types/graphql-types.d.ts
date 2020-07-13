@@ -1940,8 +1940,6 @@ export type QueryAllSitePageArgs = {
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
-  port?: Maybe<DateQueryOperatorInput>;
-  host?: Maybe<StringQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -2052,8 +2050,6 @@ export type QueryAllSitePluginArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars['Date']>;
   siteMetadata?: Maybe<SiteSiteMetadata>;
-  port?: Maybe<Scalars['Date']>;
-  host?: Maybe<Scalars['String']>;
   pathPrefix?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
   id: Scalars['ID'];
@@ -2064,14 +2060,6 @@ export type Site = Node & {
 
 
 export type SiteBuildTimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
-};
-
-
-export type SitePortArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
@@ -2266,9 +2254,10 @@ export type SiteFieldsEnum =
   | 'siteMetadata___siteUrl'
   | 'siteMetadata___author'
   | 'siteMetadata___twitter'
+  | 'siteMetadata___facebook'
+  | 'siteMetadata___youtube'
+  | 'siteMetadata___linkedin'
   | 'siteMetadata___adsense'
-  | 'port'
-  | 'host'
   | 'pathPrefix'
   | 'polyfill'
   | 'id'
@@ -2361,8 +2350,6 @@ export type SiteFieldsEnum =
 export type SiteFilterInput = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
-  port?: Maybe<DateQueryOperatorInput>;
-  host?: Maybe<StringQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -2570,16 +2557,6 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___maxWidth'
   | 'pluginCreator___pluginOptions___linkImagesToOriginal'
   | 'pluginCreator___pluginOptions___wrapperStyle'
-  | 'pluginCreator___pluginOptions___pathPrefix'
-  | 'pluginCreator___pluginOptions___backgroundColor'
-  | 'pluginCreator___pluginOptions___showCaptions'
-  | 'pluginCreator___pluginOptions___markdownCaptions'
-  | 'pluginCreator___pluginOptions___withWebp'
-  | 'pluginCreator___pluginOptions___tracedSVG'
-  | 'pluginCreator___pluginOptions___loading'
-  | 'pluginCreator___pluginOptions___disableBgImageOnAlpha'
-  | 'pluginCreator___pluginOptions___disableBgImage'
-  | 'pluginCreator___pluginOptions___ignoreFileExtensions'
   | 'pluginCreator___pluginOptions___short_name'
   | 'pluginCreator___pluginOptions___description'
   | 'pluginCreator___pluginOptions___homepage_url'
@@ -2587,14 +2564,12 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___background_color'
   | 'pluginCreator___pluginOptions___theme_color'
   | 'pluginCreator___pluginOptions___display'
-  | 'pluginCreator___pluginOptions___icons'
-  | 'pluginCreator___pluginOptions___icons___src'
-  | 'pluginCreator___pluginOptions___icons___sizes'
-  | 'pluginCreator___pluginOptions___icons___type'
+  | 'pluginCreator___pluginOptions___icon'
   | 'pluginCreator___pluginOptions___cache_busting_mode'
   | 'pluginCreator___pluginOptions___include_favicon'
   | 'pluginCreator___pluginOptions___legacy'
   | 'pluginCreator___pluginOptions___theme_color_in_head'
+  | 'pluginCreator___pluginOptions___workboxConfig___globPatterns'
   | 'pluginCreator___pluginOptions___trackingId'
   | 'pluginCreator___pluginOptions___fileName'
   | 'pluginCreator___pluginOptions___pathCheck'
@@ -2791,16 +2766,6 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___plugins___pluginOptions___maxWidth'
   | 'pluginOptions___plugins___pluginOptions___linkImagesToOriginal'
   | 'pluginOptions___plugins___pluginOptions___wrapperStyle'
-  | 'pluginOptions___plugins___pluginOptions___pathPrefix'
-  | 'pluginOptions___plugins___pluginOptions___backgroundColor'
-  | 'pluginOptions___plugins___pluginOptions___showCaptions'
-  | 'pluginOptions___plugins___pluginOptions___markdownCaptions'
-  | 'pluginOptions___plugins___pluginOptions___withWebp'
-  | 'pluginOptions___plugins___pluginOptions___tracedSVG'
-  | 'pluginOptions___plugins___pluginOptions___loading'
-  | 'pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha'
-  | 'pluginOptions___plugins___pluginOptions___disableBgImage'
-  | 'pluginOptions___plugins___pluginOptions___ignoreFileExtensions'
   | 'pluginOptions___plugins___browserAPIs'
   | 'pluginOptions___plugins___pluginFilepath'
   | 'pluginOptions___enableIdentityWidget'
@@ -2809,16 +2774,6 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___maxWidth'
   | 'pluginOptions___linkImagesToOriginal'
   | 'pluginOptions___wrapperStyle'
-  | 'pluginOptions___pathPrefix'
-  | 'pluginOptions___backgroundColor'
-  | 'pluginOptions___showCaptions'
-  | 'pluginOptions___markdownCaptions'
-  | 'pluginOptions___withWebp'
-  | 'pluginOptions___tracedSVG'
-  | 'pluginOptions___loading'
-  | 'pluginOptions___disableBgImageOnAlpha'
-  | 'pluginOptions___disableBgImage'
-  | 'pluginOptions___ignoreFileExtensions'
   | 'pluginOptions___short_name'
   | 'pluginOptions___description'
   | 'pluginOptions___homepage_url'
@@ -2826,14 +2781,12 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___background_color'
   | 'pluginOptions___theme_color'
   | 'pluginOptions___display'
-  | 'pluginOptions___icons'
-  | 'pluginOptions___icons___src'
-  | 'pluginOptions___icons___sizes'
-  | 'pluginOptions___icons___type'
+  | 'pluginOptions___icon'
   | 'pluginOptions___cache_busting_mode'
   | 'pluginOptions___include_favicon'
   | 'pluginOptions___legacy'
   | 'pluginOptions___theme_color_in_head'
+  | 'pluginOptions___workboxConfig___globPatterns'
   | 'pluginOptions___trackingId'
   | 'pluginOptions___fileName'
   | 'pluginOptions___pathCheck'
@@ -2956,16 +2909,6 @@ export type SitePluginPluginOptions = {
   maxWidth?: Maybe<Scalars['Int']>;
   linkImagesToOriginal?: Maybe<Scalars['Boolean']>;
   wrapperStyle?: Maybe<Scalars['String']>;
-  pathPrefix?: Maybe<Scalars['String']>;
-  backgroundColor?: Maybe<Scalars['String']>;
-  showCaptions?: Maybe<Scalars['Boolean']>;
-  markdownCaptions?: Maybe<Scalars['Boolean']>;
-  withWebp?: Maybe<Scalars['Boolean']>;
-  tracedSVG?: Maybe<Scalars['Boolean']>;
-  loading?: Maybe<Scalars['String']>;
-  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>;
-  disableBgImage?: Maybe<Scalars['Boolean']>;
-  ignoreFileExtensions?: Maybe<Array<Maybe<Scalars['String']>>>;
   short_name?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
   homepage_url?: Maybe<Scalars['String']>;
@@ -2973,11 +2916,12 @@ export type SitePluginPluginOptions = {
   background_color?: Maybe<Scalars['String']>;
   theme_color?: Maybe<Scalars['String']>;
   display?: Maybe<Scalars['String']>;
-  icons?: Maybe<Array<Maybe<SitePluginPluginOptionsIcons>>>;
+  icon?: Maybe<Scalars['String']>;
   cache_busting_mode?: Maybe<Scalars['String']>;
   include_favicon?: Maybe<Scalars['Boolean']>;
   legacy?: Maybe<Scalars['Boolean']>;
   theme_color_in_head?: Maybe<Scalars['Boolean']>;
+  workboxConfig?: Maybe<SitePluginPluginOptionsWorkboxConfig>;
   trackingId?: Maybe<Scalars['String']>;
   fileName?: Maybe<Scalars['String']>;
   pathCheck?: Maybe<Scalars['Boolean']>;
@@ -2991,16 +2935,6 @@ export type SitePluginPluginOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>;
   linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>;
   wrapperStyle?: Maybe<StringQueryOperatorInput>;
-  pathPrefix?: Maybe<StringQueryOperatorInput>;
-  backgroundColor?: Maybe<StringQueryOperatorInput>;
-  showCaptions?: Maybe<BooleanQueryOperatorInput>;
-  markdownCaptions?: Maybe<BooleanQueryOperatorInput>;
-  withWebp?: Maybe<BooleanQueryOperatorInput>;
-  tracedSVG?: Maybe<BooleanQueryOperatorInput>;
-  loading?: Maybe<StringQueryOperatorInput>;
-  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>;
-  disableBgImage?: Maybe<BooleanQueryOperatorInput>;
-  ignoreFileExtensions?: Maybe<StringQueryOperatorInput>;
   short_name?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
   homepage_url?: Maybe<StringQueryOperatorInput>;
@@ -3008,30 +2942,15 @@ export type SitePluginPluginOptionsFilterInput = {
   background_color?: Maybe<StringQueryOperatorInput>;
   theme_color?: Maybe<StringQueryOperatorInput>;
   display?: Maybe<StringQueryOperatorInput>;
-  icons?: Maybe<SitePluginPluginOptionsIconsFilterListInput>;
+  icon?: Maybe<StringQueryOperatorInput>;
   cache_busting_mode?: Maybe<StringQueryOperatorInput>;
   include_favicon?: Maybe<BooleanQueryOperatorInput>;
   legacy?: Maybe<BooleanQueryOperatorInput>;
   theme_color_in_head?: Maybe<BooleanQueryOperatorInput>;
+  workboxConfig?: Maybe<SitePluginPluginOptionsWorkboxConfigFilterInput>;
   trackingId?: Maybe<StringQueryOperatorInput>;
   fileName?: Maybe<StringQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
-};
-
-export type SitePluginPluginOptionsIcons = {
-  src?: Maybe<Scalars['String']>;
-  sizes?: Maybe<Scalars['String']>;
-  type?: Maybe<Scalars['String']>;
-};
-
-export type SitePluginPluginOptionsIconsFilterInput = {
-  src?: Maybe<StringQueryOperatorInput>;
-  sizes?: Maybe<StringQueryOperatorInput>;
-  type?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SitePluginPluginOptionsIconsFilterListInput = {
-  elemMatch?: Maybe<SitePluginPluginOptionsIconsFilterInput>;
 };
 
 export type SitePluginPluginOptionsPlugins = {
@@ -3062,32 +2981,20 @@ export type SitePluginPluginOptionsPluginsPluginOptions = {
   maxWidth?: Maybe<Scalars['Int']>;
   linkImagesToOriginal?: Maybe<Scalars['Boolean']>;
   wrapperStyle?: Maybe<Scalars['String']>;
-  pathPrefix?: Maybe<Scalars['String']>;
-  backgroundColor?: Maybe<Scalars['String']>;
-  showCaptions?: Maybe<Scalars['Boolean']>;
-  markdownCaptions?: Maybe<Scalars['Boolean']>;
-  withWebp?: Maybe<Scalars['Boolean']>;
-  tracedSVG?: Maybe<Scalars['Boolean']>;
-  loading?: Maybe<Scalars['String']>;
-  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>;
-  disableBgImage?: Maybe<Scalars['Boolean']>;
-  ignoreFileExtensions?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>;
   linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>;
   wrapperStyle?: Maybe<StringQueryOperatorInput>;
-  pathPrefix?: Maybe<StringQueryOperatorInput>;
-  backgroundColor?: Maybe<StringQueryOperatorInput>;
-  showCaptions?: Maybe<BooleanQueryOperatorInput>;
-  markdownCaptions?: Maybe<BooleanQueryOperatorInput>;
-  withWebp?: Maybe<BooleanQueryOperatorInput>;
-  tracedSVG?: Maybe<BooleanQueryOperatorInput>;
-  loading?: Maybe<StringQueryOperatorInput>;
-  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>;
-  disableBgImage?: Maybe<BooleanQueryOperatorInput>;
-  ignoreFileExtensions?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePluginPluginOptionsWorkboxConfig = {
+  globPatterns?: Maybe<Array<Maybe<Scalars['String']>>>;
+};
+
+export type SitePluginPluginOptionsWorkboxConfigFilterInput = {
+  globPatterns?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginSortInput = {
@@ -3101,6 +3008,9 @@ export type SiteSiteMetadata = {
   siteUrl?: Maybe<Scalars['String']>;
   author?: Maybe<Scalars['String']>;
   twitter?: Maybe<Scalars['String']>;
+  facebook?: Maybe<Scalars['String']>;
+  youtube?: Maybe<Scalars['String']>;
+  linkedin?: Maybe<Scalars['String']>;
   adsense?: Maybe<Scalars['String']>;
 };
 
@@ -3110,6 +3020,9 @@ export type SiteSiteMetadataFilterInput = {
   siteUrl?: Maybe<StringQueryOperatorInput>;
   author?: Maybe<StringQueryOperatorInput>;
   twitter?: Maybe<StringQueryOperatorInput>;
+  facebook?: Maybe<StringQueryOperatorInput>;
+  youtube?: Maybe<StringQueryOperatorInput>;
+  linkedin?: Maybe<StringQueryOperatorInput>;
   adsense?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -3147,7 +3060,7 @@ export type BlogIndexQueryQuery = { remark: { posts: Array<{ post: (
 export type IndexQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type IndexQueryQuery = { site?: Maybe<{ meta?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'siteUrl' | 'author' | 'twitter' | 'adsense'>> }> };
+export type IndexQueryQuery = { site?: Maybe<{ meta?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'siteUrl' | 'author' | 'twitter' | 'facebook' | 'linkedin' | 'adsense'>> }> };
 
 export type PostByPathQueryVariables = Exact<{
   path: Scalars['String'];

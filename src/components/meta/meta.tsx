@@ -7,7 +7,7 @@ interface Props {
   site:
     | Pick<
         SiteSiteMetadata,
-        'title' | 'description' | 'author' | 'twitter' | 'adsense' | 'siteUrl'
+        'title' | 'description' | 'author' | 'twitter' | 'facebook' | 'youtube' | 'linkedin' | 'adsense' | 'siteUrl'
       >
     | null
     | undefined
@@ -26,7 +26,19 @@ const Meta: React.FC<Props> = ({ site, title }: Props) => {
         { name: 'twitter:card', content: 'summary' },
         {
           name: 'twitter:site',
-          content: `@${site?.twitter}`,
+          content: `${site?.twitter}`,
+        },
+        {
+          name: 'facebook:site',
+          content: `${site?.facebook}`,
+        },
+        {
+          name: 'youtube:site',
+          content: `${site?.youtube}`,
+        },
+        {
+          name: 'linkedin:site',
+          content: `${site?.linkedin}`,
         },
         { property: 'og:title', content: pageTitle },
         { property: 'og:type', content: 'website' },

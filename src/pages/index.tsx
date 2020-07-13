@@ -123,6 +123,8 @@ export const pageQuery = graphql`
         siteUrl
         author
         twitter
+        facebook
+        linkedin
         adsense
       }
     }

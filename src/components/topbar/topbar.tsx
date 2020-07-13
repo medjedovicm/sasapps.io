@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { siteMetadata } from '../../../gatsby-config'
 
 import Input from '../input/input'
 import SocialMedia from '../socialmedia/socialmedia'
@@ -38,10 +39,10 @@ const ContactLinks: React.FC<Props2> = ({ mobile }) => {
       </div>
       <div className="sociallinks">
         <SocialMedia
-        facebook={true}
-        linkedin={true}
-        twitter={true}
-        youtube={true} />
+        facebook={siteMetadata.facebook}
+        linkedin={siteMetadata.linkedin}
+        twitter={siteMetadata.twitter}
+        youtube={siteMetadata.youtube} />
       </div>
       <div className="login">
         <span><img src={userSvg} />Log In</span>
