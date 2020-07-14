@@ -53,8 +53,10 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
               instagram={"#"}
               moreSpacing={true} />
             </div>
-            <div>
-              <Input name="" label="Newsletter" placeholder="Enter your email"/>
+            <div className="subscribe kwes-form" style={{maxHeight: "35px", overflow: "hidden"}}>
+              <form method="POST" action="https://kwes.io/api/foreign/forms/BAScYvAqKdAN1bC2H0wQ" no-reload="" success-message="Thank you for Subscribing">
+                <Input name="subscription_email" label="Newsletter" placeholder="Enter your email" rules="required"/>
+              </form>
             </div>
           </div>
         </div>
@@ -62,7 +64,7 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
           <h3 className="custom-heading">Quick Links</h3>
           <div className="content quicklinks">
             <a href="/">Home</a>
-            <a href="/contact">Contact Us</a>
+            <a href="/contact-us">Contact Us</a>
             <a href="/solutions">Solutions</a>
             <a href="/about-us">About us</a>
             <a href="/products">Products</a>

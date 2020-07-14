@@ -5,7 +5,7 @@ import { siteMetadata } from '../../gatsby-config'
 import Layout from '../components/layout/layout'
 import Meta from '../components/meta/meta'
 import Breadcrum from '../components/breadcrum/breadcrum'
-import Button from '../components/button/button'
+import LinkButton from '../components/button/link-button'
 
 import bfSvg from '../../assets/business-finance.svg';
 import stSvg from '../../assets/statistics.svg';
@@ -75,7 +75,7 @@ const Solutions: React.FC<Props> = ({ location }: Props) => {
           </div>
         </div>
         <div className="text-center">
-          <Button path={"/contact-us"} label="Contact Us" />
+          <LinkButton path={"/contact-us"} label="Contact Us" />
         </div>
       </div>
     </Layout>

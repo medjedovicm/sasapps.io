@@ -5,6 +5,7 @@ import { siteMetadata } from '../../gatsby-config'
 import Layout from '../components/layout/layout'
 import Meta from '../components/meta/meta'
 import Breadcrum from '../components/breadcrum/breadcrum'
+import LinkButton from '../components/button/link-button'
 import Button from '../components/button/button'
 import Input from '..//components/input/input'
 
@@ -28,17 +29,19 @@ const Contact: React.FC<Props> = ({ location }: Props) => {
         <div className="row">
           <div className="col-lg-6">
             <h5>How can we help?</h5>
-            <img src={chSvg} style={{display: "block", margin: "0 auto"}}/>
+            <img src={chSvg} style={{display: "block", margin: "0 auto", maxWidth: "100%"}}/>
           </div>
           <div className="col-lg-6">
-            <div className="card no-button">
+            <div className="card no-button kwes-form">
               <h3>Contact Us</h3>
-              <Input name="" label="Company Name" placeholder="Enter your company name" vertical={true}/>
-              <Input name="" label="Name" placeholder="Enter your name" vertical={true}/>
-              <Input name="" label="Email" placeholder="Enter your email" vertical={true}/>
-              <Input name="" label="Phone Number" placeholder="Enter your phone number" vertical={true}/>
-              <Input name="" label="Message" placeholder="Your message here" vertical={true} textarea={true}/>
-              <div><Button path={"#"} label="Submit" /></div>
+              <form method="POST" action="https://kwes.io/api/foreign/forms/PQBmKKKpmXWPjIz1q7bl" no-reload="">
+                <Input name="company" label="Company Name" placeholder="Enter your company name" vertical={true}/>
+                <Input name="name" label="Name" placeholder="Enter your name" vertical={true} rules="required"/>
+                <Input name="email" label="Email" placeholder="Enter your email" vertical={true} rules="required"/>
+                <Input name="phone_number" label="Phone Number" placeholder="Enter your phone number" vertical={true} rules="required|numeric"/>
+                <Input name="message" label="Message" placeholder="Your message here" vertical={true} textarea={true} rules="required|max:100"/>
+                <Button type="submit" label="Submit" />
+              </form>
             </div>
           </div>
         </div>

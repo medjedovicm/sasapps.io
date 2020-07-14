@@ -97,3 +97,8 @@ a{
 @import './contact.scss';
 @import './home.scss';
 @import '../components/components.scss';
+
+.subscribe.kwes-form{
+  .kw-message-error{ display: none; }
+  .kw-message-success{ margin-top: -10px; }
+}

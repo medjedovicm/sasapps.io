@@ -34,8 +34,10 @@ const ContactLinks: React.FC<Props2> = ({ mobile }) => {
           contact@sasapps.to
         </a>
       </div>
-      <div className="subscribe">
-        <Input name="" label="Subscribe" placeholder="Enter your email"/>
+      <div className="subscribe kwes-form">
+        <form method="POST" action="https://kwes.io/api/foreign/forms/BAScYvAqKdAN1bC2H0wQ" no-reload="" success-message="Thank you for Subscribing">
+          <Input name="subscription_email" label="Subscribe" placeholder="Enter your email" rules="required"/>
+        </form>
       </div>
       <div className="sociallinks">
         <SocialMedia

@@ -2,15 +2,13 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 interface Props {
-  path: string
+  type: 'button' | 'submit' | 'reset'
   label: string
 }
 
-const Button: React.FC<Props> = ({ path, label }: Props) => {
+const Button: React.FC<Props> = ({ type, label }: Props) => {
   return (
-    <Link className="btn btn-primary" to={path}>
-      {label}
-    </Link>
+    <button type={type} className="btn btn-primary">{label}</button>
   )
 }
 

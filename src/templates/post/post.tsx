@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 
 import Adsense from '../../components/adsense/adsense'
-import Button from '../../components/button/button'
+import LinkButton from '../../components/button/link-button'
 import Badge from '../../components/badge/badge'
 import { PostByPathQuery } from '../../../types/graphql-types'
 
@@ -57,7 +57,7 @@ const Post: React.FC<Props> = ({ data, options }: Props) => {
             __html: isMore ? getDescription(html) : html,
           }}
         />
-        {isMore && <Button path={path} label="MORE" primary={true} />}
+        {isMore && <LinkButton path={path} label="MORE" primary={true} />}
         {!isIndex && <Adsense clientId={adsense} slotId="" format="auto" />}
       </div>
     </div>

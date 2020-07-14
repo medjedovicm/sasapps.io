@@ -26,6 +26,10 @@
   .sociallinks{ order: 4; }
   .login{order: 5; }
 
+  > div {
+    max-height: 25px;
+    overflow: hidden;
+  }
 }
 .contact-links.mobile{
   display: none;
