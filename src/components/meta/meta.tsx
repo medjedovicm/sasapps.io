@@ -1,13 +1,13 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import { SiteSiteMetadata } from '../../../types/graphql-types'
+import { siteMetadata } from '../../../types/graphql-types'
 
 interface Props {
   site:
     | Pick<
-        SiteSiteMetadata,
-        'title' | 'description' | 'author' | 'twitter' | 'facebook' | 'youtube' | 'linkedin' | 'adsense' | 'siteUrl'
+        siteMetadata,
+        'title' | 'description' | 'author' | 'twitter' | 'facebook' | 'youtube' | 'linkedin' | 'adsense' | 'siteUrl' | 'location'
       >
     | null
     | undefined
@@ -17,7 +17,9 @@ interface Props {
 const Meta: React.FC<Props> = ({ site, title }: Props) => {
   const siteTitle = site?.title || ''
   const siteUrl = site?.siteUrl || ''
+  const author = site?.author || ''
   const siteDescription = site?.description || ''
+  const location = site?.location || {}
   const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle
   return (
     <Helmet
@@ -48,11 +50,17 @@ const Meta: React.FC<Props> = ({ site, title }: Props) => {
         },
         {
           property: 'og:url',
-          content: `${siteUrl}/profile`,
+          content: `${siteUrl}${location.pathname}${location.hash}`,
         },
         {
+          name: "image",
           property: 'og:image',
-          content: `${siteUrl}/img/profile.jpg`,
+          content: `${siteUrl}/img/analytium.png`,
+        },
+        {
+          name: "author",
+          property: 'author',
+          content: author
         },
       ]}
     />

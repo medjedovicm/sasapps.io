@@ -19,10 +19,11 @@ interface Props {
 }
 
 const Solutions: React.FC<Props> = ({ location }: Props) => {
+  const meta = { ...siteMetadata, location }
 
   return (
     <Layout location={location}>
-      <Meta site={siteMetadata} title="Solutions" />
+      <Meta site={meta} title="Solutions" />
       <Breadcrum links={[
         {label: "Home", to: "/"},
         {label: "Solutions", to: "#"},

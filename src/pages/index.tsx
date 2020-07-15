@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 
-import { IndexQueryQuery, PostByPathQuery } from '../../types/graphql-types'
+import { MetaQuery, PostByPathQuery } from '../../types/graphql-types'
 import Post from '../templates/post/post'
 import Meta from '../components/meta/meta'
 import Layout from '../components/layout/layout'
@@ -15,16 +15,16 @@ import bgSvg from '../../assets/bar-graph.svg';
 import fiSvg from '../../assets/financing.svg';
 
 interface Props {
-  data: IndexQueryQuery
+  data: MetaQuery
   location: Location
 }
 
 const Home: React.FC<Props> = ({ data, location }: Props) => {
-  const meta = data.site?.meta
+  const meta = { ...data.site?.meta, location }
 
   return (
     <Layout location={location}>
-      <Meta site={meta} />
+      <Meta site={meta}/>
       <div className="main-background">
         <div className="container">
           <h1>SAS Apps</h1>
@@ -103,7 +103,7 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
 export default Home
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query MetaQuery {
     site {
       meta: siteMetadata {
         title
@@ -112,6 +112,7 @@ export const pageQuery = graphql`
         author
         twitter
         facebook
+        youtube
         linkedin
         adsense
       }

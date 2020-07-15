@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: 'SASApps | Analytium | Analytics For Every Business',
     description:
-      'Experts in SAS Data Analytics and Management. Analyse Implement Maximise',
+      'Provides SAS Apps Solution, Experts in SAS Data Analytics and Management. Analyse Implement Maximise',
     siteUrl: 'https://sasapps.netlify.app',
     author: 'Allan Bowie',
     twitter: 'https://twitter.com/analytium',

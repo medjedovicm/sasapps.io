@@ -15,10 +15,11 @@ interface Props {
 
 const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
   const posts = data.remark.posts
+  const meta = { ...siteMetadata, location }
 
   return (
     <Layout location={location}>
-      <Meta site={siteMetadata} title="Blog" />
+      <Meta site={meta} title="Blog" />
       <Breadcrum links={[
         {label: "Home", to: "/"},
         {label: "Blog", to: "#"},
