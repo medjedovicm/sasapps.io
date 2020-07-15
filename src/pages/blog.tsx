@@ -18,10 +18,10 @@ const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
 
   return (
     <Layout location={location}>
-      <Meta site={siteMetadata} title="Blogs" />
+      <Meta site={siteMetadata} title="Blog" />
       <Breadcrum links={[
         {label: "Home", to: "/"},
-        {label: "Blogs", to: "#"},
+        {label: "Blog", to: "#"},
         ]}/>
         <div className="container">
           <div style={{ maxWidth: "700px" }}>

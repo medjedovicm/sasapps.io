@@ -25,7 +25,7 @@ const Template: React.FC<Props> = ({ data, location }: Props) => {
         />
         <Breadcrum links={[
           {label: "Home", to: "/"},
-          {label: "Blogs", to: "/blogs"},
+          {label: "Blog", to: "/blog"},
           {label: title, to: "#"},
           ]}/>
         <div className="container">

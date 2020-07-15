@@ -22,7 +22,7 @@ const ContactLinks: React.FC<Props2> = ({ mobile }) => {
   const classname = mobile ? "contact-links mobile" : "contact-links";
   return (
     <div className={classname}>
-      <div className="mobile">
+      {/*<div className="mobile">
         <a href="tel:+4402039949849">
           <img src={mobileSvg} />
           +44 (0) 203 9949 849
@@ -33,10 +33,10 @@ const ContactLinks: React.FC<Props2> = ({ mobile }) => {
           <img src={mailSvg} />
           contact@sasapps.to
         </a>
-      </div>
+      </div>*/}
       <div className="subscribe kwes-form">
         <form method="POST" action="https://kwes.io/api/foreign/forms/BAScYvAqKdAN1bC2H0wQ" no-reload="" success-message="Thank you for Subscribing">
-          <Input name="subscription_email" label="Subscribe" placeholder="Enter your email" rules="required"/>
+          <Input name="subscription_email" label="Subscribe" placeholder="Enter your email" rules="required|email"/>
         </form>
       </div>
       <div className="sociallinks">

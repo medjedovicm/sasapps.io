@@ -36,8 +36,8 @@ const Contact: React.FC<Props> = ({ location }: Props) => {
               <h3>Contact Us</h3>
               <form method="POST" action="https://kwes.io/api/foreign/forms/PQBmKKKpmXWPjIz1q7bl" no-reload="">
                 <Input name="company" label="Company Name" placeholder="Enter your company name" vertical={true}/>
-                <Input name="name" label="Name" placeholder="Enter your name" vertical={true} rules="required"/>
-                <Input name="email" label="Email" placeholder="Enter your email" vertical={true} rules="required"/>
+                <Input name="name" label="Name" placeholder="Enter your name" vertical={true} rules="required|max:50"/>
+                <Input name="email" label="Email" placeholder="Enter your email" vertical={true} rules="required|email"/>
                 <Input name="phone_number" label="Phone Number" placeholder="Enter your phone number" vertical={true} rules="required|max:30"/>
                 <Input name="message" label="Message" placeholder="Your message here" vertical={true} textarea={true} rules="required|max:100"/>
                 <Button type="submit" label="Submit" />

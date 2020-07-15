@@ -22,6 +22,7 @@ const Layout: React.FC<Props> = ({ children, location }: Props) => {
   useEffect(() => {
     emergence.init()
     let kwesScript = document.createElement('script')
+    kwesScript.setAttribute('rel', 'noopener')
     kwesScript.setAttribute('src', 'https://kwes.io/js/kwes.js')
     document.head.appendChild(kwesScript)
   })

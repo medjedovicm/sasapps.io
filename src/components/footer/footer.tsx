@@ -21,7 +21,7 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
         <div className="col-md-6 col-lg-4">
           <h3 className="custom-heading">Contact Us</h3>
           <div className="content">
-            <div>
+            {/*<div>
               <a href="tel:+4402039949849">
                 <img src={mobileSvg} />
                 +44 (0) 203 9949 849
@@ -32,9 +32,9 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
                 <img src={mailSvg} />
                 contact@sasapps.to
               </a>
-            </div>
+            </div>*/}
             <div>
-              <a href="#">
+              <a>
                 <img src={locSvg} />
                 86-90 4th Floor, Paul Street, London, EC2A 4NE
               </a>
@@ -50,12 +50,11 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
               linkedin={siteMetadata.linkedin}
               twitter={siteMetadata.twitter}
               youtube={siteMetadata.youtube}
-              instagram={"#"}
               moreSpacing={true} />
             </div>
             <div className="subscribe kwes-form" style={{maxHeight: "35px", overflow: "hidden"}}>
               <form method="POST" action="https://kwes.io/api/foreign/forms/BAScYvAqKdAN1bC2H0wQ" no-reload="" success-message="Thank you for Subscribing">
-                <Input name="subscription_email" label="Newsletter" placeholder="Enter your email" rules="required"/>
+                <Input name="subscription_email" label="Newsletter" placeholder="Enter your email" rules="required|email"/>
               </form>
             </div>
           </div>
@@ -74,7 +73,7 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
       </div>
     </div>
     <div className="bottom">
-      <p>© 2017 Analytium Ltd is a limited company registered in England and Wales. Company Registration No. 10214873 VAT: GB248508389</p>
+      <p>© 2020 Analytium Ltd is a limited company registered in England and Wales. Company Registration No. 10214873 VAT: GB248508389</p>
     </div>
   </div>
 )
