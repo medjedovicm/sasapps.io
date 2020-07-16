@@ -23,21 +23,21 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
           <div className="content">
             {/*<div>
               <a href="tel:+4402039949849">
-                <img src={mobileSvg} />
+                <img src={mobileSvg} alt="mobile icon"/>
                 +44 (0) 203 9949 849
               </a>
             </div>
             <div>
               <a href="mailto:contact@sasapps.to">
-                <img src={mailSvg} />
+                <img src={mailSvg} alt="mail icon"/>
                 contact@sasapps.to
               </a>
             </div>*/}
             <div>
-              <a>
-                <img src={locSvg} />
+              <span>
+                <img src={locSvg} alt="address icon" />
                 86-90 4th Floor, Paul Street, London, EC2A 4NE
-              </a>
+              </span>
             </div>
           </div>
         </div>

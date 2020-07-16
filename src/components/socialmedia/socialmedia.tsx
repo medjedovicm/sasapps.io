@@ -21,11 +21,11 @@ interface Props {
 const SocialMedia: React.FC<Props> = ({ youtube, facebook, linkedin, twitter, instagram, moreSpacing }: Props) => {
   return (
     <div className={moreSpacing ? "extra-space" : ""}>
-      { linkedin && <a href={linkedin} target="_blank" rel="noreferrer"><img src={linkedinSvg} /></a> }
-      { twitter && <a href={twitter} target="_blank" rel="noreferrer"><img src={twitterSvg} /></a> }
-      { facebook && <a href={facebook} target="_blank" rel="noreferrer"><img src={facebookSvg} /></a> }
-      { youtube && <a href={youtube} target="_blank" rel="noreferrer"><img src={youtubeSvg} /></a> }
-      { instagram && <a href={instagram} target="_blank" rel="noreferrer"><img src={instaSvg} /></a> }
+      { linkedin && <a href={linkedin} target="_blank" rel="noreferrer"><img src={linkedinSvg} alt="linkedin icon"/></a> }
+      { twitter && <a href={twitter} target="_blank" rel="noreferrer"><img src={twitterSvg} alt="twitter icon"/></a> }
+      { facebook && <a href={facebook} target="_blank" rel="noreferrer"><img src={facebookSvg} alt="facebook icon"/></a> }
+      { youtube && <a href={youtube} target="_blank" rel="noreferrer"><img src={youtubeSvg} alt="youtube icon"/></a> }
+      { instagram && <a href={instagram} target="_blank" rel="noreferrer"><img src={instaSvg} alt="instagram icon"/></a> }
     </div>
   )
 }

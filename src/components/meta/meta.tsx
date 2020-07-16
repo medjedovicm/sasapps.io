@@ -31,6 +31,10 @@ const Meta: React.FC<Props> = ({ site, title }: Props) => {
           content: `${site?.twitter}`,
         },
         {
+          name: "twitter:image",
+          content: `${siteUrl}/img/analytium.png`,
+        },
+        {
           name: 'facebook:site',
           content: `${site?.facebook}`,
         },
@@ -45,6 +49,7 @@ const Meta: React.FC<Props> = ({ site, title }: Props) => {
         { property: 'og:title', content: pageTitle },
         { property: 'og:type', content: 'website' },
         {
+          name: 'description',
           property: 'og:description',
           content: siteDescription,
         },

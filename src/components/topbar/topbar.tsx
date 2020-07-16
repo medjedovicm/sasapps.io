@@ -24,13 +24,13 @@ const ContactLinks: React.FC<Props2> = ({ mobile }) => {
     <div className={classname}>
       {/*<div className="mobile">
         <a href="tel:+4402039949849">
-          <img src={mobileSvg} />
+          <img src={mobileSvg} alt="mobile icon"/>
           +44 (0) 203 9949 849
         </a>
       </div>
       <div className="email">
         <a href="mailto:contact@sasapps.to">
-          <img src={mailSvg} />
+          <img src={mailSvg} alt="mail icon"/>
           contact@sasapps.to
         </a>
       </div>*/}
@@ -47,7 +47,7 @@ const ContactLinks: React.FC<Props2> = ({ mobile }) => {
         youtube={siteMetadata.youtube} />
       </div>
       <div className="login">
-        <span><img src={userSvg} />Log In</span>
+        <span><img src={userSvg} alt="user icon"/>Log In</span>
       </div>
     </div>
   )
@@ -60,7 +60,7 @@ const Navibar: React.FC<Props> = ({ location, mobile }: Props) => {
       <div className="row">
         <div className="col-9 col-xl-3">
           <Link className="text-center" to="/">
-            <img src={analytiumSvg} style={{ maxWidth: "100%" }}/>
+            <img src={analytiumSvg} alt="Analytium Logo" style={{ maxWidth: "100%" }}/>
           </Link>
         </div>
         <div className="col-xl-9">

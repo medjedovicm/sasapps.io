@@ -31,7 +31,7 @@ const Products: React.FC<Props> = ({ location }: Props) => {
         <div className="row buttom-margin-child">
           <div className="col-md-6 col-xl-4">
             <div className="card">
-              <img src={dtSvg} />
+              <img src={dtSvg} alt="Data Controller for SAS®"/>
               <h3>Data Controller for SAS®</h3>
               <p>Built on SASjs, enables end user data management and EUC data capture (with 4 eyes approval) on both SAS9 and Viya.  Features include Data Validation at source, Data Workflows, Data Dictionary, Data Catalog, Data Lineage, Data Alerts and a wide range of databases and loading formats supported. </p>
               <div className="wrapper"><LinkButton path={"https://datacontroller.io"} label="Show" /></div>
@@ -39,7 +39,7 @@ const Products: React.FC<Props> = ({ location }: Props) => {
           </div>
           <div className="col-md-6 col-xl-4">
             <div className="card">
-              <img src={pcSvg} />
+              <img src={pcSvg} alt="SAS9API"/>
               <h3>SAS9API</h3>
               <p>Integrate SAS 9 with almost any platform using a familiar (and extendable) REST API interface.  Using existing IOM interfaces, there is nothing to install in your SAS Platform – simply connect and go</p>
               <div className="wrapper"><LinkButton path={"https://sas9api.io"} label="Show" /></div>
@@ -47,7 +47,7 @@ const Products: React.FC<Props> = ({ location }: Props) => {
           </div>
           <div className="col-md-6 col-xl-4">
             <div className="card">
-              <img src={idSvg} />
+              <img src={idSvg} alt="SASjs"/>
               <h3>SASjs</h3>
               <p>A fully open source “opinionated” framework for building HTML5 web applications on SAS 9 and Viya, and the core technology underpinning all of our web apps.  Comprised of a data adapter, SAS Macro library, CLI tool, and supporting documentation.</p>
               <div className="wrapper"><LinkButton path={"https://sasjs.io"} label="Show" /></div>

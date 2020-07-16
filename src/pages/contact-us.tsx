@@ -30,7 +30,7 @@ const Contact: React.FC<Props> = ({ location }: Props) => {
         <div className="row">
           <div className="col-lg-6">
             <h5>How can we help?</h5>
-            <img src={chSvg} style={{display: "block", margin: "0 auto", maxWidth: "100%"}}/>
+            <img src={chSvg} style={{display: "block", margin: "0 auto", maxWidth: "100%"}} alt="How can we help?"/>
           </div>
           <div className="col-lg-6">
             <div className="card no-button kwes-form">

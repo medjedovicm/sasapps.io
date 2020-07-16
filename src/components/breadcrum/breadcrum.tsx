@@ -26,7 +26,7 @@ const Breadcrum: React.FC<Props> = ({ location, links }: Props) => {
           );
         return (
           <div key={i}>
-            <img src={arrowRightSvg} />
+            <img src={arrowRightSvg} alt="right arrow icon"/>
             <Link className="text-center" to={link.to}>{link.label}</Link>
           </div>
           );
