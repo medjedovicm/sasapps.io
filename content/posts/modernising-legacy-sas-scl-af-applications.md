@@ -28,7 +28,7 @@ Web apps are a natural migration for legacy AF. Secured by your existing enterpr
 
 When building web apps on SAS, it's super important to separate the frontend logic (the domain of a web developer) from the backend (idempotent, stateless SAS programs). A typical modernisation project will begin by creating UX diagrams, wireframes, and screenshots to mockup the visuals and diagramming the application logic. This means that the gory details of the AF part, ie all the `call display()` and `call next()` routines (and associated catalog entries) are effectively disregarded, and completely rebuilt using modern design methods and javascript frameworks.
 
-But what about the data logic? All the SLISTS, SCL programs, subroutines and methods? The good news is that **much of this can be re-used**. The fact is that SCL is based on, and works very similarly to, good old base SAS. This led to the development of the SCL Transcoding Kit, a framework / approach that lets you migrate SCL entries directly over to SAS (eg to run in a Stored Process or Job Execution Service), without the need for an AF License.
+But what about the data logic? All the SLISTS, SCL programs, subroutines and methods? The good news is that **much of this can be re-used**. The fact is that SCL is based on, and works very similarly to, good old base SAS. This led to the development of the SCL Transcoding Kit, a framework / approach that lets you migrate SCL entries directly over to SAS (eg to run in a SAS 9 Stored Process or Job Execution Service on Viya), without the need for an AF License.
 
 ## Running SCL in SAS Studio
 
