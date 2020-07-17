@@ -68,7 +68,7 @@ The full list of supported functions includes:
 
 Other than the `fcmp` library (referenced in the video above), this kit also lays out the process for exporting all the lists into a database, handling methods (with overloadable signatures), and migrating SCL entries into SAS code (hence, eradicating the use of catalogs).
 
-Do you have legacy AF / SCL you'd like modernised? We'd love to help.  Do \[get in touch](<https://sasapps.io/contact-us>) for a no-obligation chat.
+Do you have legacy AF / SCL you'd like modernised? We'd love to help.  Do [get in touch](https://sasapps.io/contact-us) for a no-obligation chat.
 
 Additional resources:
 
