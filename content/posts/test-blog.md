@@ -1,12 +1,10 @@
 ---
 title: Markdown 📝
 date: '2015-05-28T22:40:32.169Z'
-layout: post
 path: '/markdown/'
+description: description for my markdown blog
 category: Typography
-tags:
-  - Markdown
-  - Emoji
+tags: ['animals', 'Chicago', 'zoos']
 ---
 
 Paragraphs are separated by a blank line.

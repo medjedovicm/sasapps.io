@@ -1,5 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
+import kebabCase from "lodash/kebabCase"
 
 import Adsense from '../../components/adsense/adsense'
 import LinkButton from '../../components/button/link-button'
@@ -45,7 +46,9 @@ const Post: React.FC<Props> = ({ data, options }: Props) => {
           </Link>
           <Badge label={frontmatter?.category || ''} primary={true} />
           {(frontmatter?.tags || []).map((tag, index) => (
-            <Badge label={tag as string} primary={false} key={index} />
+            <Link to={`/tags/${kebabCase(tag)}/`} key={index}>
+              <Badge label={tag as string} primary={false} />
+            </Link>
           ))}
         </div>
         <div className="content">

@@ -53,7 +53,7 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
               moreSpacing={true} />
             </div>
             <div className="subscribe kwes-form" style={{maxHeight: "35px", overflow: "hidden"}}>
-              <form method="POST" action="https://kwes.io/api/foreign/forms/BAScYvAqKdAN1bC2H0wQ" no-reload="" success-message="Thank you for Subscribing">
+              <form method="POST" action="https://kwes.io/api/foreign/forms/O68mn1H8QHlz02b1VGsr" no-reload="" success-message="Thank you for Subscribing">
                 <Input name="subscription_email" label="Newsletter" placeholder="Enter your email" rules="required|email"/>
               </form>
             </div>

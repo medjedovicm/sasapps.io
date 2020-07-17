@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
+const _ = require('lodash')
 const PostTemplate = path.resolve('./src/templates/template.tsx')
+const tagTemplate = path.resolve('./src/templates/tags.tsx')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -20,11 +22,15 @@ exports.createPages = ({ graphql, actions }) => {
                   remark: childMarkdownRemark {
                     id
                     frontmatter {
-                      layout
                       path
                     }
                   }
                 }
+              }
+            }
+            tagsGroup: allMarkdownRemark(limit: 1000) {
+              group(field: frontmatter___tags) {
+                fieldValue
               }
             }
           }
@@ -47,14 +53,27 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
-        const pages = items.filter(({ node }) => /page/.test(node.name))
-        pages.forEach(({ node }) => {
-          if (!node.remark) return
-          const { name } = path.parse(node.path)
-          const PageTemplate = path.resolve(node.path)
+        // const pages = items.filter(({ node }) => /page/.test(node.name))
+        // pages.forEach(({ node }) => {
+        //   if (!node.remark) return
+        //   const { name } = path.parse(node.path)
+        //   const PageTemplate = path.resolve(node.path)
+        //   createPage({
+        //     path: name,
+        //     component: PageTemplate,
+        //   })
+        // })
+
+        // Extract tag data from query
+        const tags = data.tagsGroup.group
+        // Make tag pages
+        tags.forEach((tag) => {
           createPage({
-            path: name,
-            component: PageTemplate,
+            path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+            component: tagTemplate,
+            context: {
+              tag: tag.fieldValue,
+            },
           })
         })
       })

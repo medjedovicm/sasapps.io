@@ -35,7 +35,7 @@ const Contact: React.FC<Props> = ({ location }: Props) => {
           <div className="col-lg-6">
             <div className="card no-button kwes-form">
               <h3>Contact Us</h3>
-              <form method="POST" action="https://kwes.io/api/foreign/forms/PQBmKKKpmXWPjIz1q7bl" no-reload="">
+              <form method="POST" action="https://kwes.io/api/foreign/forms/HDiMLPhC4y8kPLpmrAtw" no-reload="">
                 <Input name="company" label="Company Name" placeholder="Enter your company name" vertical={true}/>
                 <Input name="name" label="Name" placeholder="Enter your name" vertical={true} rules="required|max:50"/>
                 <Input name="email" label="Email" placeholder="Enter your email" vertical={true} rules="required|email"/>

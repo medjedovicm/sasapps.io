@@ -23,10 +23,9 @@ collections:
       - { name: description, label: Description }
       - { name: category, label: Category }
       - { 
-          label: Tags, 
+          label: Tags (comma-separated), 
           name: tags,
-          widget: 'select',
-          options: ['a', 'b', 'c'],
-          multiple: true
+          widget: 'list',
+          default: ["news"]
         }
       - { name: body, label: Body, widget: markdown }

@@ -14,7 +14,6 @@ interface Props {
 }
 
 const Template: React.FC<Props> = ({ data, location }: Props) => {
-  const isPage = data.post?.frontmatter?.layout != 'page'
   const title = data.post?.frontmatter?.title || ''
   return (
     <div>
@@ -29,17 +28,13 @@ const Template: React.FC<Props> = ({ data, location }: Props) => {
           {label: title, to: "#"},
           ]}/>
         <div className="container">
-          {isPage ? (
-            <Post
-              data={data}
-              options={{
-                isIndex: false,
-                adsense: data.site?.meta?.adsense,
-              }}
-            />
-          ) : (
-            <Page data={data} location={location} />
-          )}
+          <Post
+            data={data}
+            options={{
+              isIndex: false,
+              adsense: data.site?.meta?.adsense,
+            }}
+          />
         </div>
       </Layout>
     </div>
@@ -64,7 +59,6 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        layout
         title
         path
         category

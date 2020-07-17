@@ -52,7 +52,6 @@ export const pageQuery = graphql`
         post: node {
           html
           frontmatter {
-            layout
             title
             path
             category

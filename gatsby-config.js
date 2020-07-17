@@ -4,7 +4,7 @@ module.exports = {
     title: 'SASApps | Analytium | Analytics For Every Business',
     description:
       'Provides SAS Apps Solution, Experts in SAS Data Analytics and Management. Analyse Implement Maximise',
-    siteUrl: 'https://sasapps.netlify.app',
+    siteUrl: 'http://sasapps.io/',
     author: 'Allan Bowie',
     twitter: 'https://twitter.com/analytium',
     facebook: 'https://www.facebook.com/analytium/',
@@ -65,7 +65,7 @@ module.exports = {
         short_name: 'SASApps | Analytium',
         description:
           'Experts in SAS Data Analytics and Management. Analyse Implement Maximise',
-        homepage_url: 'https://sasapps.netlify.app',
+        homepage_url: 'http://sasapps.io/',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#00A5D7',
