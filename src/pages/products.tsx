@@ -33,7 +33,7 @@ const Products: React.FC<Props> = ({ location }: Props) => {
             <div className="card">
               <img src={dtSvg} alt="Data Controller for SAS®"/>
               <h3>Data Controller for SAS®</h3>
-              <p>Built on SASjs, enables end user data management and EUC data capture (with 4 eyes approval) on both SAS9 and Viya.  Features include Data Validation at source, Data Workflows, Data Dictionary, Data Catalog, Data Lineage, Data Alerts and a wide range of databases and loading formats supported. </p>
+              <p>Enables end user data management and EUC data capture (with 4 eyes approval) on both SAS9 and Viya.  Features include Data Validation at source, Data Workflows, Data Dictionary, Data Catalog, Data Lineage, Data Alerts with a wide range of databases and loading formats supported. </p>
               <div className="wrapper"><LinkButton path={"https://datacontroller.io"} label="Show" /></div>
             </div>
           </div>

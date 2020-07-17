@@ -64,14 +64,14 @@ const Solutions: React.FC<Props> = ({ location }: Props) => {
             <div className="card no-button" id="Viya-Readiness-Migration-Service-for-Existing-SAS-9-Apps">
               <img src={bgSvg} alt="Viya Readiness & Migration Service for Existing SAS 9 Apps" />
               <h3>Viya Readiness & Migration Service for Existing SAS 9 Apps</h3>
-              <p>Rebuild your existing SAS 9 applications using modern, supportable frameworks (eg React or Angular) in such a way that they can be easily maintained by generic developers, and later ‘flipped’ to Viya with a single switch.</p>
+              <p>Rebuild your existing SAS 9 applications using modern, supportable frameworks (eg React or Angular) in such a way that they can be easily maintained by generic developers, and later ‘flipped’ to Viya.</p>
             </div>
           </div>
           <div className="col-md-6 col-xl-4">
             <div className="card no-button" id="SAS9-Health-Report">
               <img src={fiSvg} alt="SAS9 Health Report" />
               <h3>SAS9 Health Report</h3>
-              <p>Without changing anything on your SAS 9 platform, we perform a complete scan and provide you with an instant report of the  trouble spots – such as dangling metadata, security misconfigurations, SAS coding issues, custom code in DI Studio, missing primary keys – and much much more.</p>
+              <p>Perform a complete scan of your SAS 9 platform to identify common "trouble spots" – such as dangling metadata, security misconfigurations, SAS coding issues, custom code in DI Studio, missing primary keys – and much much more.</p>
             </div>
           </div>
         </div>
