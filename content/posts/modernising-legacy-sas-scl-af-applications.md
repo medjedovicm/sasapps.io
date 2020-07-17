@@ -30,7 +30,9 @@ When building web apps on SAS, it's super important to separate the frontend log
 
 But what about the data logic? All the SLISTS, SCL programs, subroutines and methods? The good news is that **much of this can be re-used**. The fact is that SCL is based on, and works very similarly to, good old base SAS. This led to the development of the SCL Transcoding Kit, a framework / approach that lets you migrate SCL entries directly over to SAS (eg to run in a Stored Process or Job Execution Service), without the need for an AF License.
 
-![SCLinStudio](https://vimeo.com/367240430)
+## Running SCL in SAS Studio
+
+<iframe src="https://player.vimeo.com/video/367240430" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 The full list of supported functions includes:
 
