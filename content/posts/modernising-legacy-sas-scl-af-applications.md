@@ -7,7 +7,8 @@ description: Modernise legacy AF/SCL desktop applications into modern
   SAS-Powered HTML5 Web Applications with Analytium
 category: SCL
 tags:
-  - a
+  - SAS
+  - AF/SCL
 ---
 Before SAS Studio, and even EG (but after display manager), there was a desktop application used exclusively for accessing SAS. It was known as Base SAS, and within it there was an application development facility known as SAS/AF.
 
