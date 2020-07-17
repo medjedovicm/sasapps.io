@@ -11,7 +11,7 @@ tags:
 ---
 Before SAS Studio, and even EG (but after display manager), there was a desktop application used exclusively for accessing SAS. It was known as Base SAS, and within it there was an application development facility known as SAS/AF.
 
-This enabled point and click development of user interfaces, in a similar way to User Forms in VBA Excel. The application logic was driven by an object-orientated language known as SCL. SCL code was compiled, stored in catalogs, and the resulting application was often stored on a network drive and launched by end users.
+This enabled point and click development of user interfaces, in a similar way to User Forms in VBA Excel. The application logic was driven by an object-orientated language known as SCL. SCL code was compiled, saved in catalogs, and the resulting application was often stored on a network drive and launched by end users.
 
 It's fair to say these applications were a massive success, as many of them are still alive today - surviving decades of technological evolution! Still, as organisations have matured, the following challenges transpired:
 
@@ -70,7 +70,7 @@ Other than the `fcmp` library (referenced in the video above), this kit also lay
 
 Do you have legacy AF / SCL you'd like modernised? We'd love to help.  Do [get in touch](https://sasapps.io/contact-us) for a no-obligation chat.
 
-Additional resources:
+## Additional resources
 
 * Linkedin Article: <https://www.linkedin.com/pulse/easy-af-scl-modernisation-html5-sas-allan-bowe/>
 * Slides: <https://slides.com/allanbowe/sasaf>
