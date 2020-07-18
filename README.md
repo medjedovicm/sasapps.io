@@ -1,39 +1,50 @@
-# Gatstrap
+[SAS Apps] is a static blog site. It has following features implemented.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fa249a3a-68ea-4b4b-9aa6-394c87099ee1/deploy-status)](https://app.netlify.com/sites/gatstrap/deploys)
-[![CircleCI](https://circleci.com/gh/jaxx2104/gatsby-starter-bootstrap.svg?style=svg)](https://circleci.com/gh/jaxx2104/gatsby-starter-bootstrap)
-[![dependency Status](https://img.shields.io/david/jaxx2104/gatsby-starter-bootstrap.svg?style=flat-square)](https://david-dm.org/jaxx2104/gatsby-starter-bootstrap#info=dependencies)
+- CMS
+- Auto deployments
+- Forms
 
-Gatsby starter for bootstrap a blog
+## 🚀 Get Up and Running in 5 Minutes
 
-![thumb](https://user-images.githubusercontent.com/2681007/42584980-656c9406-856f-11e8-882f-cafa9d89b395.png)
+You can get a new Gatsby site up and running on your local dev environment in 5 minutes with these four steps:
 
-## GatsbyJS v2, v1, v0
+1.  **Install the Gatsby CLI.**
 
-- For v2 version of this starter, check out the [master branch](https://github.com/jaxx2104/gatsby-starter-bootstrap).
-- For v1 version, check out the [v1 branch](https://github.com/jaxx2104/gatsby-starter-bootstrap/tree/v1).
-- For v0 version, check out the [v0 branch](https://github.com/jaxx2104/gatsby-starter-bootstrap/tree/v0).
-- Make sure to read the [migration guide](https://next.gatsbyjs.org/docs/migrating-from-v1-to-v2/) when porting v1 projects to v2.
+    ```shell
+    npm install -g gatsby-cli
+    ```
 
-## Features
+        	Recommended Gatsby CLI version: 2.12.61
 
-- Single column layout
-- Simple components: Post, Page, Navi, Footer etc.
-- [Twitter Bootstrap 4](https://github.com/twbs/bootstrap) css framework.
-- Custom theme color.
+2.  **Start the site in `develop` mode.**
 
-## Installation
+    Next, move into your new site’s directory and start it up:
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatstrap https://github.com/jaxx2104/gatsby-starter-bootstrap`
+    ```shell
+    cd my-blazing-fast-site/
+    gatsby develop
+    ```
 
-## Usage
+3.  **Create build and run locally `production` mode.**
+    ```sh
+    gatsby build
+    gatsby serve
+    ```
 
-develop
-`gatsby develop`
+### Tech
 
-### Custom Theme
+SASApps uses a number of open source projects to work properly:
 
-`/src/scss/gatstrap.scss`
+- [Gatsby] - framework based on React that helps developers build blazing fast websites and apps
+- [Netlify] - an excellent option for deploying Gatsby sites.
+- [Netlify CMS] - an open source, single page app written in React that lets you edit content and data files in your Git repository.
+- [Kwes Forms] - Most customizable form service for web agencies.
 
-![1f466b07-5506-4c8d-8d17-8d02b42d6d0d](https://user-images.githubusercontent.com/2681007/43086458-5092d0be-8ed8-11e8-8125-8b336fdd3b43.gif)
+Netlify auto-deployments and Netlify CMS is configured with Self Hosted Instance of Gitlab. So, just make commit to master branch and push to gitlab.
+
+[//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
+[sas apps]: http://sasapps.io/
+[gatsby]: https://www.gatsbyjs.org/
+[netlify]: https://www.netlify.com/
+[netlify cms]: https://www.netlifycms.org//
+[kwes forms]: https://kwes.io/
