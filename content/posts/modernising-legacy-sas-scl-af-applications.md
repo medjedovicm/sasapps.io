@@ -15,6 +15,10 @@ Before SAS Studio, and even EG (but after display manager), there was a desktop 
 
 This enabled point and click development of user interfaces, in a similar way to User Forms in VBA Excel. The application logic was driven by an object-orientated language known as SCL. SCL code was compiled, saved in catalogs, and the resulting application was often stored on a network drive and launched by end users.
 
+![SAS AF SCL](../assets/sas_scl.png)
+
+## Legacy SAS/AF SCL Apps
+
 It's fair to say these applications were a massive success, as many of them are still alive today - surviving decades of technological evolution! Still, as organisations have matured, the following challenges transpired:
 
 - **Security**. Especially of source files, and password management.
@@ -24,7 +28,7 @@ It's fair to say these applications were a massive success, as many of them are 
 
 So, what to do about it? These applications are often complex, business critical, and heavily embedded in the SAS infrastructure. Well, as it happens, there is a tidy solution, quick to implement, and keeps everything within SAS. So what is it?
 
-**HTML5 SAS Web Apps**
+## HTML5 SAS Web Apps
 
 Web apps are a natural migration for legacy AF. Secured by your existing enterprise authorisation mechanism (SASLogon), they are highly scalable, easy to support, quick to build, and very user friendly.
 
