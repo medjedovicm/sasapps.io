@@ -1,0 +1,28 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+
+build:
+  before_script:
+    # first check and install all dependencies
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - 'which rsync || ( apt-get update -y && apt-get install rsync -y )'
+    # prepare ssh
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - npm install
+    - ./node_modules/.bin/gatsby build  
+    - cd public
+    - rsync -avz -e "ssh -p 18765" * analytiu@uk72.siteground.eu:/home/analytiu/public_html/sasappsio
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
