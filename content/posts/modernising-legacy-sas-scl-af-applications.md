@@ -6,6 +6,7 @@ path: /modernising-legacy-sas-scl-af-applications
 description: Modernise legacy AF/SCL desktop applications into modern
   SAS-Powered HTML5 Web Applications with Analytium
 category: SCL
+featuredImage: ../assets/sas_scl.png
 tags:
   - SAS
   - AF/SCL

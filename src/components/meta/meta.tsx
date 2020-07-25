@@ -13,14 +13,25 @@ interface Props {
     | undefined
   title?: string
   prependtitle?: boolean
+  previewImg?: string
 }
 
-const Meta: React.FC<Props> = ({ site, title, prependtitle = true }: Props) => {
+const Meta: React.FC<Props> = ({ site, title, prependtitle = true, previewImg = '' }: Props) => {
   const siteTitle = site?.title || ''
   const siteUrl = site?.siteUrl || ''
   const author = site?.author || ''
   const siteDescription = site?.description || ''
   const location = site?.location || {}
+  let image = {
+    og: `${siteUrl}/img/sas-apps.png`,
+    twitter: `${siteUrl}/img/sas-apps-2.png`
+  }
+  if ( previewImg !== '' ) {
+    image = {
+      og: `${siteUrl}${previewImg}`,
+      twitter: `${siteUrl}${previewImg}`
+    }
+  }
   let pageTitle = title ? `${title} | ${siteTitle}` : siteTitle
   if ( !prependtitle ) {
     pageTitle = title
@@ -36,7 +47,7 @@ const Meta: React.FC<Props> = ({ site, title, prependtitle = true }: Props) => {
         },
         {
           name: "twitter:image",
-          content: `${siteUrl}/img/sas-apps-2.png`,
+          content: image.twitter,
         },
         {
           name: "twitter:title",
@@ -72,7 +83,7 @@ const Meta: React.FC<Props> = ({ site, title, prependtitle = true }: Props) => {
         {
           name: "image",
           property: 'og:image',
-          content: `${siteUrl}/img/sas-apps.png`,
+          content: image.og,
         },
         {
           name: "author",

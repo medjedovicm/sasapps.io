@@ -15,6 +15,9 @@ interface Props {
 
 const Template: React.FC<Props> = ({ data, location }: Props) => {
   const title = data.post?.frontmatter?.title || ''
+  let featuredImg = data.post?.frontmatter.featuredImage.childImageSharp.fixed
+  if ( !featuredImg ) featuredImg = { src: ''}
+
   return (
     <div>
       <Layout location={location}>
@@ -22,6 +25,7 @@ const Template: React.FC<Props> = ({ data, location }: Props) => {
           title={title}
           site={data.site?.meta}
           prependtitle={false}
+          previewImg={featuredImg.src}
         />
         <Breadcrum links={[
           {label: "Home", to: "/"},
@@ -61,6 +65,13 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        featuredImage {
+          childImageSharp {
+            fixed(width: 400) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         path
         category
         tags
