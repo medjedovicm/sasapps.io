@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
-    title: 'SASApps | Analytium | Analytics For Every Business',
+    title: 'SASApps - Unleash Your Analytics',
     description:
       'Provides SAS Apps Solution, Experts in SAS Data Analytics and Management. Analyse Implement Maximise',
-    siteUrl: 'http://sasapps.io/',
-    author: 'Allan Bowie',
+    siteUrl: 'https://sasapps.io/',
+    author: 'Allan Bowe',
     twitter: 'https://twitter.com/analytium',
     facebook: 'https://www.facebook.com/analytium/',
     youtube: 'https://www.youtube.com/channel/UCo3g8hiOQk08N65nfOa9aCg',
@@ -68,11 +68,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'SASApps | Analytium | Analytics For Every Business',
+        name: 'SASApps - Unleash Your Analytics',
         short_name: 'SASApps | Analytium',
         description:
           'Experts in SAS Data Analytics and Management. Analyse Implement Maximise',
-        homepage_url: 'http://sasapps.io/',
+        homepage_url: 'https://sasapps.io/',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#00A5D7',

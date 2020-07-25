@@ -13,7 +13,7 @@ const Navibar: React.FC<Props> = ({ location, title }: Props) => {
     <div className="container">
       <nav className="navbar navbar-expand-lg navbar-light">
         <Link className="logo text-center" to="/">
-          <img src={sasAppsPNG} alt="SAS Apps Logo"/>
+          <img src={sasAppsPNG} alt="SAS&reg; Apps Logo"/>
         </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>

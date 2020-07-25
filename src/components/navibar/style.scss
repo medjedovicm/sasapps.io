@@ -6,7 +6,10 @@ nav.navbar {
       margin: 10px 0px;
       max-width: 70%;
     }
-    img { max-width: 100%; }
+    img {
+      width: 100%;
+      max-width: 250px;
+    }
   }
 }
 .navbar-collapse{

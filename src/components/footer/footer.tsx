@@ -36,7 +36,7 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
             <div>
               <span>
                 <img src={locSvg} alt="address icon" />
-                86-90 4th Floor, Paul Street, London, EC2A 4NE
+                Analytium Ltd, 86-90 4th Floor, Paul Street, London, EC2A 4NE
               </span>
             </div>
           </div>

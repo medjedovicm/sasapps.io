@@ -27,13 +27,12 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
       <Meta site={meta}/>
       <div className="main-background">
         <div className="container">
-          <h1>SAS Apps</h1>
           <h4>Custom Interfaces to the world's most powerful Analytics Platform</h4>
           <div className="container card-gray">
-            <p className="heading">Leverage your investment in SAS with a range of solution and product offerings to fit your specific needs. </p>
+            <p className="heading">Leverage your investment in SAS&reg; with a range of solution and product offerings to fit your specific needs. </p>
             <div className="row">
               <div className="col-12 col-md-9 col-lg-10">
-                <p className="info">We blend decades of traditional SAS experience with open source technology offerings to give you well documented solutions that you can either maintain yourselves, or allow us to continue to support with a transparent range of support packages.</p>
+                <p className="info">We blend decades of traditional SAS&reg; experience with open source technology offerings to give you well documented solutions that you can either maintain yourselves, or allow us to continue to support with a transparent range of support packages.</p>
               </div>
               <div className="col-md-3 col-lg-2 text-center">
                 <LinkButton path={"/products"} label="Our Products" />
@@ -50,7 +49,7 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
             <div className="card">
               <img src={bfSvg} alt="SAS-Powered HTML5 Apps" />
               <h3>SAS-Powered HTML5 Apps</h3>
-              <p>Let SAS come to you – with a bespoke app, tailor made to your specific workflow and reporting requirements.  Built with fully open source tools, standard frameworks, and ...</p>
+              <p>Let SAS&reg; come to you – with a bespoke app, tailor made to your specific workflow and reporting requirements.  Built with fully open source tools, standard frameworks, and ...</p>
               <div className="wrapper"><LinkButton path={"/solutions/#SAS-Powered-HTML5-Apps"} label="Find Out More" /></div>
             </div>
           </div>
@@ -58,7 +57,7 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
             <div className="card">
               <img src={stSvg} alt="Performance Monitoring and Platform Alerts" />
               <h3>Performance Monitoring and Platform Alerts</h3>
-              <p>Gain a real time and historical perspective of your SAS platform with a highly customisable performance dashboard. Configure automated ...</p>
+              <p>Gain a real time and historical perspective of your SAS&reg; platform with a highly customisable performance dashboard. Configure automated ...</p>
               <div className="wrapper"><LinkButton path={"/solutions/#performance-monitoring-and-platform-alerts"} label="Find Out More" /></div>
             </div>
           </div>

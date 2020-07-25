@@ -21,6 +21,7 @@ const Template: React.FC<Props> = ({ data, location }: Props) => {
         <Meta
           title={title}
           site={data.site?.meta}
+          prependtitle={false}
         />
         <Breadcrum links={[
           {label: "Home", to: "/"},

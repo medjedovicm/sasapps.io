@@ -12,15 +12,19 @@ interface Props {
     | null
     | undefined
   title?: string
+  prependtitle?: boolean
 }
 
-const Meta: React.FC<Props> = ({ site, title }: Props) => {
+const Meta: React.FC<Props> = ({ site, title, prependtitle = true }: Props) => {
   const siteTitle = site?.title || ''
   const siteUrl = site?.siteUrl || ''
   const author = site?.author || ''
   const siteDescription = site?.description || ''
   const location = site?.location || {}
-  const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle
+  let pageTitle = title ? `${title} | ${siteTitle}` : siteTitle
+  if ( !prependtitle ) {
+    pageTitle = title
+  }
   return (
     <Helmet
       title={pageTitle}

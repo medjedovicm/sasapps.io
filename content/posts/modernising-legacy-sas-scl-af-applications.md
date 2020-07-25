@@ -2,7 +2,7 @@
 title: Modernising Legacy SAS SCL / AF Applications
 date: 2020-07-17T17:29:47.570Z
 layout: POST
-path: /blog/modernising-legacy-sas-scl-af-applications
+path: /modernising-legacy-sas-scl-af-applications
 description: Modernise legacy AF/SCL desktop applications into modern
   SAS-Powered HTML5 Web Applications with Analytium
 category: SCL
