@@ -63,10 +63,11 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
           <h3 className="custom-heading">Quick Links</h3>
           <div className="content quicklinks">
             <a href="/">Home</a>
-            <a href="/contact-us">Contact Us</a>
+            <a href="/contact-us">Contact</a>
             <a href="/solutions">Solutions</a>
-            <a href="/about-us">About us</a>
+            <a href="/about-us">About Us</a>
             <a href="/products">Products</a>
+            <a href="/blog">Blog</a>
           </div>
         </div>
         

@@ -77,7 +77,7 @@ module.exports = {
         background_color: '#fff',
         theme_color: '#00A5D7',
         display: 'standalone',
-        icon: 'assets/an-512.png',
+        icon: 'assets/favicon.png',
         icon_options: {
           purpose: `maskable`,
         },

@@ -32,7 +32,15 @@ const Meta: React.FC<Props> = ({ site, title }: Props) => {
         },
         {
           name: "twitter:image",
-          content: `${siteUrl}/img/analytium.png`,
+          content: `${siteUrl}/img/sas-apps-2.png`,
+        },
+        {
+          name: "twitter:title",
+          content: pageTitle,
+        },
+        {
+          name: "twitter:description",
+          content: siteDescription,
         },
         {
           name: 'facebook:site',
@@ -60,7 +68,7 @@ const Meta: React.FC<Props> = ({ site, title }: Props) => {
         {
           name: "image",
           property: 'og:image',
-          content: `${siteUrl}/img/analytium.png`,
+          content: `${siteUrl}/img/sas-apps.png`,
         },
         {
           name: "author",

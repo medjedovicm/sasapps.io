@@ -9,6 +9,8 @@
   }
   .content {
     margin: 50px auto;
+    @media only screen and (max-width: 991px) { margin: 25px auto; }
+    @media only screen and (max-width: 767px) { margin-top: 10px; }
     padding-left: 80px;
     > div {
       padding: 5px;
