@@ -19,13 +19,16 @@ const TagsPage: React.FC<Props> = ({ data, location }: Props) => {
 
   return (
     <Layout location={location}>
-      <Meta site={meta} title="Tags" />
+      <Meta
+        site={meta}
+        title="Tags"
+        customDescription="tags customDescription"/>
       <Breadcrum links={[
         {label: "Home", to: "/"},
         {label: "Tags", to: "#"},
         ]}/>
         <div className="container about-us">
-          <h3 className="custom-heading">Tags</h3>
+          <h1 className="custom-heading">Tags</h1>
           <ul>
           </ul>
           <div className="list-group">

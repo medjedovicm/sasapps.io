@@ -20,7 +20,10 @@ const Contact: React.FC<Props> = ({ location }: Props) => {
 
   return (
     <Layout location={location}>
-      <Meta site={meta} title="Contact Us" />
+      <Meta
+        site={meta}
+        title="Contact Us"
+        customDescription="contact us customDescription"/>
       <Breadcrum links={[
         {label: "Home", to: "/"},
         {label: "Contact Us", to: "#"},

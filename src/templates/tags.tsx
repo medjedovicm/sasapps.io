@@ -27,6 +27,7 @@ const TagTemplate: React.FC<Props> = ({ data, location, pageContext }: Props) =>
         <Meta
           title={title}
           site={data.site?.meta}
+          customDescription="single tag customDescription"
         />
         <Breadcrum links={[
           {label: "Home", to: "/"},
@@ -34,7 +35,7 @@ const TagTemplate: React.FC<Props> = ({ data, location, pageContext }: Props) =>
           {label: title, to: "#"},
           ]}/>
         <div className="container about-us">
-          <h3 className="custom-heading">{tagHeader}</h3>
+          <h1 className="custom-heading">{tagHeader}</h1>
           <ul>
           </ul>
           <div className="list-group list-group-flush">

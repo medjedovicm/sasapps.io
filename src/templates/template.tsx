@@ -26,6 +26,7 @@ const Template: React.FC<Props> = ({ data, location }: Props) => {
           site={data.site?.meta}
           prependtitle={false}
           previewImg={featuredImg.src}
+          customDescription="single blog customDescription"
         />
         <Breadcrum links={[
           {label: "Home", to: "/"},

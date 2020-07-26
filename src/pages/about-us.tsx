@@ -15,7 +15,10 @@ const About: React.FC<Props> = ({ location }: Props) => {
 
   return (
     <Layout location={location}>
-      <Meta site={meta} title="About Us" />
+      <Meta
+        site={meta}
+        title="About Us"
+        customDescription="About Us description"/>
       <Breadcrum links={[
         {label: "Home", to: "/"},
         {label: "About Us", to: "#"},

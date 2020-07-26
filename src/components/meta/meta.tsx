@@ -14,23 +14,21 @@ interface Props {
   title?: string
   prependtitle?: boolean
   previewImg?: string
+  customDescription?: string
 }
 
-const Meta: React.FC<Props> = ({ site, title, prependtitle = true, previewImg = '' }: Props) => {
+const Meta: React.FC<Props> = ({ site, title, prependtitle = true, previewImg = '', customDescription = '' }: Props) => {
   const siteTitle = site?.title || ''
   const siteUrl = site?.siteUrl || ''
   const author = site?.author || ''
-  const siteDescription = site?.description || ''
   const location = site?.location || {}
-  let image = {
+  const siteDescription = customDescription == '' ? (site?.description || '') : customDescription
+  const image = previewImg == '' ? {
     og: `${siteUrl}/img/sas-apps.png`,
     twitter: `${siteUrl}/img/sas-apps-2.png`
-  }
-  if ( previewImg !== '' ) {
-    image = {
-      og: `${siteUrl}${previewImg}`,
-      twitter: `${siteUrl}${previewImg}`
-    }
+  } : {
+    og: `${siteUrl}${previewImg}`,
+    twitter: `${siteUrl}${previewImg}`
   }
   let pageTitle = title ? `${title} | ${siteTitle}` : siteTitle
   if ( !prependtitle ) {

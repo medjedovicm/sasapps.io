@@ -19,7 +19,10 @@ const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
 
   return (
     <Layout location={location}>
-      <Meta site={meta} title="Blog" />
+      <Meta
+        site={meta}
+        title="Blog"
+        customDescription="Blog index page description"/>
       <Breadcrum links={[
         {label: "Home", to: "/"},
         {label: "Blog", to: "#"},
