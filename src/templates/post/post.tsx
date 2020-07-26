@@ -5,7 +5,7 @@ import kebabCase from "lodash/kebabCase"
 import Adsense from '../../components/adsense/adsense'
 import LinkButton from '../../components/button/link-button'
 import Badge from '../../components/badge/badge'
-import { PostByPathQuery } from '../../../types/graphql-types'
+import { PostByPath } from '../../../types/graphql-types'
 
 import './style.scss'
 
@@ -22,7 +22,7 @@ const getDescription = (content: string): string => {
 }
 
 interface Props {
-  data: PostByPathQuery
+  data: PostByPath
   options: {
     isIndex: boolean
     adsense?: string | null

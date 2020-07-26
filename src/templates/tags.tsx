@@ -9,7 +9,7 @@ import LinkButton from '../components/button/link-button'
 import { TagByPath } from '../../types/graphql-types'
 
 interface Props {
-  pageContext: String
+  pageContext: { tag:String }
   data: TagByPath
   location: Location
 }

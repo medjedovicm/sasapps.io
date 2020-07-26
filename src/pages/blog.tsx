@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 
-import { IndexQueryQuery, PostByPathQuery } from '../../types/graphql-types'
+import { BlogIndexQuery } from '../../types/graphql-types'
 import { siteMetadata } from '../../gatsby-config'
 import Post from '../templates/post/post'
 import Meta from '../components/meta/meta'
@@ -9,7 +9,7 @@ import Layout from '../components/layout/layout'
 import Breadcrum from '../components/breadcrum/breadcrum'
 
 interface Props {
-  data: IndexQueryQuery
+  data: BlogIndexQuery
   location: Location
 }
 
@@ -31,7 +31,7 @@ const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
           <div style={{ maxWidth: "700px" }}>
             {posts.map((post, i) => (
               <Post
-                data={post as PostByPathQuery}
+                data={post}
                 options={{
                   isIndex: true,
                 }}

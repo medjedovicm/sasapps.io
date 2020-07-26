@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 
-import { MetaQuery, PostByPathQuery } from '../../types/graphql-types'
+import { MetaQuery } from '../../types/graphql-types'
 import Post from '../templates/post/post'
 import Meta from '../components/meta/meta'
 import Layout from '../components/layout/layout'
@@ -43,7 +43,7 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
       </div>
 
       <div className="container">
-        <h5>What We Offer:</h5>
+        <h1>What We Offer:</h1>
         <div className="row buttom-margin-child">
           <div className="col-md-6 col-xl-4">
             <div className="card">
