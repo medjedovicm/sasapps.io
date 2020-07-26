@@ -1,10 +1,9 @@
-image: node:latest
-
 cache:
   paths:
     - node_modules/
 
 deploy:buildDeploy:
+  image: node:latest
   stage: deploy
   before_script:
     # first check and install all dependencies
