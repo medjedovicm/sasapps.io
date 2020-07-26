@@ -67,7 +67,7 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
             <a href="/solutions">Solutions</a>
             <a href="/about-us">About Us</a>
             <a href="/products">Products</a>
-            <a href="/blog">Blog</a>
+            <a href="/blog/">Blog</a>
           </div>
         </div>
         
