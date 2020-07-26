@@ -4,7 +4,8 @@ cache:
   paths:
     - node_modules/
 
-build:
+deploy:buildDeploy:
+  stage: deploy
   before_script:
     # first check and install all dependencies
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
