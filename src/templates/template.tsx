@@ -15,6 +15,7 @@ interface Props {
 
 const Template: React.FC<Props> = ({ data, location }: Props) => {
   const title = data.post?.frontmatter?.title || ''
+  const description = data.post?.frontmatter?.description || ''
   let featuredImg = data.post?.frontmatter.featuredImage.childImageSharp.fixed
   if ( !featuredImg ) featuredImg = { src: ''}
 
@@ -26,7 +27,7 @@ const Template: React.FC<Props> = ({ data, location }: Props) => {
           site={data.site?.meta}
           prependtitle={false}
           previewImg={featuredImg.src}
-          customDescription="single blog customDescription"
+          customDescription={description}
         />
         <Breadcrum links={[
           {label: "Home", to: "/"},

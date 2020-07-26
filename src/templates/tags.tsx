@@ -27,7 +27,7 @@ const TagTemplate: React.FC<Props> = ({ data, location, pageContext }: Props) =>
         <Meta
           title={title}
           site={data.site?.meta}
-          customDescription="single tag customDescription"
+          customDescription={`${title} | SAS Apps`}
         />
         <Breadcrum links={[
           {label: "Home", to: "/"},
