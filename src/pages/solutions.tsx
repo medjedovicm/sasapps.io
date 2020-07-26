@@ -25,8 +25,8 @@ const Solutions: React.FC<Props> = ({ location }: Props) => {
     <Layout location={location}>
       <Meta
         site={meta}
-        title="Solutions"
-        customDescription="solutions customDescription"/>
+        title="SAS App Solutions"
+        customDescription="SAS Solutions to Address Business Challenges"/>
       <Breadcrum links={[
         {label: "Home", to: "/"},
         {label: "Solutions", to: "#"},

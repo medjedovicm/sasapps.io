@@ -23,7 +23,7 @@ const Contact: React.FC<Props> = ({ location }: Props) => {
       <Meta
         site={meta}
         title="Contact Us"
-        customDescription="contact us customDescription"/>
+        customDescription="Contact us to discuss ideas, proposals, and workshops"/>
       <Breadcrum links={[
         {label: "Home", to: "/"},
         {label: "Contact Us", to: "#"},
