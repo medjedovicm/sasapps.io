@@ -44,7 +44,7 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
         <div className="col-md-6 col-lg-4">
           <h3 className="custom-heading">Social</h3>
           <div className="content">
-            <div>
+            <div style={{ padding: 0 }} >
             <SocialMedia
               facebook={siteMetadata.facebook}
               linkedin={siteMetadata.linkedin}
@@ -52,7 +52,7 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
               youtube={siteMetadata.youtube}
               moreSpacing={true} />
             </div>
-            <div className="subscribe kwes-form" style={{maxHeight: "35px", overflow: "hidden"}}>
+            <div className="subscribe kwes-form" style={{maxHeight: "70px", overflow: "hidden"}}>
               <form method="POST" action="https://kwes.io/api/foreign/forms/O68mn1H8QHlz02b1VGsr" no-reload="" success-message="Thank you for Subscribing">
                 <Input name="subscription_email" label="Newsletter" placeholder="Enter your email" rules="required|email"/>
               </form>

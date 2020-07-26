@@ -15,9 +15,10 @@ module.exports = {
   pathPrefix: '/',
   plugins: [
     {
-      resolve: `gatsby-plugin-netlify-cms`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        enableIdentityWidget: true,
+        trackingId: 'UA-172951413-1',
+        head: true,
       },
     },
     {
@@ -90,12 +91,6 @@ module.exports = {
         workboxConfig: {
           globPatterns: ['**/*'],
         },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-172951413-1',
       },
     },
     {

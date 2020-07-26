@@ -24,10 +24,6 @@ const HTML: React.FC<Props> = ({
       <body>
         <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
         {postBodyComponents}
-        <script
-          async
-          src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        />
       </body>
     </html>
   )
