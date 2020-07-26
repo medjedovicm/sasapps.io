@@ -18,7 +18,7 @@ You can get a new Gatsby site up and running on your local dev environment in 5 
 
 2.  **Start the site in `develop` mode.**
 
-    Next, move into your new site’s directory and start it up:
+    Next, move into your new site's directory and start it up:
 
     ```shell
     cd my-blazing-fast-site/
