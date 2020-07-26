@@ -21,8 +21,8 @@ const TagsPage: React.FC<Props> = ({ data, location }: Props) => {
     <Layout location={location}>
       <Meta
         site={meta}
-        title="Tags"
-        customDescription="tags customDescription"/>
+        title="SAS Apps | Tags"
+        customDescription="Site Tags for SAS Apps"/>
       <Breadcrum links={[
         {label: "Home", to: "/"},
         {label: "Tags", to: "#"},

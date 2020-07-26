@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: 'SASApps - Unleash Your Analytics',
     description:
-      'Provides SAS Apps Solution, Experts in SAS Data Analytics and Management. Analyse Implement Maximise',
+      'Bespoke SAS Apps on SAS 9 and SAS Viya - unleash your analytics, your way',
     siteUrl: 'https://sasapps.io/',
     author: 'Allan Bowe',
     twitter: 'https://twitter.com/analytium',
@@ -71,7 +71,7 @@ module.exports = {
         name: 'SASApps - Unleash Your Analytics',
         short_name: 'SASApps | Analytium',
         description:
-          'Experts in SAS Data Analytics and Management. Analyse Implement Maximise',
+          'Unleash your Analytics with bespoke SAS Apps - fast, user friendly, scalable analytics',
         homepage_url: 'https://sasapps.io/',
         start_url: '/',
         background_color: '#fff',
