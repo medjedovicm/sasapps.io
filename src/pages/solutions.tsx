@@ -30,7 +30,7 @@ const Solutions: React.FC<Props> = ({ location }: Props) => {
         ]}/>
       <div className="container about-us">
         <h3 className="custom-heading">Solutions</h3>
-        <h5>Tailored Solutions for Specific Outcomes</h5>
+        <h1>Tailored Solutions for Specific Outcomes</h1>
         <div className="row buttom-margin-child">
           <div className="col-md-6 col-xl-4">
             <div className="card no-button" id="SAS-Powered-HTML5-Apps">

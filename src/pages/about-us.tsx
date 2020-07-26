@@ -22,7 +22,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
         ]}/>
       <div className="container about-us">
         <h3 className="custom-heading">About Us</h3>
-        <h5>Analyse   Implement   Maximise</h5>
+        <h1>Analyse   Implement   Maximise</h1>
         <h6>Where does our name come from?</h6>
         <p>Our name, analytium, comes from two words “Analytics” and the Latin suffix “ium”.</p>
         <h6>What are the definitions of these words?</h6>
@@ -31,7 +31,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
         <p>By combining these we get to what we are about, we use analytics to discover stories, patterns and trends in your data which will help you formulate ideas and create positive outcomes for the future.</p>
         <h6>What else do we offer?</h6>
         <p>We offer full transparency, We believe that offering this ensures that you are fully involved and up to date with your project, whether that be giving you full insight into how we’re utilising our time, or even how we’re getting to the results you’re looking for. We document everything to ensure you have a full understanding of everything we do with you.</p>
-        <h5>Our Values</h5>
+        <h1>Our Values</h1>
         <p>Our values are centred around what our people value in themselves as well as each other. We collectively strive to use our values to guide our decision making and our ways of working effectively with each other and our customers.</p>
         <h3 className="custom-heading">Trust</h3>
         <p>Our people are passionate about data analytics and are self-driven to keep up with current technology trends and improve on our skills. We are trusted by our customers and peers to be the best we can be and continuously improve ourselves and deliver optimal outcomes. </p>

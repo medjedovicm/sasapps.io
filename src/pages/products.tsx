@@ -27,7 +27,7 @@ const Products: React.FC<Props> = ({ location }: Props) => {
         ]}/>
       <div className="container about-us">
         <h3 className="custom-heading">Products</h3>
-        <h5>SAS® Apps and Technology</h5>
+        <h1>SAS® Apps and Technology</h1>
         <div className="row buttom-margin-child">
           <div className="col-md-6 col-xl-4">
             <div className="card">

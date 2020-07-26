@@ -29,7 +29,7 @@ const Contact: React.FC<Props> = ({ location }: Props) => {
         <h3 className="custom-heading">Contact Us</h3>
         <div className="row">
           <div className="col-lg-6">
-            <h5>How can we help?</h5>
+            <h1>How can we help?</h1>
             <img src={chSvg} style={{display: "block", margin: "0 auto", maxWidth: "100%"}} alt="How can we help?"/>
           </div>
           <div className="col-lg-6">
