@@ -36,7 +36,7 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
             <div>
               <span>
                 <img src={locSvg} alt="address icon" />
-                <span class="aquamarine_text">{An}</span>alytium Ltd, 86-90 4th Floor, Paul Street, London, EC2A 4NE
+                <span class="aquamarine_text">{"{An}"}</span>alytium Ltd, 86-90 4th Floor, Paul Street, London, EC2A 4NE
               </span>
             </div>
           </div>
@@ -74,7 +74,7 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
       </div>
     </div>
     <div className="bottom">
-      <p>© 2020 <span class="aquamarine_text">{An}</span>alytium Ltd is a limited company registered in England and Wales. Company Registration No. 10214873 VAT: GB248508389</p>
+      <p>© 2020 <span class="aquamarine_text">{"{An}"}</span>alytium Ltd is a limited company registered in England and Wales. Company Registration No. 10214873 VAT: GB248508389</p>
     </div>
   </div>
 )

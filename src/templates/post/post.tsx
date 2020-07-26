@@ -51,9 +51,6 @@ const Post: React.FC<Props> = ({ data, options }: Props) => {
             </Link>
           ))}
         </div>
-        <div className="content">
-          <p>{frontmatter?.description}</p>
-        </div>
         <div
           className="content"
           dangerouslySetInnerHTML={{
