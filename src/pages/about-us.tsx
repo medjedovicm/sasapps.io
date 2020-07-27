@@ -10,6 +10,7 @@ interface Props {
   location: Location
 }
 
+const constAnalytium='<span className="aquamarine_text">{An}</span>alytium'
 const About: React.FC<Props> = ({ location }: Props) => {
   const meta = { ...siteMetadata, location }
 
@@ -41,7 +42,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
         <h3 className="custom-heading">Win-Win approach</h3>
         <p>To achieve a win-win outcome, we become an extended part of your business and commit ourselves as if it were one of our own.  We really understand that a win for you is also a win for us as much as a loss for you is also a loss for us. Your success ultimately leads to our success as a business. </p>
         <h3 className="custom-heading">Our Commitment to You</h3>
-        <p>At <span className="aquamarine_text">{An}</span>alytium, we strive to deliver the best, through our people with their technical skills and their unwavering commitment to our customers. The technologies we work with and the operating models we use, afford our people the time to fully understand our customers' needs, whilst maximising opportunities to evolve and also ensuring that we deliver above and beyond what is expected from us. We believe that delivering on all of these promises is not only key to your success, but it is also key to our success.</p>
+        <p>At {constAnalytium}, we strive to deliver the best, through our people with their technical skills and their unwavering commitment to our customers. The technologies we work with and the operating models we use, afford our people the time to fully understand our customers' needs, whilst maximising opportunities to evolve and also ensuring that we deliver above and beyond what is expected from us. We believe that delivering on all of these promises is not only key to your success, but it is also key to our success.</p>
       </div>
     </Layout>
   )
