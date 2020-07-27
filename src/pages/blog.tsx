@@ -1,9 +1,10 @@
 import { graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import React from 'react'
+import Img from "gatsby-image"
 
 import { BlogIndexQuery } from '../../types/graphql-types'
 import { siteMetadata } from '../../gatsby-config'
-import Post from '../templates/post/post'
 import Meta from '../components/meta/meta'
 import Layout from '../components/layout/layout'
 import Breadcrum from '../components/breadcrum/breadcrum'
@@ -31,15 +32,26 @@ const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
         <h1 className="text-center">SAS Apps' Latest News</h1>
         <p className="text-center">Welcome to the SAS Apps blog. You’ve reached the front page for news on ad blocking, features, performance, privacy and Basic Attention Token related announcements.</p>
         <div className="row justify-content-md-center">
-          {posts.map((post, i) => (
-            <Post
-              data={post}
-              options={{
-                isIndex: true,
-              }}
-              key={i}
-            />
-          ))}
+          {posts.map((data, i) => {
+            const frontmatter = data.post?.frontmatter
+            const path = frontmatter?.path || ''
+            let featuredImg = frontmatter?.featuredImage.childImageSharp
+            return (
+              <div className="col-md-6 col-xl-4" key={i}>
+                <div className="blog-grid-item">
+                  <Link to={path}>
+                    <Img fluid={featuredImg.fluid} />
+                  </Link>
+                  <div className="content">
+                    <Link style={{ boxShadow: 'none' }} to={path}>
+                      <h3>{frontmatter?.title}</h3>
+                    </Link>
+                    <time dateTime={frontmatter?.date}>{frontmatter?.date}</time>
+                    <p>{frontmatter?.description}</p>
+                  </div>
+                </div>
+              </div>
+            )})}
         </div>
       </div>
     </Layout>
@@ -55,7 +67,6 @@ export const pageQuery = graphql`
     ) {
       posts: edges {
         post: node {
-          html
           frontmatter {
             title
             featuredImage {
@@ -66,8 +77,6 @@ export const pageQuery = graphql`
               }
             }
             path
-            category
-            tags
             description
             date(formatString: "MMM DD, YYYY")
           }

@@ -37,7 +37,6 @@ const Template: React.FC<Props> = ({ data, location }: Props) => {
         <div className="container">
           <Post
             data={data}
-            options={{ isIndex: false }}
           />
         </div>
       </Layout>

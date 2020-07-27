@@ -3160,13 +3160,10 @@ export type Unnamed_1_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSit
 export type BlogIndexQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type BlogIndexQueryQuery = { remark: { posts: Array<{ post: (
-        Pick<MarkdownRemark, 'html'>
-        & { frontmatter?: Maybe<(
-          Pick<MarkdownRemarkFrontmatter, 'title' | 'path' | 'category' | 'tags' | 'description' | 'date'>
+export type BlogIndexQueryQuery = { remark: { posts: Array<{ post: { frontmatter?: Maybe<(
+          Pick<MarkdownRemarkFrontmatter, 'title' | 'path' | 'description' | 'date'>
           & { featuredImage?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> }
-        )> }
-      ) }> } };
+        )> } }> } };
 
 export type MetaQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
