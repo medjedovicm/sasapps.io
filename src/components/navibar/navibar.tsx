@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Topbar from '../topbar/topbar'
-import sasAppsPNG from '../../../assets/sas-apps.png';
+import sasAppsPNG from '../../../assets/sas-apps.svg';
 
 interface Props {
   title: string
