@@ -37,10 +37,7 @@ const Template: React.FC<Props> = ({ data, location }: Props) => {
         <div className="container">
           <Post
             data={data}
-            options={{
-              isIndex: false,
-              adsense: data.site?.meta?.adsense,
-            }}
+            options={{ isIndex: false }}
           />
         </div>
       </Layout>

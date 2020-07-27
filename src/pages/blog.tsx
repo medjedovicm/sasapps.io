@@ -27,19 +27,21 @@ const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
         {label: "Home", to: "/"},
         {label: "Blog", to: "#"},
         ]}/>
-        <div className="container">
-          <div style={{ maxWidth: "700px" }}>
-            {posts.map((post, i) => (
-              <Post
-                data={post}
-                options={{
-                  isIndex: true,
-                }}
-                key={i}
-              />
-            ))}
-          </div>
+      <div className="container">
+        <h1 className="text-center">SAS Apps' Latest News</h1>
+        <p className="text-center">Welcome to the SAS Apps blog. You’ve reached the front page for news on ad blocking, features, performance, privacy and Basic Attention Token related announcements.</p>
+        <div className="row justify-content-md-center">
+          {posts.map((post, i) => (
+            <Post
+              data={post}
+              options={{
+                isIndex: true,
+              }}
+              key={i}
+            />
+          ))}
         </div>
+      </div>
     </Layout>
   )
 }
@@ -56,11 +58,18 @@ export const pageQuery = graphql`
           html
           frontmatter {
             title
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             path
             category
             tags
             description
-            date(formatString: "YYYY/MM/DD")
+            date(formatString: "MMM DD, YYYY")
           }
         }
       }

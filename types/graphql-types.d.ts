@@ -3162,13 +3162,16 @@ export type BlogIndexQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type BlogIndexQueryQuery = { remark: { posts: Array<{ post: (
         Pick<MarkdownRemark, 'html'>
-        & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'path' | 'category' | 'tags' | 'description' | 'date'>> }
+        & { frontmatter?: Maybe<(
+          Pick<MarkdownRemarkFrontmatter, 'title' | 'path' | 'category' | 'tags' | 'description' | 'date'>
+          & { featuredImage?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+        )> }
       ) }> } };
 
 export type MetaQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type MetaQueryQuery = { site?: Maybe<{ meta?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'siteUrl' | 'author' | 'twitter' | 'facebook' | 'youtube' | 'linkedin' | 'adsense'>> }> };
+export type MetaQueryQuery = { site?: Maybe<{ meta?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'siteUrl' | 'author' | 'twitter' | 'facebook' | 'youtube' | 'linkedin'>> }> };
 
 export type TagsIndexQueryQueryVariables = Exact<{ [key: string]: never; }>;
 

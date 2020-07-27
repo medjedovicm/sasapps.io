@@ -113,7 +113,6 @@ export const pageQuery = graphql`
         facebook
         youtube
         linkedin
-        adsense
       }
     }
   }

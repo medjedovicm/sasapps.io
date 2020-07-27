@@ -11,10 +11,9 @@ interface NavLink {
 
 interface Props {
   links: NavLink[]
-  location: Location
 }
 
-const Breadcrum: React.FC<Props> = ({ location, links }: Props) => {
+const Breadcrum: React.FC<Props> = ({ links }: Props) => {
   return (
     <div className="container breadcrum">
       {links.map((link, i) => {
