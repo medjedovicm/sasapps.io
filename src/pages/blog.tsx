@@ -22,7 +22,7 @@ const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
     <Layout location={location}>
       <Meta
         site={meta}
-        title="SAS Apps | Blog"
+        title="Blog"
         customDescription="Latest news and updates in the world of Analytium SAS Apps"/>
       <Breadcrum links={[
         {label: "Home", to: "/"},
