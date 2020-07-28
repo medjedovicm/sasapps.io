@@ -23,14 +23,14 @@ const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
       <Meta
         site={meta}
         title="Blog"
-        customDescription="Latest news and updates in the world of Analytium SAS Apps"/>
+        customDescription="Welcome to the SAS Apps blog."/>
       <Breadcrum links={[
         {label: "Home", to: "/"},
         {label: "Blog", to: "#"},
         ]}/>
       <div className="container">
         <h1 className="text-center">SAS Apps' Latest News</h1>
-        <p className="text-center">Welcome to the SAS Apps blog. You’ve reached the front page for news on ad blocking, features, performance, privacy and Basic Attention Token related announcements.</p>
+        <p className="text-center">You've reached the front page for the latest news and updates in the world of Analytium SAS Apps.</p>
         <div className="row justify-content-md-center">
           {posts.map((data, i) => {
             const frontmatter = data.post?.frontmatter

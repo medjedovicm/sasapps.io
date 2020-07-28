@@ -24,7 +24,7 @@ const Meta: React.FC<Props> = ({ site, title, prependtitle = true, previewImg = 
   const location = site?.location || {}
   const siteDescription = customDescription == '' ? (site?.description || '') : customDescription
   const image = previewImg == '' ? {
-    og: `${siteUrl}/img/sas-apps.png`,
+    og: `${siteUrl}/img/sas-apps.svg`,
     twitter: `${siteUrl}/img/sas-apps-2.png`
   } : {
     og: `${siteUrl}${previewImg}`,

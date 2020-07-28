@@ -18,9 +18,7 @@ _Microsoft Azure customers worldwide now gain access to Data Controller for SAS�
 
 ## London, UK - July 27, 2020
 
-Analytium Group today announced the availability of Data Controller for SAS® in the Microsoft Azure Marketplace, an online store providing applications and services for use on Azure. Analytium Group customers can now take advantage of the productive and trusted Azure cloud platform, with streamlined deployment and management.
-
-Data Controller for SAS is an enterprise data governance and data workflow solution, maintained by Analytium Group, specialists in analytics and data-driven app development. Data Controller for SAS is now available in the Microsoft Azure Marketplace, an online store providing applications and services for use on Azure. Analytium Group customers can now take advantage of the productive and trusted Azure cloud platform, with streamlined deployments and management.
+Analytium Group today announced the availability of Data Controller for SAS® in the Microsoft Azure Marketplace, an online store providing applications and services for use on Azure. [Data Controller for SAS](https://datacontroller.io) is an enterprise data governance and data workflow solution, maintained by Analytium Group, specialists in analytics and data-driven app development. Analytium Group customers can now take advantage of the productive and trusted Azure cloud platform, with streamlined deployment and management.
 
 ## Why Data Controller?
 
