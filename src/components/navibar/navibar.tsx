@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Topbar from '../topbar/topbar'
-import sasAppsPNG from '../../../assets/sas-apps.png';
+import sasAppsPNG from '../../../assets/sas-apps.svg';
 
 interface Props {
   title: string
@@ -26,7 +26,7 @@ const Navibar: React.FC<Props> = ({ location, title }: Props) => {
             <li className="nav-item"><a className={location.pathname.startsWith('/products') ? 'nav-link active' : 'nav-link'} href="/products">Products</a></li>
             <li className="nav-item"><a className={location.pathname.startsWith('/contact-us') ? 'nav-link active' : 'nav-link'} href="/contact-us">Contact</a></li>
             <li className="nav-item"><a className={location.pathname.startsWith('/about-us') ? 'nav-link active' : 'nav-link'} href="/about-us">About us</a></li>
-            <li className="nav-item"><a className={location.pathname.startsWith('/blog') ? 'nav-link active' : 'nav-link'} href="/blog">Blog</a></li>
+            <li className="nav-item"><a className={location.pathname.startsWith('/blog') ? 'nav-link active' : 'nav-link'} href="/blog/">Blog</a></li>
           </ul>
           {/*<Topbar mobile={true} />*/}
         </div>

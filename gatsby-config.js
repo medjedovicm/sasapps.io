@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
-    title: 'SASApps - Unleash Your Analytics',
+    title: 'SAS Apps - Unleash Your Analytics',
     description:
-      'Bespoke SAS Apps on SAS 9 and SAS Viya - unleash your analytics, your way',
+      "Custom Interfaces to the world's most powerful Analytics Platform",
     siteUrl: 'https://sasapps.io/',
     author: 'Allan Bowe',
     twitter: 'https://twitter.com/analytium',

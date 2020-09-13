@@ -2,39 +2,21 @@ import { Link } from 'gatsby'
 import React from 'react'
 import kebabCase from "lodash/kebabCase"
 
-import Adsense from '../../components/adsense/adsense'
 import LinkButton from '../../components/button/link-button'
 import Badge from '../../components/badge/badge'
 import { PostByPath } from '../../../types/graphql-types'
 
 import './style.scss'
 
-const getDescription = (content: string): string => {
-  const body = content.replace(
-    /<blockquote>/g,
-    '<blockquote class="blockquote">'
-  )
-  if (body.match('<!--more-->')) {
-    const [description] = body.split('<!--more-->')
-    return description
-  }
-  return body
-}
-
 interface Props {
   data: PostByPath
-  options: {
-    isIndex: boolean
-    adsense?: string | null
-  }
 }
 
-const Post: React.FC<Props> = ({ data, options }: Props) => {
+const Post: React.FC<Props> = ({ data }: Props) => {
   const frontmatter = data.post?.frontmatter
   const path = frontmatter?.path || ''
-  const { isIndex, adsense } = options
   const html = data.post?.html || ''
-  const isMore = isIndex && !!html.match('<!--more-->')
+  let featuredImg = frontmatter?.featuredImage.childImageSharp
 
   return (
     <div className="article" key={path}>
@@ -54,11 +36,9 @@ const Post: React.FC<Props> = ({ data, options }: Props) => {
         <div
           className="content"
           dangerouslySetInnerHTML={{
-            __html: isMore ? getDescription(html) : html,
+            __html: html,
           }}
         />
-        {isMore && <LinkButton path={path} label="MORE" primary={true} />}
-        {!isIndex && <Adsense clientId={adsense} slotId="" format="auto" />}
       </div>
     </div>
   )
