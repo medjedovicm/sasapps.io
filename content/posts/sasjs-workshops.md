@@ -54,7 +54,7 @@ Another great thing about the SASjs approach is that anything you build with it 
 
 ## Workshop
 
-We would like to support the SAS community and help more SAS Users build awesome web applications on SAS 9 and Viya. For this reason we are running workshops (up to 6 people) during the rest of 2020.
+We would like to support the SAS community and help more SAS Users build awesome web applications on SAS 9 and Viya. For this reason we are running regular workshops during the rest of 2020.
 
 The duration is 1 hour, and will cover:
 
@@ -64,8 +64,8 @@ The duration is 1 hour, and will cover:
 - 15 mins - Deep dive into SASjs CLI functionality
 - 10 mins - Questions and discussion
 
-To reserve your spot, follow the link below. Given the small session sizes, please - only reserve if you do plan to attend!
+To reserve your spot, visit the SASjs page on linkedin, and select an event from the bottom right hand side of the page.
 
-**[https://bit.ly/sasjsworkshop](bit.ly/sasjsworkshop)**
+**[https://www.linkedin.com/company/sasjs](https://www.linkedin.com/company/sasjs)**
 
-Workshops are open to SAS Partners and Consultants as well as Customers and End Users. Contact [Allan Bowe](https://www.linkedin.com/in/allanbowe/) directly if you have 4-6 people internally and would like a dedicated session.
+Workshops are open to SAS Partners and Consultants as well as Customers and End Users. Contact [Allan Bowe](https://www.linkedin.com/in/allanbowe/) directly if you would like a dedicated internal session (4 or more people).
