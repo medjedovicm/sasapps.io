@@ -5,7 +5,7 @@ layout: POST
 path: /using-git-with-sas
 description: Using GIT Workflows when building apps with SAS
 category: SASjs
-featuredImage: https://i.imgur.com/gIYp5OG.png
+featuredImage: ../assets/targets.png
 tags:
   - SAS
   - GIT
