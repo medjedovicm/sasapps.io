@@ -45,12 +45,12 @@ const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
             return (
               <div className="col-md-6 col-xl-4" key={i}>
                 <div className="blog-grid-item">
-                  <Link to={path}>
-                    <Img fluid={featuredImg.fluid} />
+                  <Link to={path} title={frontmatter?.title}>
+                    <Img fluid={featuredImg.fluid} alt={frontmatter?.title} />
                   </Link>
                   <div className="content">
                     <Link style={{ boxShadow: 'none' }} to={path}>
-                      <h3>{frontmatter?.title}</h3>
+                      <h2>{frontmatter?.title}</h2>
                     </Link>
                     <time dateTime={frontmatter?.date}>
                       {frontmatter?.date}

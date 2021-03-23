@@ -72,9 +72,10 @@ a[href^='tel']::before {
   margin-bottom: 20px;
   .content {
     padding: 20px;
-    h3 {
+    h2 {
       letter-spacing: -0.5px;
       font-weight: normal;
+      font-size: 1.2rem;
     }
     time {
       font-size: $font-size-xs;
