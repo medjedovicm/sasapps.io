@@ -1,6 +1,6 @@
-import { Link, graphql } from "gatsby"
+import { Link, graphql } from 'gatsby'
 import React from 'react'
-import kebabCase from "lodash/kebabCase"
+import kebabCase from 'lodash/kebabCase'
 
 import { TagsIndexQuery } from '../../types/graphql-types'
 import { siteMetadata } from '../../gatsby-config'
@@ -9,7 +9,7 @@ import Layout from '../components/layout/layout'
 import Breadcrum from '../components/breadcrum/breadcrum'
 
 interface Props {
-  data: TagsIndexQuery,
+  data: TagsIndexQuery
   location: Location
 }
 
@@ -22,27 +22,32 @@ const TagsPage: React.FC<Props> = ({ data, location }: Props) => {
       <Meta
         site={meta}
         title="SAS Apps | Tags"
-        customDescription="Site Tags for SAS Apps"/>
-      <Breadcrum links={[
-        {label: "Home", to: "/"},
-        {label: "Tags", to: "#"},
-        ]}/>
-        <div className="container about-us">
-          <h1 className="custom-heading">Tags</h1>
-          <ul>
-          </ul>
-          <div className="list-group">
-            {group.map(tag => (
-              <Link
-                key={tag.fieldValue}
-                to={`/tags/${kebabCase(tag.fieldValue)}/`}
-                className="list-group-item list-group-item-action">
-                  {tag.fieldValue}
-                  <span className="badge badge-primary badge-pill pull-right">{tag.totalCount}</span>
-              </Link>
-            ))}
-          </div>
+        customDescription="Site Tags for SAS Apps"
+      />
+      <Breadcrum
+        links={[
+          { label: 'Home', to: '/' },
+          { label: 'Tags', to: '#' },
+        ]}
+      />
+      <div className="container about-us">
+        <h1 className="custom-heading">Tags</h1>
+        <ul></ul>
+        <div className="list-group">
+          {group.map((tag) => (
+            <Link
+              key={tag.fieldValue}
+              to={`/tags/${kebabCase(tag.fieldValue)}/`}
+              className="list-group-item list-group-item-action"
+            >
+              {tag.fieldValue}
+              <span className="badge badge-primary badge-pill pull-right">
+                {tag.totalCount}
+              </span>
+            </Link>
+          ))}
         </div>
+      </div>
     </Layout>
   )
 }

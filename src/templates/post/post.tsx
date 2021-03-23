@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import kebabCase from "lodash/kebabCase"
+import kebabCase from 'lodash/kebabCase'
 
 import LinkButton from '../../components/button/link-button'
 import Badge from '../../components/badge/badge'

@@ -1,5 +1,5 @@
-import { Link, graphql } from "gatsby"
-import React from "react"
+import { Link, graphql } from 'gatsby'
+import React from 'react'
 
 import Meta from '../components/meta/meta'
 import Layout from '../components/layout/layout'
@@ -9,17 +9,21 @@ import LinkButton from '../components/button/link-button'
 import { TagByPath } from '../../types/graphql-types'
 
 interface Props {
-  pageContext: { tag:String }
+  pageContext: { tag: String }
   data: TagByPath
   location: Location
 }
 
-const TagTemplate: React.FC<Props> = ({ data, location, pageContext }: Props) => {
+const TagTemplate: React.FC<Props> = ({
+  data,
+  location,
+  pageContext,
+}: Props) => {
   const { tag } = pageContext
   const title = tag
   const { edges, totalCount } = data.posts
   const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
+    totalCount === 1 ? '' : 's'
   } tagged with "${tag}"`
   return (
     <div>
@@ -29,21 +33,26 @@ const TagTemplate: React.FC<Props> = ({ data, location, pageContext }: Props) =>
           site={data.site?.meta}
           customDescription={`${title} | SAS Apps`}
         />
-        <Breadcrum links={[
-          {label: "Home", to: "/"},
-          {label: "Tags", to: "/tags"},
-          {label: title, to: "#"},
-          ]}/>
+        <Breadcrum
+          links={[
+            { label: 'Home', to: '/' },
+            { label: 'Tags', to: '/tags' },
+            { label: title, to: '#' },
+          ]}
+        />
         <div className="container about-us">
           <h1 className="custom-heading">{tagHeader}</h1>
-          <ul>
-          </ul>
+          <ul></ul>
           <div className="list-group list-group-flush">
             {edges.map(({ node }) => {
               const { path: slug } = node.frontmatter
               const { title } = node.frontmatter
               return (
-                <Link key={slug} to={slug} className="list-group-item list-group-item-action">
+                <Link
+                  key={slug}
+                  to={slug}
+                  className="list-group-item list-group-item-action"
+                >
                   {title}
                 </Link>
               )
@@ -51,7 +60,7 @@ const TagTemplate: React.FC<Props> = ({ data, location, pageContext }: Props) =>
           </div>
           <br />
           <div className="text-center">
-            <LinkButton path={"/tags"} label="All tags" />
+            <LinkButton path={'/tags'} label="All tags" />
           </div>
         </div>
       </Layout>

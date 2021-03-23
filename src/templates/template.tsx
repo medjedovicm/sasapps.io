@@ -17,7 +17,7 @@ const Template: React.FC<Props> = ({ data, location }: Props) => {
   const title = data.post?.frontmatter?.title || ''
   const description = data.post?.frontmatter?.description || ''
   let featuredImg = data.post?.frontmatter.featuredImage.childImageSharp.fixed
-  if ( !featuredImg ) featuredImg = { src: ''}
+  if (!featuredImg) featuredImg = { src: '' }
 
   return (
     <div>
@@ -29,15 +29,15 @@ const Template: React.FC<Props> = ({ data, location }: Props) => {
           previewImg={featuredImg.src}
           customDescription={description}
         />
-        <Breadcrum links={[
-          {label: "Home", to: "/"},
-          {label: "Blog", to: "/blog"},
-          {label: title, to: "#"},
-          ]}/>
+        <Breadcrum
+          links={[
+            { label: 'Home', to: '/' },
+            { label: 'Blog', to: '/blog' },
+            { label: title, to: '#' },
+          ]}
+        />
         <div className="container">
-          <Post
-            data={data}
-          />
+          <Post data={data} />
         </div>
       </Layout>
     </div>

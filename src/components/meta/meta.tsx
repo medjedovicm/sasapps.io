@@ -7,7 +7,16 @@ interface Props {
   site:
     | Pick<
         siteMetadata,
-        'title' | 'description' | 'author' | 'twitter' | 'facebook' | 'youtube' | 'linkedin' | 'adsense' | 'siteUrl' | 'location'
+        | 'title'
+        | 'description'
+        | 'author'
+        | 'twitter'
+        | 'facebook'
+        | 'youtube'
+        | 'linkedin'
+        | 'adsense'
+        | 'siteUrl'
+        | 'location'
       >
     | null
     | undefined
@@ -17,21 +26,31 @@ interface Props {
   customDescription?: string
 }
 
-const Meta: React.FC<Props> = ({ site, title, prependtitle = true, previewImg = '', customDescription = '' }: Props) => {
+const Meta: React.FC<Props> = ({
+  site,
+  title,
+  prependtitle = true,
+  previewImg = '',
+  customDescription = '',
+}: Props) => {
   const siteTitle = site?.title || ''
   const siteUrl = site?.siteUrl || ''
   const author = site?.author || ''
   const location = site?.location || {}
-  const siteDescription = customDescription == '' ? (site?.description || '') : customDescription
-  const image = previewImg == '' ? {
-    og: `${siteUrl}/img/sas-apps.svg`,
-    twitter: `${siteUrl}/img/sas-apps-2.png`
-  } : {
-    og: `${siteUrl}${previewImg}`,
-    twitter: `${siteUrl}${previewImg}`
-  }
+  const siteDescription =
+    customDescription == '' ? site?.description || '' : customDescription
+  const image =
+    previewImg == ''
+      ? {
+          og: `${siteUrl}/img/sas-apps.svg`,
+          twitter: `${siteUrl}/img/sas-apps-2.png`,
+        }
+      : {
+          og: `${siteUrl}${previewImg}`,
+          twitter: `${siteUrl}${previewImg}`,
+        }
   let pageTitle = title ? `${title} | ${siteTitle}` : siteTitle
-  if ( !prependtitle ) {
+  if (!prependtitle) {
     pageTitle = title
   }
   return (
@@ -44,15 +63,15 @@ const Meta: React.FC<Props> = ({ site, title, prependtitle = true, previewImg = 
           content: `${site?.twitter}`,
         },
         {
-          name: "twitter:image",
+          name: 'twitter:image',
           content: image.twitter,
         },
         {
-          name: "twitter:title",
+          name: 'twitter:title',
           content: pageTitle,
         },
         {
-          name: "twitter:description",
+          name: 'twitter:description',
           content: siteDescription,
         },
         {
@@ -79,14 +98,14 @@ const Meta: React.FC<Props> = ({ site, title, prependtitle = true, previewImg = 
           content: `${siteUrl}${location.pathname}${location.hash}`,
         },
         {
-          name: "image",
+          name: 'image',
           property: 'og:image',
           content: image.og,
         },
         {
-          name: "author",
+          name: 'author',
           property: 'author',
-          content: author
+          content: author,
         },
       ]}
     />

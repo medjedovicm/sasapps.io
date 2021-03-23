@@ -9,8 +9,12 @@
   }
   .content {
     margin: 50px auto;
-    @media only screen and (max-width: 991px) { margin: 25px auto; }
-    @media only screen and (max-width: 767px) { margin-top: 10px; }
+    @media only screen and (max-width: 991px) {
+      margin: 25px auto;
+    }
+    @media only screen and (max-width: 767px) {
+      margin-top: 10px;
+    }
     padding-left: 80px;
     > div {
       padding: 5px;
@@ -18,29 +22,31 @@
     span > img {
       padding-right: 15px;
     }
-    label input{
+    label input {
       width: 150px;
     }
   }
-  .content.quicklinks a{
+  .content.quicklinks a {
     display: inline-flex;
     width: 50%;
     margin-bottom: 15px;
   }
-  .bottom{
+  .bottom {
     text-align: center;
     color: white;
-    background: #00A5D7;
+    background: #00a5d7;
     font-size: 12px;
     padding: 15px 30px;
-    p {margin: 0;}
+    p {
+      margin: 0;
+    }
   }
 }
 
-.extra-space{
+.extra-space {
   display: flex;
   justify-content: space-between;
-  img{
+  img {
     min-width: 30px;
   }
 }

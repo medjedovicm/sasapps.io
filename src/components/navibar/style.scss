@@ -12,32 +12,31 @@ nav.navbar {
     }
   }
 }
-.navbar-collapse{
-
-  .nav-item{
+.navbar-collapse {
+  .nav-item {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     text-transform: capitalize;
-    color: #4C525E !important;
-    .nav-link{
+    color: #4c525e !important;
+    .nav-link {
       padding-left: 0 !important;
       padding-right: 2rem !important;
-      &.active{
-        color: #00A5D7 !important;
+      &.active {
+        color: #00a5d7 !important;
       }
     }
   }
   margin-top: 30px;
   @media only screen and (min-width: 1200px) {
-    .nav-item{
+    .nav-item {
       font-size: 22px;
     }
   }
   @media only screen and (max-width: 991px) {
     margin-top: 0;
-    .nav-item{
+    .nav-item {
       text-align: center;
     }
   }

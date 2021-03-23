@@ -67,8 +67,8 @@ html,
 body {
   height: 100%;
   width: 100%;
-  color: #4C525E;
-  background: #FBFDFF;
+  color: #4c525e;
+  background: #fbfdff;
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
@@ -78,13 +78,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.aquamarine_text{ color: $aquamarine; }
-a{
-  color: #4C525E;
-  &:visited{ color: #4C525E; }
+.aquamarine_text {
+  color: $aquamarine;
+}
+a {
+  color: #4c525e;
+  &:visited {
+    color: #4c525e;
+  }
 }
 
-.custom-heading{
+.custom-heading {
   color: $aquamarine;
   padding-left: 80px;
   background-image: url('../../assets/heading.svg');
@@ -92,13 +96,16 @@ a{
   background-position: 10px 6px;
 }
 
-
 @import './about.scss';
 @import './contact.scss';
 @import './home.scss';
 @import '../components/components.scss';
 
-.subscribe.kwes-form{
-  .kw-message-error{ display: none; }
-  .kw-message-success{ margin-top: -10px; }
+.subscribe.kwes-form {
+  .kw-message-error {
+    display: none;
+  }
+  .kw-message-success {
+    margin-top: -10px;
+  }
 }

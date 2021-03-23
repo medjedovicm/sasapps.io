@@ -70,7 +70,7 @@
   ],
   "license": "MIT",
   "lint-staged": {
-    "*.{js,json,md}": [
+    "src/**/*.{ts,tsx,js,jsx,json,css,scss,md}": [
       "prettier --write"
     ],
     "*.md": [
@@ -85,11 +85,11 @@
     "develop": "gatsby develop",
     "builddeploy": "gatsby build && scp -P 18765 -r ./public/. analytiu@uk72.siteground.eu:/home/analytiu/public_html/sasappsio",
     "buildsync": "gatsby build && npm run sync",
-    "format": "prettier --write \"**/*.+(js|json|md)\" --ignore-path .gitignore",
+    "format": "prettier --write \"src/**/*.+(ts|tsx|js|jsx|json|css|scss)\" --ignore-path .gitignore",
     "lint": "eslint --fix --ext .js,.jsx --ignore-path .gitignore .",
     "lint:text": "textlint src/pages/**/index.md",
     "lint:textfix": "textlint --fix src/pages/**/index.md",
-    "test": "prettier --write \"**/*.+(js|jsx|json|css|scss)\""
+    "test": "prettier --check \"src/**/*.+(ts|tsx|js|jsx|json|css|scss)\""
   },
   "husky": {
     "hooks": {

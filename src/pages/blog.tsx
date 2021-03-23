@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import React from 'react'
-import Img from "gatsby-image"
+import Img from 'gatsby-image'
 
 import { BlogIndexQuery } from '../../types/graphql-types'
 import { siteMetadata } from '../../gatsby-config'
@@ -23,14 +23,20 @@ const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
       <Meta
         site={meta}
         title="Blog"
-        customDescription="Welcome to the SAS Apps blog."/>
-      <Breadcrum links={[
-        {label: "Home", to: "/"},
-        {label: "Blog", to: "#"},
-        ]}/>
+        customDescription="Welcome to the SAS Apps blog."
+      />
+      <Breadcrum
+        links={[
+          { label: 'Home', to: '/' },
+          { label: 'Blog', to: '#' },
+        ]}
+      />
       <div className="container">
         <h1 className="text-center">SAS Apps' Latest News</h1>
-        <p className="text-center">You've reached the front page for the latest news and updates in the world of Analytium SAS Apps.</p>
+        <p className="text-center">
+          You've reached the front page for the latest news and updates in the
+          world of Analytium SAS Apps.
+        </p>
         <div className="row justify-content-md-center">
           {posts.map((data, i) => {
             const frontmatter = data.post?.frontmatter
@@ -46,12 +52,15 @@ const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
                     <Link style={{ boxShadow: 'none' }} to={path}>
                       <h3>{frontmatter?.title}</h3>
                     </Link>
-                    <time dateTime={frontmatter?.date}>{frontmatter?.date}</time>
+                    <time dateTime={frontmatter?.date}>
+                      {frontmatter?.date}
+                    </time>
                     <p>{frontmatter?.description}</p>
                   </div>
                 </div>
               </div>
-            )})}
+            )
+          })}
         </div>
       </div>
     </Layout>

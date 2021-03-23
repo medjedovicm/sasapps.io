@@ -1,6 +1,5 @@
 import React from 'react'
-import favicon from '../favicon.png';
-
+import favicon from '../favicon.png'
 
 interface Props {
   headComponents: React.ReactNode[]

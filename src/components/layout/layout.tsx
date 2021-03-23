@@ -12,7 +12,6 @@ import 'scss/gatstrap.scss'
 import 'animate.css/animate.css'
 import 'font-awesome/css/font-awesome.css'
 
-
 interface Props {
   children?: React.ReactNode
   location: Location
@@ -33,9 +32,7 @@ const Layout: React.FC<Props> = ({ children, location }: Props) => {
         {/*<Topbar />*/}
         <Navibar title={siteMetadata.title} location={location} />
       </div>
-      <div className="body-content">
-        {children}
-      </div>
+      <div className="body-content">{children}</div>
       <Footer title={siteMetadata.title} author={siteMetadata.author} />
     </div>
   )

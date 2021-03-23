@@ -1,14 +1,18 @@
-.breadcrum{
+.breadcrum {
   padding-top: 20px;
   > div {
     display: inline-block;
-    img { margin: 0 10px 2px; }
+    img {
+      margin: 0 10px 2px;
+    }
     a {
       font-weight: 300;
       font-size: 14px;
     }
-    &:last-child{
-      a{ pointer-events: none; }
+    &:last-child {
+      a {
+        pointer-events: none;
+      }
     }
   }
 }
