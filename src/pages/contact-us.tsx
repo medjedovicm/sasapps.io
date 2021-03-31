@@ -1,11 +1,9 @@
-import { graphql } from 'gatsby'
 import React from 'react'
 
 import { siteMetadata } from '../../gatsby-config'
 import Layout from '../components/layout/layout'
 import Meta from '../components/meta/meta'
 import Breadcrum from '../components/breadcrum/breadcrum'
-import LinkButton from '../components/button/link-button'
 import Button from '../components/button/button'
 import Input from '..//components/input/input'
 

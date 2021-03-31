@@ -2,7 +2,6 @@ import { Link } from 'gatsby'
 import React from 'react'
 import kebabCase from 'lodash/kebabCase'
 
-import LinkButton from '../../components/button/link-button'
 import Badge from '../../components/badge/badge'
 import { PostByPath } from '../../../types/graphql-types'
 
@@ -16,7 +15,6 @@ const Post: React.FC<Props> = ({ data }: Props) => {
   const frontmatter = data.post?.frontmatter
   const path = frontmatter?.path || ''
   const html = data.post?.html || ''
-  let featuredImg = frontmatter?.featuredImage.childImageSharp
 
   return (
     <div className="article" key={path}>

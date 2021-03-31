@@ -32,16 +32,16 @@ const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
         ]}
       />
       <div className="container">
-        <h1 className="text-center">SAS Apps' Latest News</h1>
+        <h1 className="text-center">SAS Apps&apos; Latest News</h1>
         <p className="text-center">
-          You've reached the front page for the latest news and updates in the
-          world of Analytium SAS Apps.
+          You&apos;ve reached the front page for the latest news and updates in
+          the world of Analytium SAS Apps.
         </p>
         <div className="row justify-content-md-center">
           {posts.map((data, i) => {
             const frontmatter = data.post?.frontmatter
             const path = frontmatter?.path || ''
-            let featuredImg = frontmatter?.featuredImage.childImageSharp
+            const featuredImg = frontmatter?.featuredImage.childImageSharp
             return (
               <div className="col-md-6 col-xl-4" key={i}>
                 <div className="blog-grid-item">

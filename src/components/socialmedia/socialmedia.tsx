@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import youtubeSvg from '../../../assets/social/youtube.svg'
 import facebookSvg from '../../../assets/social/facebook.svg'

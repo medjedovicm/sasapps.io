@@ -2,7 +2,6 @@ import { graphql } from 'gatsby'
 import React from 'react'
 
 import { MetaQuery } from '../../types/graphql-types'
-import Post from '../templates/post/post'
 import Meta from '../components/meta/meta'
 import Layout from '../components/layout/layout'
 import LinkButton from '../components/button/link-button'
@@ -28,7 +27,8 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
       <div className="main-background">
         <div className="container">
           <h4>
-            Custom Interfaces to the world's most powerful Analytics Platform
+            Custom Interfaces to the world&apos;s most powerful Analytics
+            Platform
           </h4>
           <div className="container card-gray">
             <p className="heading">

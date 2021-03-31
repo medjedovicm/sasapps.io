@@ -5,19 +5,15 @@ import { siteMetadata } from '../../../gatsby-config'
 import Input from '../input/input'
 import SocialMedia from '../socialmedia/socialmedia'
 import analytiumSvg from '../../../assets/analytium.svg'
-import mobileSvg from '../../../assets/mobile.svg'
-import mailSvg from '../../../assets/mail.svg'
+// import mobileSvg from '../../../assets/mobile.svg'
+// import mailSvg from '../../../assets/mail.svg'
 import userSvg from '../../../assets/user.svg'
 
 interface Props {
   mobile: boolean
-  location: Location
-}
-interface Props2 {
-  mobile: boolean
 }
 
-const ContactLinks: React.FC<Props2> = ({ mobile }) => {
+const ContactLinks: React.FC<Props> = ({ mobile }: Props) => {
   const classname = mobile ? 'contact-links mobile' : 'contact-links'
   return (
     <div className={classname}>
@@ -65,7 +61,7 @@ const ContactLinks: React.FC<Props2> = ({ mobile }) => {
     </div>
   )
 }
-const Navibar: React.FC<Props> = ({ location, mobile }: Props) => {
+const Navibar: React.FC<Props> = ({ mobile }: Props) => {
   if (mobile) return <ContactLinks mobile={true} />
   return (
     <div className="container">

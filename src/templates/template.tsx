@@ -5,7 +5,6 @@ import Post from './post/post'
 import Meta from '../components/meta/meta'
 import Layout from '../components/layout/layout'
 import Breadcrum from '../components/breadcrum/breadcrum'
-import Page from './page/page'
 import { PostByPath } from '../../types/graphql-types'
 
 interface Props {

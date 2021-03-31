@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 interface Props {
   type: 'button' | 'submit' | 'reset'

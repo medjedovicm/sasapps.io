@@ -1,4 +1,3 @@
-import { graphql } from 'gatsby'
 import React from 'react'
 
 import { siteMetadata } from '../../gatsby-config'
@@ -124,9 +123,9 @@ const Solutions: React.FC<Props> = ({ location }: Props) => {
               <h3>SAS9 Health Report</h3>
               <p>
                 Perform a complete scan of your SAS 9 platform to identify
-                common "trouble spots" – such as dangling metadata, security
-                misconfigurations, SAS coding issues, custom code in DI Studio,
-                missing primary keys – and much much more.
+                common &quot;trouble spots&quot; – such as dangling metadata,
+                security misconfigurations, SAS coding issues, custom code in DI
+                Studio, missing primary keys – and much much more.
               </p>
             </div>
           </div>

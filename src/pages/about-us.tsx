@@ -1,4 +1,3 @@
-import { graphql } from 'gatsby'
 import React from 'react'
 
 import { siteMetadata } from '../../gatsby-config'
@@ -32,14 +31,15 @@ const About: React.FC<Props> = ({ location }: Props) => {
         <h1>Analyse Implement Maximise</h1>
         <h6>Where does our name come from?</h6>
         <p>
-          Our name, analytium, comes from two words "Analytics" and the Latin
-          suffix "ium".
+          Our name, analytium, comes from two words &quot;Analytics&quot; and
+          the Latin suffix &quot;ium&quot;.
         </p>
         <h6>What are the definitions of these words?</h6>
         <p>
-          The definition of 'Analytics' is the systematic computational analysis
-          of data or statistics, whilst 'ium' is a Latin suffix used in the
-          formation of the names of metallic elements.
+          The definition of &apos;Analytics&apos; is the systematic
+          computational analysis of data or statistics, whilst &apos;ium&apos;
+          is a Latin suffix used in the formation of the names of metallic
+          elements.
         </p>
         <h6>Why is this important?</h6>
         <p>
@@ -51,10 +51,10 @@ const About: React.FC<Props> = ({ location }: Props) => {
         <p>
           We offer full transparency, We believe that offering this ensures that
           you are fully involved and up to date with your project, whether that
-          be giving you full insight into how we're utilising our time, or even
-          how we're getting to the results you're looking for. We document
-          everything to ensure you have a full understanding of everything we do
-          with you.
+          be giving you full insight into how we&apos;re utilising our time, or
+          even how we&apos;re getting to the results you&apos;re looking for. We
+          document everything to ensure you have a full understanding of
+          everything we do with you.
         </p>
         <h1>Our Values</h1>
         <p>
@@ -83,11 +83,11 @@ const About: React.FC<Props> = ({ location }: Props) => {
           At {constAnalytium}, we strive to deliver the best, through our people
           with their technical skills and their unwavering commitment to our
           customers. The technologies we work with and the operating models we
-          use, afford our people the time to fully understand our customers'
-          needs, whilst maximising opportunities to evolve and also ensuring
-          that we deliver above and beyond what is expected from us. We believe
-          that delivering on all of these promises is not only key to your
-          success, but it is also key to our success.
+          use, afford our people the time to fully understand our
+          customers&apos; needs, whilst maximising opportunities to evolve and
+          also ensuring that we deliver above and beyond what is expected from
+          us. We believe that delivering on all of these promises is not only
+          key to your success, but it is also key to our success.
         </p>
       </div>
     </Layout>

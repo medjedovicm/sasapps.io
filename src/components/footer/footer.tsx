@@ -1,19 +1,13 @@
-import { Link } from 'gatsby'
 import React from 'react'
 import Input from '../input/input'
 import { siteMetadata } from '../../../gatsby-config'
 import SocialMedia from '../socialmedia/socialmedia'
 
-import mobileSvg from '../../../assets/mobile.svg'
-import mailSvg from '../../../assets/mail.svg'
+// import mobileSvg from '../../../assets/mobile.svg'
+// import mailSvg from '../../../assets/mail.svg'
 import locSvg from '../../../assets/location.svg'
 
-interface Props {
-  author: string
-  title: string
-}
-
-const Footer: React.FC<Props> = ({ author, title }: Props) => (
+const Footer: React.FC = () => (
   <div className="footer">
     <div className="container">
       <div className="row">

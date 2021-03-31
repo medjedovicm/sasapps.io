@@ -1,4 +1,3 @@
-import { graphql } from 'gatsby'
 import React from 'react'
 
 import { siteMetadata } from '../../gatsby-config'

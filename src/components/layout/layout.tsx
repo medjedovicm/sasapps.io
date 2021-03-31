@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import emergence from 'emergence.js'
 
-import Topbar from '../topbar/topbar'
+// import Topbar from '../topbar/topbar'
 import Navibar from '../navibar/navibar'
 import Footer from '../footer/footer'
 import { siteMetadata } from '../../../gatsby-config'
@@ -20,7 +20,7 @@ interface Props {
 const Layout: React.FC<Props> = ({ children, location }: Props) => {
   useEffect(() => {
     emergence.init()
-    let kwesScript = document.createElement('script')
+    const kwesScript = document.createElement('script')
     kwesScript.setAttribute('rel', 'noopener')
     kwesScript.setAttribute('src', 'https://kwes.io/js/kwes.js')
     document.head.appendChild(kwesScript)

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Topbar from '../topbar/topbar'
+// import Topbar from '../topbar/topbar'
 import sasAppsPNG from '../../../assets/sas-apps.svg'
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
   location: Location
 }
 
-const Navibar: React.FC<Props> = ({ location, title }: Props) => {
+const Navibar: React.FC<Props> = ({ location }: Props) => {
   return (
     <div className="container">
       <nav className="navbar navbar-expand-lg navbar-light">
