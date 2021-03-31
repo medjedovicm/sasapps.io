@@ -30,14 +30,16 @@ Using SASjs.
 
 With this framework you can enjoy all the flexibility of a modern IDE such as VS Code, and the raw execution grunt of a high powered SAS server with a few simple commands:
 
-• `sasjs create yourProject -t jobs # create a project`
-• `sasjs add # add deployment target`
-• `sasjs cbd -t yourTarget # compile, build & deploy to Viya or SAS 9`
+```bash
+sasjs create yourProject -t jobs # create a project
+sasjs add # add deployment target
+sasjs cbd -t yourTarget # compile, build & deploy to Viya or SAS 9
+```
 
 If you don't want to wait for your entire project to build & deploy each time, you can compile and `sasjs run` individual jobs, or use the SASjs [VS Code Plugin](https://marketplace.visualstudio.com/items?itemName=SASjs.sasjs-for-vscode) to execute code.
 
 Once your code is tested and ready you can commit (ideally using the [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) standard), push, and have your pull request reviewed following standard GIT workflow practices.
 
-Docs: https://cli.sasjs.io
+Docs: [https://cli.sasjs.io](https://cli.sasjs.io)
 
 ¬[](https://i.imgur.com/gIYp5OG.png)
