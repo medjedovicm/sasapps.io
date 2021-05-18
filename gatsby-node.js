@@ -3,6 +3,7 @@
 const path = require('path')
 const _ = require('lodash')
 const PostTemplate = path.resolve('./src/templates/template.tsx')
+const PageTemplate = path.resolve('./src/templates/markdownPageTemplate.tsx')
 const tagTemplate = path.resolve('./src/templates/tags.tsx')
 
 exports.createPages = ({ graphql, actions }) => {
@@ -41,7 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
           reject(errors)
         }
 
-        // Create blog posts & pages.
+        // Create blog posts
         const items = data.allFile.edges
         const posts = items.filter(({ node }) => /posts/.test(node.name))
         posts.forEach(({ node }) => {
@@ -53,16 +54,16 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
-        // const pages = items.filter(({ node }) => /page/.test(node.name))
-        // pages.forEach(({ node }) => {
-        //   if (!node.remark) return
-        //   const { name } = path.parse(node.path)
-        //   const PageTemplate = path.resolve(node.path)
-        //   createPage({
-        //     path: name,
-        //     component: PageTemplate,
-        //   })
-        // })
+        // Create markdown pages
+        const pages = items.filter(({ node }) => /pages/.test(node.name))
+        pages.forEach(({ node }) => {
+          if (!node.remark) return
+          const { path } = node.remark.frontmatter
+          createPage({
+            path,
+            component: PageTemplate,
+          })
+        })
 
         // Extract tag data from query
         const tags = data.tagsGroup.group

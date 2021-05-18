@@ -79,6 +79,7 @@
   },
   "main": "n/a",
   "scripts": {
+    "start": "gatsby develop",
     "build": "gatsby build",
     "deploy": "scp -P 18765 -r ./public/. analytiu@uk72.siteground.eu:/home/analytiu/public_html/sasappsio",
     "sync": "rsync -avz -e 'ssh -p 18765'  ./public/.  analytiu@uk72.siteground.eu:/home/analytiu/public_html/sasappsio",
