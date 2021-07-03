@@ -15,6 +15,8 @@ SAS Streamed Apps are served directly from the SAS logical folder tree - ie SAS 
 
 This article will demonstrate the concept of a SAS-Streamed app using a Nintendo classic - Super Mario.  The app will work on both SAS 9 or Viya.
 
+![](../assets/mario.png)
+
 Before we begin - lets take a look at some of the _disadvantages_ of SAS-Streamed apps:
 
 * Performance.  Because every asset is served from the SAS folder tree (App Server), response times are slow.  However, assets are also cached so subsequent requests are fast.
@@ -80,7 +82,7 @@ The great thing about the generated SAS program is that it can be executed by AN
 
 ## Deploy
 
-For manual deployment, you can just execute the SAS program from `sasjs build` by copy pasting into SAS Studio or Enterprise Guide.  For automated deployment, authentication is required.  For this, simply run the below and follow the prompts:
+For manual deployment, you can just execute the aforementioned SAS program from `sasjs build` by copy pasting into SAS Studio or Enterprise Guide.  For automated deployment, authentication is required.  For this, simply run the below and follow the prompts:
 
 ```
 sasjs auth
