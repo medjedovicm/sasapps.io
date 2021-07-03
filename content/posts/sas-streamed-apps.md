@@ -3,7 +3,7 @@ title: SAS Streamed Apps
 date: 2021-02-19T09:00:00.000Z
 layout: POST
 path: /sas-streamed-apps
-description: The first hurdle many SAS App Developers must overcome is Web Server access.  What if you didn't need a web server?  Welcome to SAS Streamed Apps!
+description: SAS Streamed Web Apps - SAS Apps, without the Web Server!
 category: SASjs
 featuredImage: ../assets/mario.png
 tags:
@@ -17,7 +17,7 @@ This article will demonstrate the concept of a SAS-Streamed app using a Nintendo
 
 Before we begin - lets take a look at some of the _disadvantages_ of SAS-Streamed apps:
 
-* Performance.  Due to the fact that every asset is served from the SAS App server, response times can be slow.  However, assets are also cached so subsequent requests are fast.
+* Performance.  Because every asset is served from the SAS folder tree (App Server), response times are slow.  However, assets are also cached so subsequent requests are fast.
 * Complexity.  In order to 'convert' a regular app into a streamed app, there is a compilation process.  It works well but it's not 100% perfect (yet).
 
 The main reasons for using this approach would be:
@@ -53,7 +53,7 @@ The next step is the configuration.  This can be found in the `sasjsconfig.json`
 
 ## Compilation
 
-Compilation is the process of taking all the source files (ie your web frontend, and any SAS-powered web services) and preparing them for deployment.  For SAS 9, all content is served through Stored Processes - so any binary content must first be base-64 encoded.  Also, all references (eg to images, css files etc) must be converted from relative paths, to fully qualified paths (ie to the relevant location in the SAS logical folder tree).
+Compilation is the process of taking all the source files (ie your web frontend, and any SAS-powered web services) and preparing them for deployment.  For SAS 9, all content is served through self-contained Stored Processes - so any binary content must be base-64 encoded.  Also, prior to the build, all references (eg to images, css files etc) must be converted from relative paths, to fully qualified paths - ie to the relevant location in the SAS logical folder tree.
 
 Fortunately you don't have to do any of this!  It can be achieved with a single command:
 
@@ -61,9 +61,9 @@ Fortunately you don't have to do any of this!  It can be achieved with a single 
 sasjs compile
 ```
 
-The exact settings (source / target folder path, index.html rename, etc) can all be adjusted.  More information [here](https://sasjs.io/frontend-deployment/#streaming-app-configuration).
+The exact settings for this process (source / target folder path, index.html rename, etc) can all be adjusted.  More information [here](https://sasjs.io/frontend-deployment/#streaming-app-configuration).
 
-For the Mario game you can see all the files under the `src` folder.  If you are building your own streamed app, your content would be here instead.  Ensure all file paths are relative, all web content is in the same folder, and that your app starts from a file called `index.html`.
+For the Mario game you can see all the files under the `src` folder.  If you are building your own streamed app, you'd place your own content in this folder instead.  Ensure all file paths are relative, all web content is in the same folder, and that your app starts from a file called `index.html`.
 
 ## Build
 
