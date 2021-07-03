@@ -5,7 +5,7 @@ layout: POST
 path: /sas-streamed-apps
 description: The first hurdle many SAS App Developers must overcome is Web Server access.  What if you didn't need a web server?  Welcome to SAS Streamed Apps!
 category: SASjs
-featuredImage: https://sasjs.io/img/mario.png
+featuredImage: ../assets/mario.png
 tags:
   - SAS
   - Apps
