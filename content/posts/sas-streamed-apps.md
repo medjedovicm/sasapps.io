@@ -9,6 +9,7 @@ featuredImage: ../assets/mario.png
 tags:
   - SAS
   - Apps
+  - SASjs
 ---
 
 SAS Streamed Apps are served directly from the SAS logical folder tree - ie SAS Drive in Viya or the Metadata BIP folder in SAS 9.  This is highly convenient - there's no need for web server access, nor even a filesystem, and they can be deployed easily in a few lines of code.
