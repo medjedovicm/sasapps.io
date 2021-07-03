@@ -40,23 +40,23 @@ Our demo will make use of the tools below - these need to be installed locally (
 
 ## Setup
 
-The first thing to do is to clone the example project from github, as follows:
+The first thing to do is clone the example project from github, as follows:
 
 ```
 git clone https://github.com/sasjs/mario
 cd mario
 ```
 
-The next step is the configuration.  This can be found in the `sasjsconfig.json` file, under the `sasjs` folder.  The following items should be changed:
+The next step is configuration.  This is always found in the `sasjs/sasjsconfig.json` file.  The following items should be changed:
 
-* `defaultTarget` - enter "sas9" or "viya" depending on the type of SAS server you are using
-* `appLoc` - within your chosen target (either sas9 or viya) adjust the appLoc to your needs.  This represents the _root_ folder under which the app will be deployed.
+* `defaultTarget` - either "sas9" or "viya" depending on your SAS server type
+* `appLoc` - for your chosen target (sas9 or viya), this represents the _root_ folder to which the app is deployed.
 * `serverUrl` - the full server (including port) of your target machine.
 
 
 ## Compilation
 
-Compilation is the process of taking all the source files (ie your web frontend, and any SAS-powered web services) and preparing them for deployment.  For SAS 9, all content is served through self-contained Stored Processes - so any binary content must be base-64 encoded.  Also, prior to the build, all references (eg to images, css files etc) must be converted from relative paths, to fully qualified paths - ie to the relevant location in the SAS logical folder tree.
+Compilation is the process of taking all the source files (ie your web frontend, and any SAS-powered web services) and preparing them for deployment.  For SAS 9, all content is served through self-contained Stored Processes - so any binary content must be base-64 encoded.  Also, prior to the build for both Viya and SAS 9, all file references (eg to images, css, js etc) must be converted from relative paths, to fully qualified paths - ie to the relevant location in the SAS logical folder tree.
 
 Fortunately you don't have to do any of this!  It can be achieved with a single command:
 
