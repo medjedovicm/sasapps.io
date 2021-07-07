@@ -101,6 +101,12 @@ When the `deployServicePack` attribute in the `sasjsconfig.json` file is `true`,
 
 The URL for the app will also be printed to the console window.
 
+## Video Walkthrough
+
+If you'd like to see this app deployed to both SAS 9 and Viya in just 5 minutes, check out the video below!
+
+`youtube: https://youtu.be/y03eACD-XhU`
+
 
 ## Summary
 
