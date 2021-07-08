@@ -51,8 +51,6 @@ The next step is configuration.  This is always found in the `sasjs/sasjsconfig.
 
 * `defaultTarget` - either "sas9" or "viya" depending on your SAS server type
 * `appLoc` - for your chosen target (sas9 or viya), this represents the _root_ folder to which the app is deployed.
-* `serverUrl` - the full server (including port) of your target machine.
-
 
 ## Compilation
 
