@@ -73,11 +73,13 @@ The build part involves taking all the compiled assets and preparing a single fi
 * JSON - used in Viya for deployment with REST APIs (client/secret required)
 * SAS - can be executed in both SAS 9 and Viya
 
-The great thing about the generated SAS program is that it can be executed by ANY user of SAS to create the app.  To adjust the target location, simply configure the `appLoc` macro variable at the start of the program.  You could have the app deployed to the home directory on SAS 9 for instance, by setting:
+The great thing about the generated SAS program is that it can be executed by ANY user of SAS to create the app.  To adjust the target location, simply configure the `appLoc` macro variable at the start of the program, eg:
 
 ```sas
-%let apploc=/User Folders/&sysuserid/My Folder;
+%let apploc=/Public/app/my_amazing_app;
 ```
+
+This does require that you have the "write" permissions on the target folder.
 
 ## Deploy
 
