@@ -76,7 +76,7 @@ The build part involves taking all the compiled assets and preparing a single fi
 The great thing about the generated SAS program is that it can be executed by ANY user of SAS to create the app.  To adjust the target location, simply configure the `appLoc` macro variable at the start of the program, eg:
 
 ```sas
-%let apploc=/Public/app/my_amazing_app;
+%let apploc=/folder-location/app/my_amazing_app;
 ```
 
 This does require that you have the "write" permissions on the target folder.
