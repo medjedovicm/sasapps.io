@@ -1,7 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 
-import Post from './post/post'
 import Meta from '../components/meta/meta'
 import Layout from '../components/layout/layout'
 import Breadcrum from '../components/breadcrum/breadcrum'
@@ -13,7 +12,7 @@ interface Props {
 }
 
 const MarkdownPageTemplate: React.FC<Props> = ({ data, location }: Props) => {
-  const { frontmatter, html } = data?.markdownRemark
+  const { html } = data?.markdownRemark
   const title = data.markdownRemark?.frontmatter?.title || ''
   const description = data.markdownRemark?.frontmatter?.description || ''
 
