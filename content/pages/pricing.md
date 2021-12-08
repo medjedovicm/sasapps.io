@@ -25,9 +25,9 @@ Our JS (TypeScript) developers are familiar with Viya REST APIs, SAS 9 Stored Pr
 * Senior JS Developer - 800 EUR per day
 * Junior JS Developer - 450 EUR per day
 
-The rates above are for customer projects with a minimum engagement of 5 days.
+The rates above are for customer projects with a minimum engagement of 5 days.  For shorter, or short-notice engagements there is a 20% premium on the above rates.
 
-For paid support to extend the [SASjs framework](https://github.com/sasjs), the rate is always 600 EUR, and there is no minimum engagement.
+For paid support to extend the [SASjs framework](https://github.com/sasjs) or [Data Controller](https://datacontroller.io), the rate is always 600 EUR, and there is no minimum engagement.
 
 ## SAS App Support Plans
 
