@@ -66,7 +66,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             <p className="profile-text col-lg-10">
               With a nose for NodeJS and a mind for Docker, Yury blends
               technical and soft skills with a project delivery mentality one
-              could describe as "sailing a boat to harbour".
+              could describe as sailing a boat to harbour.
             </p>
           </div>
 
@@ -102,7 +102,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             <p className="profile-name">Sabir</p>
             <p className="profile-heading">Captain React</p>
             <p className="profile-text col-lg-10">
-              Sabir has the sacred ability to "make things work". The lead
+              Sabir has the sacred ability to make things work. The lead
               developer for Sasensei.com, Sabir also contributes to the SASjs
               framework and related projects.
             </p>
