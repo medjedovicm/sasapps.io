@@ -27,37 +27,27 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
   return (
     <Layout location={location}>
       <Meta site={meta} />
-      <div className="main-background">
-        <div className="container">
+      <div className="container">
+        <div className="main-background">
           <h4>
-            Custom Interfaces to the world&apos;s most powerful{' '}
-            <span style={{ color: '#8AC71E' }}> Analytics Platform</span>
+            Custom Interfaces to the world&apos;s most powerful
+            <span> Analytics Platform</span>
           </h4>
-          <div className="row">
-            <div className="col-lg-4">
-              <p className="heading">
-                Leverage your investment in SAS&reg; with a range of solution
-                and product offerings to fit your specific needs.{' '}
-              </p>
-              {/* <div className="row"> */}
-              {/* <div className="col-12 col-md-9 col-lg-10"> */}
-              <p className="info">
-                We blend decades of traditional SAS&reg; experience with open
-                source technology offerings to give you well documented
-                solutions that you can either maintain yourselves, or allow us
-                to continue to support with a transparent range of support
-                packages.
-              </p>
-              {/* </div> */}
-              {/* <div className="col-md-3 col-lg-2 text-center"> */}
-              <LinkButton path={'/products'} label="Our Products" />
-              {/* </div> */}
-              {/* </div> */}
-            </div>
-            <div className="col-lg-4">
-              <img src={mainSvg} alt="#" />
-            </div>
-          </div>
+          <p className="heading">
+            Leverage your investment in SAS&reg; with a range of solution and
+            product offerings to fit your specific needs.{' '}
+          </p>
+          <p className="info">
+            We blend decades of traditional SAS&reg; experience with open source
+            technology offerings to give you well documented solutions that you
+            can either maintain yourselves, or allow us to continue to support
+            with a transparent range of support packages.
+          </p>
+          <LinkButton path={'/products'} label="Our Products" active />
+          <br />
+          <br />
+          <br />
+          <br />
         </div>
       </div>
 

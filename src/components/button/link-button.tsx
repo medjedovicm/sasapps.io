@@ -4,11 +4,13 @@ import { Link } from 'gatsby'
 interface Props {
   path: string
   label: string
+  active?: boolean
 }
 
-const LinkButton: React.FC<Props> = ({ path, label }: Props) => {
+const LinkButton: React.FC<Props> = ({ path, label, active }: Props) => {
+  const classname = active ? 'active' : ''
   return (
-    <Link className="btn btn-primary" to={path}>
+    <Link className={`btn btn-primary ${classname}`} to={path}>
       {label}
     </Link>
   )

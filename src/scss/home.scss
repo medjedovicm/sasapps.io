@@ -1,50 +1,40 @@
 .main-background {
-  // background-image: url('../../assets/main-background-min.png');
+  background-image: url('../../assets/22.svg');
   background-repeat: no-repeat;
-  background-position: right 15%;
-  background-size: 80%;
+  background-position: right 150px;
   color: white;
-  .card-gray {
-    margin-top: 170px;
-  }
-  @media only screen and (min-width: 768px) {
-    background-position: right 7%;
-    background-size: 85%;
-    .card-gray {
-      margin-top: 180px;
-    }
-  }
-  @media only screen and (min-width: 992px) {
-    background-position: right -46px;
-    background-size: 83%;
-    .card-gray {
-      margin-top: 250px;
-    }
-  }
-  @media only screen and (min-width: 1200px) {
-    background-position: right -115px;
-    background-size: auto;
-  }
-  @media only screen and (min-width: 1600px) {
-    background-position: 65% -120px;
-    background-size: auto;
-  }
   h1 {
     font-size: 80px;
     font-weight: 500;
   }
   h4 {
     font-size: 48px;
-    font-weight: 500;
     line-height: 56px;
-    width: 45%;
+    width: 70%;
     padding-top: 50px;
+    span {
+      color: $yellowGreen;
+    }
     @media only screen and (max-width: 991px) {
       width: 90%;
     }
     @media only screen and (max-width: 767px) {
       width: 100%;
     }
+  }
+  .heading {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 10px;
+    width: 55%;
+  }
+
+  .info {
+    margin-top: 45px;
+    margin-bottom: 35px;
+    line-height: 1.2;
+    width: 35%;
   }
   @media only screen and (max-width: 600px) {
     h1 {
@@ -54,10 +44,6 @@
       font-size: 36px;
     }
     background-position: right 27%;
-    .card-gray {
-      margin-top: 145px;
-      padding: 30px;
-    }
   }
   @media only screen and (max-width: 550px) {
     h1 {
@@ -93,10 +79,6 @@
       font-size: 28px;
       line-height: 1.2;
     }
-    .card-gray {
-      margin-top: 60px;
-      padding: 20px;
-    }
     background-position: right 20%;
   }
 }
@@ -130,13 +112,12 @@ h5 {
   align-items: center;
   background: #104f55;
   color: white;
-  border: none;
-  border-bottom: 2px solid white;
-  border-bottom: none;
+  border: 1px solid transparent;
   border-radius: 10px;
   &:hover {
-    border-bottom: 2px solid #00a5d7;
-    border: 1px solid #8ac71e;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    border: 1px solid $yellowGreen;
   }
   padding: 35px;
   height: 100%;
@@ -149,7 +130,7 @@ h5 {
   transition: all 0.25s ease;
   h3 {
     margin-top: 18px;
-    color: #8ac71e;
+    color: $yellowGreen;
     font-weight: normal;
     text-align: center;
     margin-top: 10px;
@@ -176,22 +157,10 @@ h5 {
     font-style: italic;
     margin-top: 21px;
     margin-bottom: 22px;
-    color: #8ac71e;
+    color: $yellowGreen;
   }
   box-shadow: 0px 1px 4px rgba(43, 55, 66, 0.1);
   box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.25);
-}
-
-.heading {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
-  margin-top: 10px;
-}
-
-.info {
-  margin-top: 45px;
-  margin-bottom: 35px;
 }
 
 .card-gray {

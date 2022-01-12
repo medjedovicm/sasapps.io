@@ -35,7 +35,7 @@ const Footer: React.FC = () => (
           </div>
         </div>
         <div className="col-md-6 col-lg-4">
-          <h3 className="custom-heading">Social</h3>
+          {/* <h3 className="custom-heading">Social</h3>
           <div className="content">
             <div style={{ padding: 0 }}>
               <SocialMedia
@@ -64,7 +64,7 @@ const Footer: React.FC = () => (
                 />
               </form>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="col-md-6 col-lg-4">
           <h3 className="custom-heading">Quick Links</h3>
