@@ -21,10 +21,12 @@ nav.navbar {
     text-transform: capitalize;
     color: #4c525e !important;
     .nav-link {
+      color: white;
       padding-left: 0 !important;
       padding-right: 2rem !important;
       &.active {
         color: #00a5d7 !important;
+        color: #8ac71e !important;
       }
     }
   }

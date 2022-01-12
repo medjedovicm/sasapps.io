@@ -6,12 +6,15 @@ import Meta from '../components/meta/meta'
 import Layout from '../components/layout/layout'
 import LinkButton from '../components/button/link-button'
 
-import bfSvg from '../../assets/business-finance.svg'
-import stSvg from '../../assets/statistics.svg'
-import chSvg from '../../assets/charts.svg'
-import inSvg from '../../assets/information.svg'
-import bgSvg from '../../assets/bar-graph.svg'
-import fiSvg from '../../assets/financing.svg'
+import firstPng from '../../assets/42.png'
+import secondSvg from '../../assets/32.svg'
+import thirdSvg from '../../assets/11.svg'
+import DcSvg from '../../assets/DCSymbol.svg'
+import DcNameSvg from '../../assets/DC-name-1.svg'
+import JsSvg from '../../assets/JS-1.svg'
+import SasSvg from '../../assets/SAS-illu-1.svg'
+import SasnameSvg from '../../assets/SAS-name-1.svg'
+import mainSvg from '../../assets/22.svg'
 
 interface Props {
   data: MetaQuery
@@ -27,44 +30,57 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
       <div className="main-background">
         <div className="container">
           <h4>
-            Custom Interfaces to the world&apos;s most powerful Analytics
-            Platform
+            Custom Interfaces to the world&apos;s most powerful{' '}
+            <span style={{ color: '#8AC71E' }}> Analytics Platform</span>
           </h4>
-          <div className="container card-gray">
-            <p className="heading">
-              Leverage your investment in SAS&reg; with a range of solution and
-              product offerings to fit your specific needs.{' '}
-            </p>
-            <div className="row">
-              <div className="col-12 col-md-9 col-lg-10">
-                <p className="info">
-                  We blend decades of traditional SAS&reg; experience with open
-                  source technology offerings to give you well documented
-                  solutions that you can either maintain yourselves, or allow us
-                  to continue to support with a transparent range of support
-                  packages.
-                </p>
-              </div>
-              <div className="col-md-3 col-lg-2 text-center">
-                <LinkButton path={'/products'} label="Our Products" />
-              </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <p className="heading">
+                Leverage your investment in SAS&reg; with a range of solution
+                and product offerings to fit your specific needs.{' '}
+              </p>
+              {/* <div className="row"> */}
+              {/* <div className="col-12 col-md-9 col-lg-10"> */}
+              <p className="info">
+                We blend decades of traditional SAS&reg; experience with open
+                source technology offerings to give you well documented
+                solutions that you can either maintain yourselves, or allow us
+                to continue to support with a transparent range of support
+                packages.
+              </p>
+              {/* </div> */}
+              {/* <div className="col-md-3 col-lg-2 text-center"> */}
+              <LinkButton path={'/products'} label="Our Products" />
+              {/* </div> */}
+              {/* </div> */}
+            </div>
+            <div className="col-lg-6">
+              <img src={mainSvg} alt="#" />
             </div>
           </div>
         </div>
       </div>
 
       <div className="container">
-        <h1>What We Offer:</h1>
+        <h1>What We Offer</h1>
         <div className="row buttom-margin-child">
           <div className="col-md-6 col-xl-4">
             <div className="card">
-              <img src={bfSvg} alt="SAS-Powered HTML5 Apps" />
-              <h3>SAS-Powered HTML5 Apps</h3>
-              <p>
-                Let SAS&reg; come to you – with a bespoke app, tailor made to
-                your specific workflow and reporting requirements. Built with
-                fully open source tools, standard frameworks, and ...
-              </p>
+              <img src={firstPng} alt="SAS App Delivery" />
+              <div className="content-wrapper col-lg-12">
+                <h3>SAS App Delivery</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus eu orci massa. Aenean vehicula leo non augue
+                  porttitor, at suscipit dui posuere.
+                </p>
+                <a
+                  className="service-link"
+                  href=" https://sasapps.io/projects/"
+                >
+                  https://sasapps.io/projects/
+                </a>
+              </div>
               <div className="wrapper">
                 <LinkButton
                   path={'/solutions/#SAS-Powered-HTML5-Apps'}
@@ -75,16 +91,19 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
           </div>
           <div className="col-md-6 col-xl-4">
             <div className="card">
-              <img
-                src={stSvg}
-                alt="Performance Monitoring and Platform Alerts"
-              />
-              <h3>Performance Monitoring and Platform Alerts</h3>
-              <p>
-                Gain a real time and historical perspective of your SAS&reg;
-                platform with a highly customisable performance dashboard.
-                Configure automated ...
-              </p>
+              <img src={secondSvg} alt="SAS App Support" />
+              <div className="content-wrapper col-lg-12">
+                <h3>SAS App Support</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus eu orci massa. Aenean vehicula leo non augue
+                  porttitor, at suscipit dui posuere.
+                </p>
+                <a className="service-link" href=" https://sasapps.io/pricing/">
+                  https://sasapps.io/pricing/
+                </a>
+              </div>
+
               <div className="wrapper">
                 <LinkButton
                   path={
@@ -97,14 +116,15 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
           </div>
           <div className="col-md-6 col-xl-4">
             <div className="card">
-              <img src={chSvg} alt="EUC Data Capture & Control" />
-              <h3>EUC Data Capture & Control</h3>
-              <p>
-                Reduce spreadsheet risk by enabling business users to self-load
-                VBA driven Excel reporting tools into your preferred database
-                with Data Quality at source, 4 eyes (or more) approval at each
-                step ...
-              </p>
+              <img src={thirdSvg} alt="SASjs Enhancement" />
+              <div className="content-wrapper col-lg-12">
+                <h3>SASjs Enhancement</h3>
+                <p>
+                  We can add new features to SASjs (at a discounted rate) to
+                  support particular use cases
+                </p>
+              </div>
+
               <div className="wrapper">
                 <LinkButton
                   path={'/solutions/#EUC-Data-Capture-Control'}
@@ -115,13 +135,27 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
           </div>
           <div className="col-md-6 col-xl-4">
             <div className="card">
-              <img src={inSvg} alt="Modernise legacy AF/SCL Desktop Apps" />
-              <h3>Modernise legacy AF/SCL Desktop Apps</h3>
-              <p>
-                Migrate legacy AF/SCL applications directly to SAS9 or Viya,
-                improving the user experience, security,scalability, and
-                delivering a modern, self-supportable ...
-              </p>
+              <img
+                src={DcSvg}
+                alt="Data Controller for SAS"
+                style={{ width: '160px', height: '160px' }}
+              />
+              <img
+                src={DcNameSvg}
+                alt="Data Controller for SAS"
+                style={{ width: '243px', height: '27px' }}
+              />
+              <div className="content-wrapper col-lg-12">
+                <h3>Data Controller for SAS</h3>
+                <p>
+                  Enable Business Users to make controlled changes to data in
+                  SAS
+                </p>
+                <a className="service-link" href="https://datacontroller.io">
+                  https://datacontroller.io
+                </a>
+              </div>
+
               <div className="wrapper">
                 <LinkButton
                   path={'/solutions/#Modernise-legacy-AF-SCL-Desktop-Apps'}
@@ -133,17 +167,22 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
           <div className="col-md-6 col-xl-4">
             <div className="card">
               <img
-                src={bgSvg}
-                alt="Viya Readiness & Migration Service for Existing SAS 9 Apps"
+                src={JsSvg}
+                alt="The SASjs Framework"
+                style={{ width: '163px', height: '187px' }}
               />
-              <h3>
-                Viya Readiness & Migration Service for Existing SAS 9 Apps
-              </h3>
-              <p>
-                Rebuild your existing SAS 9 applications using modern,
-                supportable frameworks (eg React or Angular) in such a way that
-                they can be easily ...
-              </p>
+              <div className="content-wrapper col-lg-12">
+                <h3>The SASjs Framework</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus eu orci massa. Aenean vehicula leo non augue
+                  porttitor, at suscipit dui posuere.
+                </p>
+                <a className="service-link" href="https://sasjs.io">
+                  https://sasjs.io
+                </a>
+              </div>
+
               <div className="wrapper">
                 <LinkButton
                   path={
@@ -156,14 +195,24 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
           </div>
           <div className="col-md-6 col-xl-4">
             <div className="card">
-              <img src={fiSvg} alt="SAS9 Health Report" />
-              <h3>SAS9 Health Report</h3>
-              <p>
-                Without changing anything on your SAS 9 platform, we perform a
-                complete scan and provide you with an instant report of the
-                trouble spots – such as dangling metadata, security
-                misconfigurations ...
-              </p>
+              <img
+                src={SasSvg}
+                alt="SASensei"
+                style={{ width: '176px', height: '160px' }}
+              />
+              <img
+                src={SasnameSvg}
+                alt="SASSenSei"
+                style={{ width: '176px', height: '31px' }}
+              />
+              <div className="content-wrapper col-lg-12">
+                <h3> SASensei</h3>
+                <p>Global SAS Challenge Platform with over 5000 SAS players</p>
+                <a className="service-link" href="https://sasensei.com">
+                  https://sasensei.com
+                </a>
+              </div>
+
               <div className="wrapper">
                 <LinkButton
                   path={'/solutions/#SAS9-Health-Report'}

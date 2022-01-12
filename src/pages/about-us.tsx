@@ -4,6 +4,8 @@ import { siteMetadata } from '../../gatsby-config'
 import Layout from '../components/layout/layout'
 import Meta from '../components/meta/meta'
 import Breadcrum from '../components/breadcrum/breadcrum'
+import frame from '../../assets/frame.png'
+import pic1 from '../../assets/pic1.svg'
 
 interface Props {
   location: Location
@@ -27,7 +29,28 @@ const About: React.FC<Props> = ({ location }: Props) => {
         ]}
       />
       <div className="container about-us">
-        <h3 className="custom-heading">About Us</h3>
+        <h3 className="custom-heading">Our Team</h3>
+        <p>
+          The SAS Apps team have been together (in various forms) since 2018.{' '}
+          <br /> We built the SASjs Framework, Data Controller for SAS, and
+          Sasensei.com - not to mention, numerous customer projects. <br /> We
+          usually work through SAS partners, but we can also be engaged
+          directly.
+        </p>
+        <div>
+          <div>
+            <img
+              src={pic1}
+              alt="#"
+              style={{
+                backgroundImage: `url(${frame})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: '',
+              }}
+            />
+          </div>
+        </div>
+        {/* <h3 className="custom-heading">About Us</h3>
         <h1>Analyse Implement Maximise</h1>
         <h6>Where does our name come from?</h6>
         <p>
@@ -88,7 +111,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
           also ensuring that we deliver above and beyond what is expected from
           us. We believe that delivering on all of these promises is not only
           key to your success, but it is also key to our success.
-        </p>
+        </p> */}
       </div>
     </Layout>
   )

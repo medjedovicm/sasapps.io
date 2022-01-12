@@ -39,7 +39,7 @@ $enable-print-styles: true !default;
 //   sm: 540px,
 //   md: 640px,
 //   lg: 710px,
-//   xl: 780px,
+//   xl: 1580px,
 // ) !default;
 
 // Body
@@ -90,10 +90,12 @@ a {
 
 .custom-heading {
   color: $aquamarine;
+  color: white;
   padding-left: 80px;
-  background-image: url('../../assets/heading.svg');
-  background-repeat: no-repeat;
-  background-position: 10px 6px;
+  font-size: 28px;
+  // background-image: url('../../assets/heading.svg');
+  // background-repeat: no-repeat;
+  // background-position: 10px 6px;
 }
 
 @import './about.scss';

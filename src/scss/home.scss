@@ -1,9 +1,9 @@
 .main-background {
-  background-image: url('../../assets/main-background-min.png');
+  // background-image: url('../../assets/main-background-min.png');
   background-repeat: no-repeat;
   background-position: right 15%;
   background-size: 80%;
-  color: #00a5d7;
+  color: white;
   .card-gray {
     margin-top: 170px;
   }
@@ -34,9 +34,9 @@
     font-weight: 500;
   }
   h4 {
-    font-size: 38px;
+    font-size: 48px;
     font-weight: 500;
-    line-height: 48px;
+    line-height: 56px;
     width: 70%;
     padding-top: 50px;
     @media only screen and (max-width: 991px) {
@@ -100,6 +100,15 @@
     background-position: right 20%;
   }
 }
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 48px;
+  margin-top: 40px;
+  margin-bottom: 46px;
+}
+
 h5 {
   font-size: 48px;
   font-weight: 500;
@@ -117,11 +126,17 @@ h5 {
 }
 
 .card {
-  background: white;
+  text-align: center;
+  align-items: center;
+  background: #104f55;
+  color: white;
   border: none;
   border-bottom: 2px solid white;
+  border-bottom: none;
+  border-radius: 10px;
   &:hover {
     border-bottom: 2px solid #00a5d7;
+    border: 1px solid #8ac71e;
   }
   padding: 35px;
   height: 100%;
@@ -133,6 +148,8 @@ h5 {
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
   h3 {
+    margin-top: 18px;
+    color: #8ac71e;
     font-weight: normal;
     text-align: center;
     margin-top: 10px;
@@ -140,6 +157,7 @@ h5 {
     line-height: 135.01%;
   }
   p {
+    margin-top: 21px;
     font-family: Raleway;
   }
   .wrapper {
@@ -149,7 +167,31 @@ h5 {
     left: 0;
     right: 0;
   }
+  img {
+    width: 251px;
+    height: 233px;
+  }
+  .service-link {
+    display: block;
+    font-style: italic;
+    margin-top: 21px;
+    margin-bottom: 22px;
+    color: #8ac71e;
+  }
   box-shadow: 0px 1px 4px rgba(43, 55, 66, 0.1);
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.25);
+}
+
+.heading {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 10px;
+}
+
+.info {
+  margin-top: 45px;
+  margin-bottom: 35px;
 }
 
 .card-gray {
@@ -157,13 +199,6 @@ h5 {
   border: none;
   border-radius: 5px;
   padding: 40px 60px;
-  .heading {
-    font-weight: 500;
-    font-size: 18px;
-  }
-  .info {
-    color: #4c525e;
-  }
 }
 
 .buttom-margin-child .col-xl-4 {
