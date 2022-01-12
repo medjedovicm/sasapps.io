@@ -34,7 +34,7 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
             <span style={{ color: '#8AC71E' }}> Analytics Platform</span>
           </h4>
           <div className="row">
-            <div className="col-lg-6">
+            <div className="col-lg-4">
               <p className="heading">
                 Leverage your investment in SAS&reg; with a range of solution
                 and product offerings to fit your specific needs.{' '}
@@ -54,7 +54,7 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
               {/* </div> */}
               {/* </div> */}
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-4">
               <img src={mainSvg} alt="#" />
             </div>
           </div>

@@ -7,19 +7,49 @@
     font-size: 18px;
     line-height: 21px;
   }
+  .custom-text {
+    margin-bottom: 108px;
+  }
   .custom-heading {
     margin: 30px auto 20px;
     font-size: 48px;
     text-align: center;
   }
-  img {
-    border: 0px solid #60ffff;
-    box-sizing: border-box;
+
+  .profile {
+    width: fit-content;
+    align-items: center;
+    text-align: center;
+    .profile-name {
+      margin-top: 50px;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 2px;
+    }
+    .profile-heading {
+      color: #8ac71e;
+      font-size: 25px;
+      font-weight: 500;
+      font-style: italic;
+      margin-top: 10px;
+      // margin-top: 50px;
+    }
+    .profile-text {
+      text-align: center;
+      font-size: 15px;
+      margin-left: 30px;
+      margin-top: 30px;
+      margin-bottom: 70px;
+    }
+    .image-wrapper {
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 265px;
+      width: 100%;
+    }
   }
-  h5 {
-    margin-bottom: 30px;
-    // margin-top: 50px;
-  }
+
   h6 {
     font-size: 18px;
     font-weight: 500;
@@ -28,4 +58,33 @@
   p {
     font-weight: 300;
   }
+}
+.profileImage {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: 30%;
+  margin-right: auto;
+  margin-top: 7%;
+  margin-bottom: auto;
+}
+#p1.profileImage {
+  margin-left: 32%;
+  margin-top: 6%;
+}
+#p4.profileImage {
+  margin-left: 29%;
+  margin-top: 7%;
+}
+#p5.profileImage {
+  margin-left: 28%;
+  margin-top: 5%;
+}
+#p6.profileImage {
+  margin-left: 28%;
+  margin-top: 4%;
+}
+#p7.profileImage {
+  margin-left: 31%;
+  margin-top: 3%;
 }
