@@ -11,7 +11,7 @@ interface Props {
 const Navibar: React.FC<Props> = ({ location }: Props) => {
   return (
     <div className="container">
-      <nav className="navbar navbar-expand-lg navbar-light">
+      <nav className="navbar navbar-expand-lg navbar-dark">
         <Link className="logo text-center" to="/">
           <img src={sasAppsPNG} alt="SAS&reg; Apps Logo" />
         </Link>
@@ -28,7 +28,7 @@ const Navibar: React.FC<Props> = ({ location }: Props) => {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
+          <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <a
                 className={

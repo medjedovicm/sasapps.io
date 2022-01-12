@@ -23,7 +23,6 @@ interface Props {
   location: Location
 }
 
-const constAnalytium = '<span className="aquamarine_text">{An}</span>alytium'
 const About: React.FC<Props> = ({ location }: Props) => {
   const meta = { ...siteMetadata, location }
 

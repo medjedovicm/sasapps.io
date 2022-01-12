@@ -29,8 +29,7 @@ const Footer: React.FC = () => (
             <div>
               <span>
                 <img src={locSvg} alt="address icon" />
-                <span className="aquamarine_text">{'{An}'}</span>alytium Ltd,
-                86-90 4th Floor, Paul Street, London, EC2A 4NE
+                Bowe IO Ltd, 29 Oldfield Rd, Windermere, Cumbria, LA23 2AZ
               </span>
             </div>
           </div>
@@ -81,10 +80,7 @@ const Footer: React.FC = () => (
       </div>
     </div>
     <div className="bottom">
-      <p>
-        © 2020 {'{An}'}alytium Ltd is a limited company registered in England
-        and Wales. Company Registration No. 10214873 VAT: GB248508389
-      </p>
+      <p>Bowe IO Ltd, 29 Oldfield Rd, Windermere, Cumbria, LA23 2AZ</p>
     </div>
   </div>
 )
