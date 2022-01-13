@@ -51,7 +51,7 @@ const TagTemplate: React.FC<Props> = ({
                 <Link
                   key={slug}
                   to={slug}
-                  className="list-group-item list-group-item-action"
+                  className="list-group-item list-group-item-action list-group-item-dark"
                 >
                   {title}
                 </Link>

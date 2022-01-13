@@ -4,7 +4,6 @@
 .article {
   padding-top: 40px;
   padding-bottom: 10px;
-  background: white;
 
   .info {
     padding-bottom: 10px;
@@ -22,7 +21,6 @@
 
     time {
       font-size: $font-size-xs;
-      color: $gray-500;
       display: inline;
       margin-right: 10px;
     }

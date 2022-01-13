@@ -38,7 +38,7 @@ const TagsPage: React.FC<Props> = ({ data, location }: Props) => {
             <Link
               key={tag.fieldValue}
               to={`/tags/${kebabCase(tag.fieldValue)}/`}
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action list-group-item-dark"
             >
               {tag.fieldValue}
               <span className="badge badge-primary badge-pill pull-right">

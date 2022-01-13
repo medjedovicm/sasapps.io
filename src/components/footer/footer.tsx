@@ -1,7 +1,7 @@
 import React from 'react'
-import Input from '../input/input'
-import { siteMetadata } from '../../../gatsby-config'
-import SocialMedia from '../socialmedia/socialmedia'
+// import Input from '../input/input'
+// import { siteMetadata } from '../../../gatsby-config'
+// import SocialMedia from '../socialmedia/socialmedia'
 
 // import mobileSvg from '../../../assets/mobile.svg'
 // import mailSvg from '../../../assets/mail.svg'
@@ -29,14 +29,13 @@ const Footer: React.FC = () => (
             <div>
               <span>
                 <img src={locSvg} alt="address icon" />
-                <span className="aquamarine_text">{'{An}'}</span>alytium Ltd,
-                86-90 4th Floor, Paul Street, London, EC2A 4NE
+                Bowe IO Ltd, 29 Oldfield Rd, Windermere, Cumbria, LA23 2AZ
               </span>
             </div>
           </div>
         </div>
         <div className="col-md-6 col-lg-4">
-          <h3 className="custom-heading">Social</h3>
+          {/* <h3 className="custom-heading">Social</h3>
           <div className="content">
             <div style={{ padding: 0 }}>
               <SocialMedia
@@ -65,7 +64,7 @@ const Footer: React.FC = () => (
                 />
               </form>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="col-md-6 col-lg-4">
           <h3 className="custom-heading">Quick Links</h3>
@@ -81,10 +80,7 @@ const Footer: React.FC = () => (
       </div>
     </div>
     <div className="bottom">
-      <p>
-        © 2020 {'{An}'}alytium Ltd is a limited company registered in England
-        and Wales. Company Registration No. 10214873 VAT: GB248508389
-      </p>
+      <p>Bowe IO Ltd, 29 Oldfield Rd, Windermere, Cumbria, LA23 2AZ</p>
     </div>
   </div>
 )

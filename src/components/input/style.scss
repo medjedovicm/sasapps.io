@@ -1,14 +1,19 @@
 label {
+  font-size: 18px;
   input,
   textarea {
     border: none;
     outline: none;
     border-bottom: 1px solid gray;
+
+    border-bottom: 1px solid white;
+    background: #104f55;
     margin-left: 5px !important;
     width: 110px;
     &::placeholder {
       /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: lightgray;
+      color: #18737b;
       opacity: 1; /* Firefox */
     }
     &:-ms-input-placeholder {
@@ -22,6 +27,7 @@ label {
     &[class*='is-success-'] {
       border: none;
       border-bottom: 1px solid gray;
+      border-bottom: 1px solid white;
     }
     &[class*='is-danger-'] {
       border: none;
@@ -32,6 +38,7 @@ label {
   &.vertical {
     font-weight: 500;
     width: 100%;
+    color: white;
     input,
     textarea {
       width: 100%;

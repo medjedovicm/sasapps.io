@@ -1,50 +1,40 @@
 .main-background {
-  background-image: url('../../assets/main-background-min.png');
+  background-image: url('../../assets/22.svg');
   background-repeat: no-repeat;
-  background-position: right 15%;
-  background-size: 80%;
-  color: #00a5d7;
-  .card-gray {
-    margin-top: 170px;
-  }
-  @media only screen and (min-width: 768px) {
-    background-position: right 7%;
-    background-size: 85%;
-    .card-gray {
-      margin-top: 180px;
-    }
-  }
-  @media only screen and (min-width: 992px) {
-    background-position: right -46px;
-    background-size: 83%;
-    .card-gray {
-      margin-top: 250px;
-    }
-  }
-  @media only screen and (min-width: 1200px) {
-    background-position: right -115px;
-    background-size: auto;
-  }
-  @media only screen and (min-width: 1600px) {
-    background-position: 65% -120px;
-    background-size: auto;
-  }
+  background-position: right 150px;
+  color: white;
   h1 {
     font-size: 80px;
     font-weight: 500;
   }
   h4 {
-    font-size: 38px;
-    font-weight: 500;
-    line-height: 48px;
+    font-size: 48px;
+    line-height: 56px;
     width: 70%;
     padding-top: 50px;
+    span {
+      color: $yellowGreen;
+    }
     @media only screen and (max-width: 991px) {
       width: 90%;
     }
     @media only screen and (max-width: 767px) {
       width: 100%;
     }
+  }
+  .heading {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 10px;
+    width: 55%;
+  }
+
+  .info {
+    margin-top: 45px;
+    margin-bottom: 35px;
+    line-height: 1.2;
+    width: 35%;
   }
   @media only screen and (max-width: 600px) {
     h1 {
@@ -54,10 +44,6 @@
       font-size: 36px;
     }
     background-position: right 27%;
-    .card-gray {
-      margin-top: 145px;
-      padding: 30px;
-    }
   }
   @media only screen and (max-width: 550px) {
     h1 {
@@ -93,13 +79,18 @@
       font-size: 28px;
       line-height: 1.2;
     }
-    .card-gray {
-      margin-top: 60px;
-      padding: 20px;
-    }
     background-position: right 20%;
   }
 }
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 48px;
+  margin-top: 40px;
+  margin-bottom: 46px;
+}
+
 h5 {
   font-size: 48px;
   font-weight: 500;
@@ -117,11 +108,16 @@ h5 {
 }
 
 .card {
-  background: white;
-  border: none;
-  border-bottom: 2px solid white;
+  text-align: center;
+  align-items: center;
+  background: #104f55;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 10px;
   &:hover {
-    border-bottom: 2px solid #00a5d7;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    border: 1px solid $yellowGreen;
   }
   padding: 35px;
   height: 100%;
@@ -133,6 +129,8 @@ h5 {
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
   h3 {
+    margin-top: 18px;
+    color: $yellowGreen;
     font-weight: normal;
     text-align: center;
     margin-top: 10px;
@@ -140,6 +138,7 @@ h5 {
     line-height: 135.01%;
   }
   p {
+    margin-top: 21px;
     font-family: Raleway;
   }
   .wrapper {
@@ -149,7 +148,19 @@ h5 {
     left: 0;
     right: 0;
   }
+  img {
+    width: 251px;
+    height: 233px;
+  }
+  .service-link {
+    display: block;
+    font-style: italic;
+    margin-top: 21px;
+    margin-bottom: 22px;
+    color: $yellowGreen;
+  }
   box-shadow: 0px 1px 4px rgba(43, 55, 66, 0.1);
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.25);
 }
 
 .card-gray {
@@ -157,13 +168,6 @@ h5 {
   border: none;
   border-radius: 5px;
   padding: 40px 60px;
-  .heading {
-    font-weight: 500;
-    font-size: 18px;
-  }
-  .info {
-    color: #4c525e;
-  }
 }
 
 .buttom-margin-child .col-xl-4 {
