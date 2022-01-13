@@ -1,7 +1,7 @@
 import React from 'react'
-import Input from '../input/input'
-import { siteMetadata } from '../../../gatsby-config'
-import SocialMedia from '../socialmedia/socialmedia'
+// import Input from '../input/input'
+// import { siteMetadata } from '../../../gatsby-config'
+// import SocialMedia from '../socialmedia/socialmedia'
 
 // import mobileSvg from '../../../assets/mobile.svg'
 // import mailSvg from '../../../assets/mail.svg'

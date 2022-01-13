@@ -67,8 +67,8 @@ html,
 body {
   height: 100%;
   width: 100%;
-  color: #4c525e;
-  background: #fbfdff;
+  color: $white;
+  background: $darkJungleGreen;
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
@@ -81,10 +81,16 @@ body {
 .aquamarine_text {
   color: $aquamarine;
 }
+a,
+p {
+  color: $white;
+}
 a {
-  color: #4c525e;
   &:visited {
-    color: #4c525e;
+    color: $gray-500;
+  }
+  &:hover {
+    color: $yellowGreen;
   }
 }
 

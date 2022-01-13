@@ -14,7 +14,7 @@ import DcNameSvg from '../../assets/DC-name-1.svg'
 import JsSvg from '../../assets/JS-1.svg'
 import SasSvg from '../../assets/SAS-illu-1.svg'
 import SasnameSvg from '../../assets/SAS-name-1.svg'
-import mainSvg from '../../assets/22.svg'
+// import mainSvg from '../../assets/22.svg'
 
 interface Props {
   data: MetaQuery
