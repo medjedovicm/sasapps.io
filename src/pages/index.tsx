@@ -17,7 +17,6 @@ import SasnameSvg from '../../assets/SAS-name-1.svg'
 import bfSvg from '../../assets/business-finance.svg'
 import chSvg from '../../assets/charts.svg'
 import inSvg from '../../assets/information.svg'
-// import mainSvg from '../../assets/22.svg'
 
 interface Props {
   data: MetaQuery
@@ -56,7 +55,7 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
 
       <div className="container">
         <h1>What We Offer</h1>
-        <h3 className="sub-heading">Services</h3>
+        <h2 className="sub-heading">Services</h2>
         <br />
         <div className="row buttom-margin-child">
           <div className="col-md-6 col-xl-4">
@@ -129,33 +128,49 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
             </div>
           </div>
           <div className="col-lg-12">
-            <h3 className="sub-heading">Solutions</h3>
+            <h2 className="sub-heading">Solutions</h2>
           </div>
           <div className="col-md-6 col-xl-4">
             <div className="card no-button" id="SAS-Powered-HTML5-Apps">
               <img src={bfSvg} alt="SAS-Powered HTML5 Apps" />
-              <h3>SAS-Powered HTML5 Apps</h3>
-              <p>
-                Let SAS come to you – with a bespoke app, tailor made to your
-                specific workflow and reporting requirements. Built with fully
-                open source tools, standard frameworks, and delivered with full
-                documentation – you can choose to maintain in-house or choose a
-                competitive and transparent support package.
-              </p>
+              <div className="content-wrapper">
+                <h3>SAS-Powered HTML5 Apps</h3>
+                <p>
+                  Let SAS come to you – with a bespoke app, tailor made to your
+                  specific workflow and reporting requirements. Built with fully
+                  open source tools, standard frameworks, and delivered with
+                  full documentation – you can choose to maintain in-house or
+                  choose a competitive and transparent support package.
+                </p>
+              </div>
+              <div className="wrapper">
+                <LinkButton
+                  path={'/solutions/#SAS-Powered-HTML5-Apps'}
+                  label="Find Out More"
+                />
+              </div>
             </div>
           </div>
 
           <div className="col-md-6 col-xl-4">
             <div className="card no-button" id="EUC-Data-Capture-Control">
               <img src={chSvg} alt="EUC Data Capture & Control" />
-              <h3>EUC Data Capture & Control</h3>
-              <p>
-                Reduce spreadsheet risk by enabling business users to self-load
-                VBA driven Excel reporting tools into your preferred database
-                with Data Quality at source, 4 eyes (or more) approval at each
-                step, and full audit traceability back to the original EUC that
-                generated the results.
-              </p>
+              <div className="content-wrapper">
+                <h3>EUC Data Capture & Control</h3>
+                <p>
+                  Reduce spreadsheet risk by enabling business users to
+                  self-load VBA driven Excel reporting tools into your preferred
+                  database with Data Quality at source, 4 eyes (or more)
+                  approval at each step, and full audit traceability back to the
+                  original EUC that generated the results.
+                </p>
+              </div>
+              <div className="wrapper">
+                <LinkButton
+                  path={'/solutions/#EUC-Data-Capture-Control'}
+                  label="Find Out More"
+                />
+              </div>
             </div>
           </div>
 
@@ -165,18 +180,26 @@ const Home: React.FC<Props> = ({ data, location }: Props) => {
               id="Modernise-legacy-AF-SCL-Desktop-Apps"
             >
               <img src={inSvg} alt="Modernise legacy AF/SCL Desktop Apps" />
-              <h3>Modernise legacy AF/SCL Desktop Apps</h3>
-              <p>
-                Migrate legacy AF/SCL applications directly to SAS9 or Viya,
-                improving the user experience, security,scalability, and
-                delivering a modern, self-supportable application built on open
-                source technology and a modern SAS stack.
-              </p>
+              <div className="content-wrapper">
+                <h3>Modernise legacy AF/SCL Desktop Apps</h3>
+                <p>
+                  Migrate legacy AF/SCL applications directly to SAS9 or Viya,
+                  improving the user experience, security,scalability, and
+                  delivering a modern, self-supportable application built on
+                  open source technology and a modern SAS stack.
+                </p>
+              </div>
+              <div className="wrapper">
+                <LinkButton
+                  path={'/solutions/#Modernise-legacy-AF-SCL-Desktop-Apps'}
+                  label="Find Out More"
+                />
+              </div>
             </div>
           </div>
 
           <div className="col-lg-12">
-            <h3 className="sub-heading">Products</h3>
+            <h2 className="sub-heading">Products</h2>
           </div>
 
           <div className="col-md-6 col-xl-4">

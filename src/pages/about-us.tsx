@@ -7,13 +7,13 @@ import Breadcrum from '../components/breadcrum/breadcrum'
 import frame1 from '../../assets/frame-1.png'
 import profile1 from '../../assets/profile-1.png'
 import frame2 from '../../assets/frame-2.png'
-import profile2 from '../../assets/profile-2.png'
+import profile2 from '../../assets/mihajlo.png'
 import frame3 from '../../assets/frame-3.png'
-import profile3 from '../../assets/profile-3.png'
+import profile3 from '../../assets/sabir.png'
 import frame4 from '../../assets/frame-4.png'
-import profile4 from '../../assets/profile-4.png'
+import profile4 from '../../assets/saad.png'
 import frame5 from '../../assets/frame-5.png'
-import profile5 from '../../assets/profile-5.png'
+import profile5 from '../../assets/krishna.png'
 import frame6 from '../../assets/frame-6.png'
 import profile6 from '../../assets/profile-6.png'
 import frame7 from '../../assets/frame-7.png'
@@ -49,7 +49,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
           directly.
         </p>
         <div className="row">
-          <div className="profile col-lg-4">
+          <div className="profile col-lg-4 col-md-2">
             <div
               style={{
                 backgroundImage: `url(${frame1})`,
@@ -69,7 +69,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </p>
           </div>
 
-          <div className="profile col-lg-4">
+          <div className="profile col-lg-4 col-md-6">
             <div
               style={{
                 backgroundImage: `url(${frame2})`,
@@ -88,7 +88,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </p>
           </div>
 
-          <div className="profile col-lg-4">
+          <div className="profile col-lg-4 col-md-6">
             <div
               style={{
                 backgroundImage: `url(${frame3})`,
@@ -107,7 +107,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </p>
           </div>
 
-          <div className="profile col-lg-4">
+          <div className="profile col-lg-4 col-md-6">
             <div
               style={{
                 backgroundImage: `url(${frame4})`,
@@ -126,7 +126,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </p>
           </div>
 
-          <div className="profile col-lg-4">
+          <div className="profile col-lg-4 col-md-6">
             <div
               style={{
                 backgroundImage: `url(${frame5})`,
@@ -145,7 +145,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </p>
           </div>
 
-          <div className="profile col-lg-4">
+          <div className="profile col-lg-4 col-md-6">
             <div
               style={{
                 backgroundImage: `url(${frame6})`,
@@ -164,7 +164,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </p>
           </div>
 
-          <div className="profile col-lg-4">
+          <div className="profile col-lg-4 col-md-6">
             <div
               style={{
                 backgroundImage: `url(${frame7})`,

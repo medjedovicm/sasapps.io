@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-// import Topbar from '../topbar/topbar'
 import sasAppsPNG from '../../../assets/sas-apps.svg'
 
 interface Props {
@@ -102,7 +101,6 @@ const Navibar: React.FC<Props> = ({ location }: Props) => {
               </a>
             </li>
           </ul>
-          {/*<Topbar mobile={true} />*/}
         </div>
       </nav>
     </div>
