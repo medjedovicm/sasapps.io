@@ -7,11 +7,8 @@ import Breadcrum from '../components/breadcrum/breadcrum'
 import LinkButton from '../components/button/link-button'
 
 import bfSvg from '../../assets/business-finance.svg'
-import stSvg from '../../assets/statistics.svg'
 import chSvg from '../../assets/charts.svg'
 import inSvg from '../../assets/information.svg'
-import bgSvg from '../../assets/bar-graph.svg'
-import fiSvg from '../../assets/financing.svg'
 
 interface Props {
   location: Location
@@ -51,25 +48,6 @@ const Solutions: React.FC<Props> = ({ location }: Props) => {
             </div>
           </div>
           <div className="col-md-6 col-xl-4">
-            <div
-              className="card no-button"
-              id="performance-monitoring-and-platform-alerts"
-            >
-              <img
-                src={stSvg}
-                alt="Performance Monitoring and Platform Alerts"
-              />
-              <h3>Performance Monitoring and Platform Alerts</h3>
-              <p>
-                Gain a real time and historical perspective of your SAS platform
-                with a highly customisable performance dashboard. Configure
-                automated alerts (eg email, SMS, phone call) on virtually any
-                event – disk usage, changes to metadata, addition of new
-                columns, new admin users - (almost) anything you can imagine..
-              </p>
-            </div>
-          </div>
-          <div className="col-md-6 col-xl-4">
             <div className="card no-button" id="EUC-Data-Capture-Control">
               <img src={chSvg} alt="EUC Data Capture & Control" />
               <h3>EUC Data Capture & Control</h3>
@@ -94,38 +72,6 @@ const Solutions: React.FC<Props> = ({ location }: Props) => {
                 improving the user experience, security,scalability, and
                 delivering a modern, self-supportable application built on open
                 source technology and a modern SAS stack.
-              </p>
-            </div>
-          </div>
-          <div className="col-md-6 col-xl-4">
-            <div
-              className="card no-button"
-              id="Viya-Readiness-Migration-Service-for-Existing-SAS-9-Apps"
-            >
-              <img
-                src={bgSvg}
-                alt="Viya Readiness & Migration Service for Existing SAS 9 Apps"
-              />
-              <h3>
-                Viya Readiness & Migration Service for Existing SAS 9 Apps
-              </h3>
-              <p>
-                Rebuild your existing SAS 9 applications using modern,
-                supportable frameworks (eg React or Angular) in such a way that
-                they can be easily maintained by generic developers, and later
-                ‘flipped’ to Viya.
-              </p>
-            </div>
-          </div>
-          <div className="col-md-6 col-xl-4">
-            <div className="card no-button" id="SAS9-Health-Report">
-              <img src={fiSvg} alt="SAS9 Health Report" />
-              <h3>SAS9 Health Report</h3>
-              <p>
-                Perform a complete scan of your SAS 9 platform to identify
-                common &quot;trouble spots&quot; – such as dangling metadata,
-                security misconfigurations, SAS coding issues, custom code in DI
-                Studio, missing primary keys – and much much more.
               </p>
             </div>
           </div>
