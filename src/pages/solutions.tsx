@@ -52,9 +52,8 @@ export const SolutionItems: React.FC = () => (
         <p>
           Let SAS come to you – with a bespoke app, tailor made to your specific
           workflow and reporting requirements. Built with fully open source
-          tools, standard frameworks, and delivered with full documentation –
-          you can choose to maintain in-house or choose a competitive and
-          transparent support package.
+          tools, standard frameworks, and full documentation – you can maintain
+          in-house or use our competitive and transparent support package.
         </p>
         <div className="wrapper">
           <LinkButton

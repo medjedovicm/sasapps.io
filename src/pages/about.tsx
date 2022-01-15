@@ -121,7 +121,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </p>
           </div>
 
-          <div className="profile col-lg-4 col-md-6">
+          <div className="profile col-lg-4 col-md-6 m-auto">
             <div className="image-wrapper">
               <img src={profile7} alt="#" className="profileImage" id="p7" />
             </div>

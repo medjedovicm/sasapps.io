@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import { siteMetadata } from '../../gatsby-config'
 import Layout from '../components/layout/layout'
@@ -52,14 +53,11 @@ export const ServiceItems: React.FC = () => (
           orci massa. Aenean vehicula leo non augue porttitor, at suscipit dui
           posuere.
         </p>
-        <a className="service-link" href=" https://sasapps.io/projects/">
+        <Link to={'/projects'} title={'SAS Projects'} className="service-link">
           https://sasapps.io/projects/
-        </a>
+        </Link>
         <div className="wrapper">
-          <LinkButton
-            path={'/solutions/#SAS-Powered-HTML5-Apps'}
-            label="Find Out More"
-          />
+          <LinkButton path={'/projects'} label="Find Out More" />
         </div>
       </div>
     </div>
@@ -72,14 +70,11 @@ export const ServiceItems: React.FC = () => (
           orci massa. Aenean vehicula leo non augue porttitor, at suscipit dui
           posuere.
         </p>
-        <a className="service-link" href=" https://sasapps.io/pricing/">
+        <Link to={'/pricing'} title={'SAS Pricing'} className="service-link">
           https://sasapps.io/pricing/
-        </a>
+        </Link>
         <div className="wrapper">
-          <LinkButton
-            path={'/solutions/#performance-monitoring-and-platform-alerts'}
-            label="Find Out More"
-          />
+          <LinkButton path={'/pricing'} label="Find Out More" />
         </div>
       </div>
     </div>
@@ -91,11 +86,11 @@ export const ServiceItems: React.FC = () => (
           We can add new features to SASjs (at a discounted rate) to support
           particular use cases
         </p>
+        <Link to={'/pricing'} title={'SAS Pricing'} className="service-link">
+          https://sasapps.io/pricing/
+        </Link>
         <div className="wrapper">
-          <LinkButton
-            path={'/solutions/#EUC-Data-Capture-Control'}
-            label="Find Out More"
-          />
+          <LinkButton path={'/pricing'} label="Find Out More" />
         </div>
       </div>
     </div>
