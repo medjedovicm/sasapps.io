@@ -4,7 +4,7 @@ import { siteMetadata } from '../../gatsby-config'
 import Layout from '../components/layout/layout'
 import Meta from '../components/meta/meta'
 import Breadcrum from '../components/breadcrum/breadcrum'
-import photoFrame from '../../assets/photo-frame.png'
+
 import profile1 from '../../assets/profile-1.png'
 import profile2 from '../../assets/team/mihajlo.png'
 import profile3 from '../../assets/team/sabir.png'
