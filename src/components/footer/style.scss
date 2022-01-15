@@ -1,6 +1,17 @@
 @import 'scss/colors.scss';
 
 .footer {
+  .content.quicklinks a {
+    color: white;
+    display: inline-flex;
+    width: 33%;
+    margin-bottom: 15px;
+    justify-content: center;
+    font-size: 24px;
+  }
+  .custom-heading {
+    font-size: 42px;
+  }
   .bottom {
     text-align: center;
     color: white;

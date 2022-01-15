@@ -61,7 +61,7 @@ export const ProductItems: React.FC = () => (
         </a>
         <div className="wrapper">
           <LinkButton
-            path={'/solutions/#Modernise-legacy-AF-SCL-Desktop-Apps'}
+            path={'https://datacontroller.io'}
             label="Find Out More"
           />
         </div>
@@ -85,10 +85,7 @@ export const ProductItems: React.FC = () => (
           https://sasensei.com
         </a>
         <div className="wrapper">
-          <LinkButton
-            path={'/solutions/#SAS9-Health-Report'}
-            label="Find Out More"
-          />
+          <LinkButton path={'https://sasensei.com'} label="Find Out More" />
         </div>
       </div>
     </div>
@@ -109,12 +106,7 @@ export const ProductItems: React.FC = () => (
           https://sasjs.io
         </a>
         <div className="wrapper">
-          <LinkButton
-            path={
-              '/solutions/#Viya-Readiness-Migration-Service-for-Existing-SAS-9-Apps'
-            }
-            label="Find Out More"
-          />
+          <LinkButton path={'https://sasjs.io'} label="Find Out More" />
         </div>
       </div>
     </div>

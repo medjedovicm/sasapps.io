@@ -2,6 +2,15 @@ import React from 'react'
 
 const Footer: React.FC = () => (
   <div className="footer">
+    <h3 className="custom-heading">Quick Links</h3>
+    <div className="content quicklinks">
+      <a href="/services">Services</a>
+      <a href="/contact-us">Contact</a>
+      <a href="/solutions">Solutions</a>
+      <a href="/about-us">About Us</a>
+      <a href="/products">Products</a>
+      <a href="/blog/">Blog</a>
+    </div>
     <div className="bottom">
       <p>
         Bowe IO Ltd, 29 Oldfield Rd, Windermere, Cumbria, LA23 2AZ Company Name:

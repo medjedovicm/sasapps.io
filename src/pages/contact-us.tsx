@@ -52,12 +52,6 @@ const Contact: React.FC<Props> = ({ location }: Props) => {
                 no-reload=""
               >
                 <Input
-                  name="company"
-                  label="Company Name"
-                  placeholder="Enter your company name"
-                  vertical={true}
-                />
-                <Input
                   name="name"
                   label="Name"
                   placeholder="Enter your name"
@@ -70,13 +64,6 @@ const Contact: React.FC<Props> = ({ location }: Props) => {
                   placeholder="Enter your email"
                   vertical={true}
                   rules="required|email"
-                />
-                <Input
-                  name="phone_number"
-                  label="Phone Number"
-                  placeholder="Enter your phone number"
-                  vertical={true}
-                  rules="required|max:30"
                 />
                 <Input
                   name="message"

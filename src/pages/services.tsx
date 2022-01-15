@@ -57,7 +57,7 @@ export const ServiceItems: React.FC = () => (
         </a>
         <div className="wrapper">
           <LinkButton
-            path={'/solutions/#SAS-Powered-HTML5-Apps'}
+            path={'https://sasapps.io/projects/'}
             label="Find Out More"
           />
         </div>
@@ -77,7 +77,7 @@ export const ServiceItems: React.FC = () => (
         </a>
         <div className="wrapper">
           <LinkButton
-            path={'/solutions/#performance-monitoring-and-platform-alerts'}
+            path={'https://sasapps.io/pricing/'}
             label="Find Out More"
           />
         </div>
@@ -91,9 +91,12 @@ export const ServiceItems: React.FC = () => (
           We can add new features to SASjs (at a discounted rate) to support
           particular use cases
         </p>
+        <a className="service-link" href=" https://sasapps.io/pricing/">
+          https://sasapps.io/pricing/
+        </a>
         <div className="wrapper">
           <LinkButton
-            path={'/solutions/#EUC-Data-Capture-Control'}
+            path={'https://sasapps.io/pricing/'}
             label="Find Out More"
           />
         </div>
