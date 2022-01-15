@@ -30,7 +30,7 @@ const TagsPage: React.FC<Props> = ({ data, location }: Props) => {
           { label: 'Tags', to: '#' },
         ]}
       />
-      <div className="container about-us">
+      <div className="container main about-us">
         <h1 className="custom-heading">Tags</h1>
         <ul></ul>
         <div className="list-group">

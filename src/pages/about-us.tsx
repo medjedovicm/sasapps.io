@@ -4,20 +4,14 @@ import { siteMetadata } from '../../gatsby-config'
 import Layout from '../components/layout/layout'
 import Meta from '../components/meta/meta'
 import Breadcrum from '../components/breadcrum/breadcrum'
-import frame1 from '../../assets/frame-1.png'
+
 import profile1 from '../../assets/profile-1.png'
-import frame2 from '../../assets/frame-2.png'
-import profile2 from '../../assets/profile-2.png'
-import frame3 from '../../assets/frame-3.png'
-import profile3 from '../../assets/profile-3.png'
-import frame4 from '../../assets/frame-4.png'
-import profile4 from '../../assets/profile-4.png'
-import frame5 from '../../assets/frame-5.png'
-import profile5 from '../../assets/profile-5.png'
-import frame6 from '../../assets/frame-6.png'
+import profile2 from '../../assets/team/mihajlo.png'
+import profile3 from '../../assets/team/sabir.png'
+import profile4 from '../../assets/team/saad.png'
+import profile5 from '../../assets/team/krishna.png'
 import profile6 from '../../assets/profile-6.png'
-import frame7 from '../../assets/frame-7.png'
-import profile7 from '../../assets/profile-7.png'
+import profile7 from '../../assets/team/allan.jpeg'
 
 interface Props {
   location: Location
@@ -39,7 +33,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
           { label: 'About Us', to: '#' },
         ]}
       />
-      <div className="container about-us">
+      <div className="container main about-us">
         <h3 className="custom-heading">Our Team</h3>
         <p className="custom-text">
           The SAS Apps team have been together (in various forms) since 2018.{' '}
@@ -49,15 +43,8 @@ const About: React.FC<Props> = ({ location }: Props) => {
           directly.
         </p>
         <div className="row">
-          <div className="profile col-lg-4">
-            <div
-              style={{
-                backgroundImage: `url(${frame1})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: '',
-              }}
-              className="image-wrapper"
-            >
+          <div className="profile col-lg-4 col-md-6">
+            <div className="image-wrapper">
               <img className="profileImage" id="p1" src={profile1} alt="#" />
             </div>
             <p className="profile-name">Yury</p>
@@ -69,14 +56,8 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </p>
           </div>
 
-          <div className="profile col-lg-4">
-            <div
-              style={{
-                backgroundImage: `url(${frame2})`,
-                backgroundRepeat: 'no-repeat',
-              }}
-              className="image-wrapper"
-            >
+          <div className="profile col-lg-4 col-md-6">
+            <div className="image-wrapper">
               <img className="profileImage" id="p2" src={profile2} alt="#" />
             </div>
             <p className="profile-name">Mihajlo</p>
@@ -88,14 +69,8 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </p>
           </div>
 
-          <div className="profile col-lg-4">
-            <div
-              style={{
-                backgroundImage: `url(${frame3})`,
-                backgroundRepeat: 'no-repeat',
-              }}
-              className="image-wrapper"
-            >
+          <div className="profile col-lg-4 col-md-6">
+            <div className="image-wrapper">
               <img className="profileImage" id="p3" src={profile3} alt="#" />
             </div>
             <p className="profile-name">Sabir</p>
@@ -107,14 +82,8 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </p>
           </div>
 
-          <div className="profile col-lg-4">
-            <div
-              style={{
-                backgroundImage: `url(${frame4})`,
-                backgroundRepeat: 'no-repeat',
-              }}
-              className="image-wrapper"
-            >
+          <div className="profile col-lg-4 col-md-6">
+            <div className="image-wrapper">
               <img src={profile4} className="profileImage" id="p4" alt="#" />
             </div>
             <p className="profile-name">Saad</p>
@@ -126,14 +95,8 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </p>
           </div>
 
-          <div className="profile col-lg-4">
-            <div
-              style={{
-                backgroundImage: `url(${frame5})`,
-                backgroundRepeat: 'no-repeat',
-              }}
-              className="image-wrapper"
-            >
+          <div className="profile col-lg-4 col-md-6">
+            <div className="image-wrapper">
               <img src={profile5} alt="#" className="profileImage" id="p5" />
             </div>
             <p className="profile-name">Krishna</p>
@@ -145,14 +108,8 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </p>
           </div>
 
-          <div className="profile col-lg-4">
-            <div
-              style={{
-                backgroundImage: `url(${frame6})`,
-                backgroundRepeat: 'no-repeat',
-              }}
-              className="image-wrapper"
-            >
+          <div className="profile col-lg-4 col-md-6">
+            <div className="image-wrapper">
               <img src={profile6} alt="#" className="profileImage" id="p6" />
             </div>
             <p className="profile-name">Ivor</p>
@@ -164,14 +121,8 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </p>
           </div>
 
-          <div className="profile col-lg-4">
-            <div
-              style={{
-                backgroundImage: `url(${frame7})`,
-                backgroundRepeat: 'no-repeat',
-              }}
-              className="image-wrapper"
-            >
+          <div className="profile col-lg-4 col-md-6">
+            <div className="image-wrapper">
               <img src={profile7} alt="#" className="profileImage" id="p7" />
             </div>
             <p className="profile-name">Allan Bowe</p>

@@ -93,15 +93,14 @@ a {
     color: $yellowGreen;
   }
 }
-
+.container.main {
+  padding: 0px 20px 30px;
+}
 .custom-heading {
-  color: $aquamarine;
-  color: white;
-  padding-left: 80px;
-  font-size: 28px;
-  // background-image: url('../../assets/heading.svg');
-  // background-repeat: no-repeat;
-  // background-position: 10px 6px;
+  color: $white;
+  text-align: center;
+  margin: 30px auto 20px;
+  font-size: 48px;
 }
 
 @import './about.scss';
@@ -116,4 +115,13 @@ a {
   .kw-message-success {
     margin-top: -10px;
   }
+}
+table {
+  border: 2px solid $yellowGreen;
+}
+thead {
+  border: 2px solid $yellowGreen;
+}
+td {
+  border: 1px solid $yellowGreen;
 }

@@ -31,7 +31,7 @@ const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
           { label: 'Blog', to: '#' },
         ]}
       />
-      <div className="container">
+      <div className="container main">
         <h1 className="text-center">SAS Apps&apos; Latest News</h1>
         <p className="text-center">
           You&apos;ve reached the front page for the latest news and updates in

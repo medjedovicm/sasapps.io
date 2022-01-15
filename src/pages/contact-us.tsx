@@ -29,8 +29,11 @@ const Contact: React.FC<Props> = ({ location }: Props) => {
           { label: 'Contact Us', to: '#' },
         ]}
       />
-      <div className="container about-us contact-us">
-        <h3 className="custom-heading">Contact Us</h3>
+      <div className="container main about-us contact-us">
+        <h3 className="custom-heading"></h3>
+        <br />
+        <br />
+        <br />
         <div className="row">
           <div className="col-lg-6">
             <h1>How can we help?</h1>
