@@ -6,9 +6,11 @@ import Meta from '../components/meta/meta'
 import Breadcrum from '../components/breadcrum/breadcrum'
 import LinkButton from '../components/button/link-button'
 
-import dtSvg from '../../assets/data.svg'
-import pcSvg from '../../assets/pencil.svg'
-import idSvg from '../../assets/idea.svg'
+import dcLogo from '../../assets/products/dc-logo.svg'
+import dcName from '../../assets/products/dc-name.svg'
+import jsLogo from '../../assets/products/js-logo.svg'
+import sasenseiLogo from '../../assets/products/sasensei-logo.svg'
+import sasenseiName from '../../assets/products/sasensei-name.svg'
 
 interface Props {
   location: Location
@@ -30,60 +32,93 @@ const Products: React.FC<Props> = ({ location }: Props) => {
           { label: 'Products', to: '#' },
         ]}
       />
-      <div className="container about-us">
-        <h3 className="custom-heading">Products</h3>
-        <h1>SAS® Apps and Technology</h1>
-        <div className="row buttom-margin-child">
-          <div className="col-md-6 col-xl-4">
-            <div className="card">
-              <img src={dtSvg} alt="Data Controller for SAS®" />
-              <h3>Data Controller for SAS®</h3>
-              <p>
-                Enables end user data management and EUC data capture (with 4
-                eyes approval) on both SAS9 and Viya. Features include Data
-                Validation at source, Data Workflows, Data Dictionary, Data
-                Catalog, Data Lineage, Data Alerts with a wide range of
-                databases and loading formats supported.{' '}
-              </p>
-              <div className="wrapper">
-                <LinkButton path={'https://datacontroller.io'} label="Show" />
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6 col-xl-4">
-            <div className="card">
-              <img src={pcSvg} alt="SAS9API" />
-              <h3>SAS9API</h3>
-              <p>
-                Integrate SAS 9 with almost any platform using a familiar (and
-                extendable) REST API interface. Using existing IOM interfaces,
-                there is nothing to install in your SAS Platform – simply
-                connect and go
-              </p>
-              <div className="wrapper">
-                <LinkButton path={'https://sas9api.io'} label="Show" />
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6 col-xl-4">
-            <div className="card">
-              <img src={idSvg} alt="SASjs" />
-              <h3>SASjs</h3>
-              <p>
-                A fully open source “opinionated” framework for building HTML5
-                web applications on SAS 9 and Viya, and the core technology
-                underpinning all of our web apps. Comprised of a data adapter,
-                SAS Macro library, CLI tool, and supporting documentation.
-              </p>
-              <div className="wrapper">
-                <LinkButton path={'https://sasjs.io'} label="Show" />
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="container main ">
+        <h3 className="custom-heading">SAS® Apps and Technology</h3>
+        <ProductItems />
       </div>
     </Layout>
   )
 }
+
+export const ProductItems: React.FC = () => (
+  <div className="row buttom-margin-child">
+    <div className="col-md-6 col-xl-4">
+      <div className="card">
+        <img
+          src={dcLogo}
+          alt="Data Controller for SAS"
+          style={{ width: '160px', height: '160px' }}
+        />
+        <img
+          src={dcName}
+          alt="Data Controller for SAS"
+          style={{ width: '243px', height: '27px' }}
+        />
+        <h3>Data Controller for SAS</h3>
+        <p>Enable Business Users to make controlled changes to data in SAS</p>
+        <a className="service-link" href="https://datacontroller.io">
+          https://datacontroller.io
+        </a>
+        <div className="wrapper">
+          <LinkButton
+            path={'/solutions/#Modernise-legacy-AF-SCL-Desktop-Apps'}
+            label="Find Out More"
+          />
+        </div>
+      </div>
+    </div>
+    <div className="col-md-6 col-xl-4">
+      <div className="card">
+        <img
+          src={sasenseiLogo}
+          alt="SASensei"
+          style={{ width: '176px', height: '160px' }}
+        />
+        <img
+          src={sasenseiName}
+          alt="SASSenSei"
+          style={{ width: '176px', height: '31px' }}
+        />
+        <h3> SASensei</h3>
+        <p>Global SAS Challenge Platform with over 5000 SAS players</p>
+        <a className="service-link" href="https://sasensei.com">
+          https://sasensei.com
+        </a>
+        <div className="wrapper">
+          <LinkButton
+            path={'/solutions/#SAS9-Health-Report'}
+            label="Find Out More"
+          />
+        </div>
+      </div>
+    </div>
+    <div className="col-md-6 col-xl-4">
+      <div className="card">
+        <img
+          src={jsLogo}
+          alt="The SASjs Framework"
+          style={{ width: '163px', height: '187px' }}
+        />
+        <h3>The SASjs Framework</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu
+          orci massa. Aenean vehicula leo non augue porttitor, at suscipit dui
+          posuere.
+        </p>
+        <a className="service-link" href="https://sasjs.io">
+          https://sasjs.io
+        </a>
+        <div className="wrapper">
+          <LinkButton
+            path={
+              '/solutions/#Viya-Readiness-Migration-Service-for-Existing-SAS-9-Apps'
+            }
+            label="Find Out More"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+)
 
 export default Products
