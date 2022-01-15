@@ -7,7 +7,20 @@ const PageTemplate = path.resolve('./src/templates/markdownPageTemplate.tsx')
 const tagTemplate = path.resolve('./src/templates/tags.tsx')
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+
+  createRedirect({
+    fromPath: `/about-us`,
+    toPath: `/about`,
+    redirectInBrowser: true,
+    isPermanent: true,
+  })
+  createRedirect({
+    fromPath: `/contact-us`,
+    toPath: `/contact`,
+    redirectInBrowser: true,
+    isPermanent: true,
+  })
 
   return new Promise((resolve, reject) => {
     resolve(

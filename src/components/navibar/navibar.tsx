@@ -71,7 +71,7 @@ const Navibar: React.FC<Props> = ({ location }: Props) => {
                     ? 'nav-link active'
                     : 'nav-link'
                 }
-                href="/contact-us"
+                href="/contact"
               >
                 Contact
               </a>
@@ -83,7 +83,7 @@ const Navibar: React.FC<Props> = ({ location }: Props) => {
                     ? 'nav-link active'
                     : 'nav-link'
                 }
-                href="/about-us"
+                href="/about"
               >
                 About us
               </a>
