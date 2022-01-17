@@ -15,7 +15,9 @@ const NotFound: React.FC<Props> = ({ data, location }: Props) => {
     <Layout location={location}>
       <Meta site={data.site.siteMetadata} title="404: Not Found" />
       <h1>Not Found</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <p style={{ textAlign: 'center' }}>
+        You just hit a route that doesn&#39;t exist... the sadness.
+      </p>
     </Layout>
   )
 }
