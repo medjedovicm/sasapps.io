@@ -45,7 +45,12 @@ const About: React.FC<Props> = ({ location }: Props) => {
         <div className="row">
           <div className="profile col-lg-4 col-md-6">
             <div className="image-wrapper">
-              <img className="profileImage" id="p1" src={profile1} alt="#" />
+              <img
+                className="profileImage"
+                src={profile1}
+                alt="Yury"
+                title="Yury - Node Master"
+              />
             </div>
             <p className="profile-name">Yury</p>
             <p className="profile-heading">Node Master</p>
@@ -58,7 +63,12 @@ const About: React.FC<Props> = ({ location }: Props) => {
 
           <div className="profile col-lg-4 col-md-6">
             <div className="image-wrapper">
-              <img className="profileImage" id="p2" src={profile2} alt="#" />
+              <img
+                className="profileImage"
+                src={profile2}
+                alt="Mihajlo"
+                title="Mihajlo - Angular Boss"
+              />
             </div>
             <p className="profile-name">Mihajlo</p>
             <p className="profile-heading">Angular Boss</p>
@@ -71,7 +81,12 @@ const About: React.FC<Props> = ({ location }: Props) => {
 
           <div className="profile col-lg-4 col-md-6">
             <div className="image-wrapper">
-              <img className="profileImage" id="p3" src={profile3} alt="#" />
+              <img
+                className="profileImage"
+                src={profile3}
+                alt="Sabir"
+                title="Sabir - Captain React"
+              />
             </div>
             <p className="profile-name">Sabir</p>
             <p className="profile-heading">Captain React</p>
@@ -84,7 +99,12 @@ const About: React.FC<Props> = ({ location }: Props) => {
 
           <div className="profile col-lg-4 col-md-6">
             <div className="image-wrapper">
-              <img src={profile4} className="profileImage" id="p4" alt="#" />
+              <img
+                src={profile4}
+                className="profileImage"
+                alt="Saad"
+                title="Saad - Application Support Hero"
+              />
             </div>
             <p className="profile-name">Saad</p>
             <p className="profile-heading">Application Support Hero</p>
@@ -97,7 +117,12 @@ const About: React.FC<Props> = ({ location }: Props) => {
 
           <div className="profile col-lg-4 col-md-6">
             <div className="image-wrapper">
-              <img src={profile5} alt="#" className="profileImage" id="p5" />
+              <img
+                src={profile5}
+                className="profileImage"
+                alt="Krishna"
+                title="Krishna - SASjs Architect"
+              />
             </div>
             <p className="profile-name">Krishna</p>
             <p className="profile-heading">SASjs Architect</p>
@@ -110,7 +135,12 @@ const About: React.FC<Props> = ({ location }: Props) => {
 
           <div className="profile col-lg-4 col-md-6">
             <div className="image-wrapper">
-              <img src={profile6} alt="#" className="profileImage" id="p6" />
+              <img
+                src={profile6}
+                className="profileImage"
+                alt="Ivor"
+                title="Ivor - SAS Wizard"
+              />
             </div>
             <p className="profile-name">Ivor</p>
             <p className="profile-heading">SAS Wizard</p>
@@ -123,7 +153,12 @@ const About: React.FC<Props> = ({ location }: Props) => {
 
           <div className="profile col-lg-4 col-md-6 m-auto">
             <div className="image-wrapper">
-              <img src={profile7} alt="#" className="profileImage" id="p7" />
+              <img
+                src={profile7}
+                className="profileImage"
+                alt="Allan Bowe"
+                title="Allan Bowe - Founder"
+              />
             </div>
             <p className="profile-name">Allan Bowe</p>
             <p className="profile-heading">Founder</p>

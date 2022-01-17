@@ -46,7 +46,7 @@ const Solutions: React.FC<Props> = ({ location }: Props) => {
 export const SolutionItems: React.FC = () => (
   <div className="row buttom-margin-child">
     <div className="col-md-6 col-xl-4">
-      <div className="card no-button" id="SAS-Powered-HTML5-Apps">
+      <div className="card" id="SAS-Powered-HTML5-Apps">
         <img src={bfSvg} alt="SAS-Powered HTML5 Apps" />
         <h3>SAS-Powered HTML5 Apps</h3>
         <p>
@@ -64,7 +64,7 @@ export const SolutionItems: React.FC = () => (
       </div>
     </div>
     <div className="col-md-6 col-xl-4">
-      <div className="card no-button" id="EUC-Data-Capture-Control">
+      <div className="card" id="EUC-Data-Capture-Control">
         <img src={chSvg} alt="EUC Data Capture & Control" />
         <h3>EUC Data Capture & Control</h3>
         <p>
@@ -83,7 +83,7 @@ export const SolutionItems: React.FC = () => (
       </div>
     </div>
     <div className="col-md-6 col-xl-4">
-      <div className="card no-button" id="Modernise-legacy-AF-SCL-Desktop-Apps">
+      <div className="card" id="Modernise-legacy-AF-SCL-Desktop-Apps">
         <img src={inSvg} alt="Modernise legacy AF/SCL Desktop Apps" />
         <h3>Modernise legacy AF/SCL Desktop Apps</h3>
         <p>
