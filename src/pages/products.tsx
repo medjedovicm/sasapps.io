@@ -60,10 +60,7 @@ export const ProductItems: React.FC = () => (
           https://datacontroller.io
         </a>
         <div className="wrapper">
-          <LinkButton
-            path={'https://datacontroller.io'}
-            label="Find Out More"
-          />
+          <LinkButton path={'/data-controller/'} label="Find Out More" />
         </div>
       </div>
     </div>
@@ -85,7 +82,7 @@ export const ProductItems: React.FC = () => (
           https://sasensei.com
         </a>
         <div className="wrapper">
-          <LinkButton path={'https://sasensei.com'} label="Find Out More" />
+          <LinkButton path={'/sas-sensei/'} label="Find Out More" />
         </div>
       </div>
     </div>
@@ -106,7 +103,7 @@ export const ProductItems: React.FC = () => (
           https://sasjs.io
         </a>
         <div className="wrapper">
-          <LinkButton path={'https://sasjs.io'} label="Find Out More" />
+          <LinkButton path={'/sas-js/'} label="Find Out More" />
         </div>
       </div>
     </div>

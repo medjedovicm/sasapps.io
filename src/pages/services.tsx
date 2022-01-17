@@ -57,7 +57,7 @@ export const ServiceItems: React.FC = () => (
           https://sasapps.io/projects/
         </Link>
         <div className="wrapper">
-          <LinkButton path={'/projects'} label="Find Out More" />
+          <LinkButton path={'/sas-app-delivery'} label="Find Out More" />
         </div>
       </div>
     </div>
@@ -74,7 +74,7 @@ export const ServiceItems: React.FC = () => (
           https://sasapps.io/pricing/
         </Link>
         <div className="wrapper">
-          <LinkButton path={'/pricing'} label="Find Out More" />
+          <LinkButton path={'/sas-app-support'} label="Find Out More" />
         </div>
       </div>
     </div>
@@ -90,7 +90,7 @@ export const ServiceItems: React.FC = () => (
           https://sasapps.io/pricing/
         </Link>
         <div className="wrapper">
-          <LinkButton path={'/pricing'} label="Find Out More" />
+          <LinkButton path={'/sasjs-enhancements'} label="Find Out More" />
         </div>
       </div>
     </div>
