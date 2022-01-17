@@ -56,10 +56,7 @@ export const SolutionItems: React.FC = () => (
           in-house or use our competitive and transparent support package.
         </p>
         <div className="wrapper">
-          <LinkButton
-            path={'/solutions/#SAS-Powered-HTML5-Apps'}
-            label="Find Out More"
-          />
+          <LinkButton path={'/sas-powered-apps/'} label="Find Out More" />
         </div>
       </div>
     </div>
@@ -75,10 +72,7 @@ export const SolutionItems: React.FC = () => (
           results.
         </p>
         <div className="wrapper">
-          <LinkButton
-            path={'/solutions/#EUC-Data-Capture-Control'}
-            label="Find Out More"
-          />
+          <LinkButton path={'/euc-data-control/'} label="Find Out More" />
         </div>
       </div>
     </div>
@@ -93,10 +87,7 @@ export const SolutionItems: React.FC = () => (
           modern SAS stack.
         </p>
         <div className="wrapper">
-          <LinkButton
-            path={'/solutions/#Modernise-legacy-AF-SCL-Desktop-Apps'}
-            label="Find Out More"
-          />
+          <LinkButton path={'/modernise-legacy-apps'} label="Find Out More" />
         </div>
       </div>
     </div>
