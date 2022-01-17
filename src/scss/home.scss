@@ -1,85 +1,82 @@
 .main-background {
-  background-image: url('../../assets/analytics-platform.svg');
   background-repeat: no-repeat;
-  background-position: right 150px;
   color: white;
-  h1 {
-    font-size: 80px;
-    font-weight: 500;
-  }
   h4 {
-    font-size: 48px;
-    line-height: 56px;
-    width: 70%;
+    font-size: 24px;
     padding-top: 50px;
     span {
       color: $yellowGreen;
     }
-    @media only screen and (max-width: 991px) {
-      width: 90%;
-    }
-    @media only screen and (max-width: 767px) {
-      width: 100%;
-    }
   }
   .heading {
     font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 18px;
     margin-top: 10px;
-    width: 55%;
   }
 
   .info {
     margin-top: 45px;
     margin-bottom: 35px;
     line-height: 1.2;
-    width: 35%;
   }
-  @media only screen and (max-width: 600px) {
-    h1 {
-      font-size: 70px;
-    }
+  @include media-breakpoint-up(sm) {
     h4 {
-      font-size: 36px;
+      font-size: 48px;
+      line-height: 56px;
     }
-    background-position: right 27%;
-  }
-  @media only screen and (max-width: 550px) {
-    h1 {
-      font-size: 60px;
+    .heading {
+      font-size: 24px;
+      line-height: 28px;
     }
+    background-image: url('../../assets/analytics-platform.svg');
+    background-size: 55%;
+    background-position: right 400px;
     h4 {
-      font-size: 34px;
+      width: 100%;
     }
-  }
-  @media only screen and (max-width: 500px) {
-    h1 {
-      font-size: 55px;
+    .heading {
+      width: 80%;
     }
-    h4 {
-      font-size: 32px;
+    .info {
+      width: 40%;
     }
   }
-  @media only screen and (max-width: 450px) {
-    h1 {
-      font-size: 50px;
-    }
+  @include media-breakpoint-up(md) {
+    background-position: right 300px;
     h4 {
-      font-size: 30px;
-      line-height: 1.3;
+      width: 100%;
     }
-    background-position: right 25%;
+    .heading {
+      width: 80%;
+    }
+    .info {
+      width: 40%;
+    }
   }
-  @media only screen and (max-width: 400px) {
-    h1 {
-      font-size: 45px;
-    }
+  @include media-breakpoint-up(lg) {
+    background-position: right 150px;
     h4 {
-      font-size: 28px;
-      line-height: 1.2;
+      width: 100%;
     }
-    background-position: right 20%;
+    .heading {
+      width: 50%;
+    }
+    .info {
+      width: 35%;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    background-size: auto;
+    background-position: right 150px;
+    h4 {
+      width: 70%;
+    }
+    .heading {
+      width: 55%;
+    }
+    .info {
+      width: 35%;
+    }
   }
 }
 
