@@ -49,7 +49,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </div>
             <p className="profile-name">Yury</p>
             <p className="profile-heading">Node Master</p>
-            <p className="profile-text col-lg-10">
+            <p className="profile-text">
               With a nose for NodeJS and a mind for Docker, Yury blends
               technical and soft skills with a project delivery mentality one
               could describe as sailing a boat to harbour.
@@ -62,7 +62,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </div>
             <p className="profile-name">Mihajlo</p>
             <p className="profile-heading">Angular Boss</p>
-            <p className="profile-text col-lg-10">
+            <p className="profile-text ">
               A drummer and adept Angularite, Mihajlo leads development on Data
               Controller for SAS and also handles the automated testing and
               continuous integration.
@@ -75,7 +75,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </div>
             <p className="profile-name">Sabir</p>
             <p className="profile-heading">Captain React</p>
-            <p className="profile-text col-lg-10">
+            <p className="profile-text ">
               Sabir has the sacred ability to make things work. The lead
               developer for Sasensei.com, Sabir also contributes to the SASjs
               framework and related projects.
@@ -88,7 +88,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </div>
             <p className="profile-name">Saad</p>
             <p className="profile-heading">Application Support Hero</p>
-            <p className="profile-text col-lg-10">
+            <p className="profile-text ">
               A team player with a particular superpower - the ability to do
               just about anything! Be that docker, shell scripting, windows,
               unix, JS, TS, APIs - nothing is impossible.
@@ -101,7 +101,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </div>
             <p className="profile-name">Krishna</p>
             <p className="profile-heading">SASjs Architect</p>
-            <p className="profile-text col-lg-10">
+            <p className="profile-text ">
               Co-founder of the SASjs concept, Krishna laid the foundations for
               the SASjs Adapter, CLI, lint, vs-code extension, seed apps and
               more.{' '}
@@ -114,7 +114,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </div>
             <p className="profile-name">Ivor</p>
             <p className="profile-heading">SAS Wizard</p>
-            <p className="profile-text col-lg-10">
+            <p className="profile-text ">
               With decades of SAS and AF/SCL experience, Ivor can transform
               couldrons of legacy catalog code into lightweight, well documented
               SAS services faster than you can say PROC SPELL
@@ -127,7 +127,7 @@ const About: React.FC<Props> = ({ location }: Props) => {
             </div>
             <p className="profile-name">Allan Bowe</p>
             <p className="profile-heading">Founder</p>
-            <p className="profile-text col-lg-10">
+            <p className="profile-text ">
               When not creating actual SAS Apps, Allan is typically working on
               the tools, team, framework, and community that supports SAS Apps.
             </p>
