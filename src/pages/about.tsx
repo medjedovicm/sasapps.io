@@ -5,12 +5,12 @@ import Layout from '../components/layout/layout'
 import Meta from '../components/meta/meta'
 import Breadcrum from '../components/breadcrum/breadcrum'
 
-import profile1 from '../../assets/profile-1.png'
+import profile1 from '../../assets/team/yury.png'
 import profile2 from '../../assets/team/mihajlo.png'
 import profile3 from '../../assets/team/sabir.png'
 import profile4 from '../../assets/team/saad.png'
 import profile5 from '../../assets/team/krishna.png'
-import profile6 from '../../assets/profile-6.png'
+import profile6 from '../../assets/team/Ivor.jpg'
 import profile7 from '../../assets/team/allan.jpeg'
 
 interface Props {
