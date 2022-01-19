@@ -67,7 +67,7 @@ const Navibar: React.FC<Props> = ({ location }: Props) => {
             <li className="nav-item">
               <a
                 className={
-                  location.pathname.startsWith('/contact-us')
+                  location.pathname.startsWith('/contact')
                     ? 'nav-link active'
                     : 'nav-link'
                 }
@@ -79,7 +79,7 @@ const Navibar: React.FC<Props> = ({ location }: Props) => {
             <li className="nav-item">
               <a
                 className={
-                  location.pathname.startsWith('/about-us')
+                  location.pathname.startsWith('/about')
                     ? 'nav-link active'
                     : 'nav-link'
                 }

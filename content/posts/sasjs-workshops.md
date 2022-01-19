@@ -38,7 +38,7 @@ To address these points, and many more, we built [SASjs](https://sasjs.io).
 
 Launched in early 2020, the SASjs framework provides a set of tools that can be used either individually (for particular use cases) or together - for maximum scale and performance when it comes to building & deploying SAS-Powered Web Applications.
 
-All the code is MIT open-source (free for commercial use), and is actively maintained by the SAS Apps division at [Analytium](https://analytium.co.uk). It powers commercial apps such as [Data Controller for SAS](https://datacontroller.io) and hence - heavily tested in real-world, production environments.
+All the code is MIT open-source (free for commercial use), and is actively maintained by the [SAS Apps Team](https://sasapps.io/about). It powers commercial apps such as [Data Controller for SAS](https://datacontroller.io) and hence - heavily tested in real-world, production environments.
 
 ## Framework
 

@@ -24,8 +24,8 @@ const About: React.FC<Props> = ({ location }: Props) => {
     <Layout location={location}>
       <Meta
         site={meta}
-        title="About Analytium"
-        customDescription="About Analytium - our mission and values"
+        title="About 4GL"
+        customDescription="About 4GL - Our Mission and Values"
       />
       <Breadcrum
         links={[

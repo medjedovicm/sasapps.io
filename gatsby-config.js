@@ -6,10 +6,10 @@ module.exports = {
       "Custom Interfaces to the world's most powerful Analytics Platform",
     siteUrl: 'https://sasapps.io/',
     author: 'Allan Bowe',
-    twitter: 'https://twitter.com/analytium',
-    facebook: 'https://www.facebook.com/analytium/',
-    youtube: 'https://www.youtube.com/channel/UCo3g8hiOQk08N65nfOa9aCg',
-    linkedin: 'https://www.linkedin.com/company/analytium/',
+    twitter: '',
+    facebook: '',
+    youtube: '',
+    linkedin: '',
     adsense: '',
   },
   pathPrefix: '/',
@@ -77,7 +77,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'SASApps - Unleash Your Analytics',
-        short_name: 'SASApps | Analytium',
+        short_name: 'SASApps | 4GL',
         description:
           'Unleash your Analytics with bespoke SAS Apps - fast, user friendly, scalable analytics',
         homepage_url: 'https://sasapps.io/',

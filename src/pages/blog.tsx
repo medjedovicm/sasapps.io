@@ -35,7 +35,7 @@ const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
         <h1 className="text-center">SAS Apps&apos; Latest News</h1>
         <p className="text-center">
           You&apos;ve reached the front page for the latest news and updates in
-          the world of SAS Apps.
+          the world of 4GL SAS Apps.
         </p>
         <div className="row justify-content-md-center">
           {posts.map((data, i) => {
