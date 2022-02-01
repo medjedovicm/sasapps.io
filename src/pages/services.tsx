@@ -34,7 +34,7 @@ const Services: React.FC<Props> = ({ location }: Props) => {
       <div className="container main">
         <h3 className="custom-heading">Some text related to Service Here</h3>
         <ServiceItems />
-        <div className="text-center">
+        <div className="text-center contact-btn">
           <LinkButton path={'/contact-us'} label="Contact Us" />
         </div>
       </div>
@@ -83,8 +83,9 @@ export const ServiceItems: React.FC = () => (
         <img src={sasjsEnhance} alt="SASjs Enhancement" />
         <h3>SASjs Enhancement</h3>
         <p>
-          We can add new features to SASjs (at a discounted rate) to support
-          particular use cases
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu
+          orci massa. Aenean vehicula leo non augue porttitor, at suscipit dui
+          posuere.
         </p>
         <Link to={'/pricing'} title={'SAS Pricing'} className="service-link">
           https://sasapps.io/pricing/
