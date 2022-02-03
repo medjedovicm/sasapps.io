@@ -35,7 +35,7 @@ const Solutions: React.FC<Props> = ({ location }: Props) => {
           Tailored Solutions for Specific Outcomes
         </h3>
         <SolutionItems />
-        <div className="text-center">
+        <div className="text-center contact-btn">
           <LinkButton path={'/contact-us'} label="Contact Us" />
         </div>
       </div>
@@ -82,7 +82,7 @@ export const SolutionItems: React.FC = () => (
         <h3>Modernise legacy AF/SCL Desktop Apps</h3>
         <p>
           Migrate legacy AF/SCL applications directly to SAS9 or Viya, improving
-          the user experience, security,scalability, and delivering a modern,
+          the user experience, security, scalability, and delivering a modern,
           self-supportable application built on open source technology and a
           modern SAS stack.
         </p>

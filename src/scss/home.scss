@@ -38,7 +38,7 @@
       width: 80%;
     }
     .info {
-      width: 40%;
+      width: 42%;
     }
   }
   @include media-breakpoint-up(md) {
@@ -50,7 +50,7 @@
       width: 80%;
     }
     .info {
-      width: 40%;
+      width: 42%;
     }
   }
   @include media-breakpoint-up(lg) {
@@ -62,7 +62,7 @@
       width: 50%;
     }
     .info {
-      width: 35%;
+      width: 42%;
     }
   }
   @include media-breakpoint-up(xl) {
@@ -75,7 +75,7 @@
       width: 55%;
     }
     .info {
-      width: 35%;
+      width: 42%;
     }
   }
 }
@@ -85,7 +85,7 @@ h1 {
   color: white;
   font-size: 48px;
   margin-top: 40px;
-  margin-bottom: 46px;
+  margin-bottom: 37px;
 }
 
 h5 {
@@ -108,8 +108,7 @@ h5 {
   text-align: center;
   color: white;
   font-size: 36px;
-  margin-top: 40px;
-  margin-bottom: 46px;
+  margin-top: 10px;
 }
 
 .card {

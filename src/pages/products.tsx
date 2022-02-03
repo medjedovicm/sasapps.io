@@ -8,7 +8,7 @@ import LinkButton from '../components/button/link-button'
 
 import dcLogo from '../../assets/products/dc-logo.svg'
 import dcName from '../../assets/products/dc-name.svg'
-import jsLogo from '../../assets/products/js-logo.svg'
+import jsLogo from '../../assets/products/js-logo.png'
 import sasenseiLogo from '../../assets/products/sasensei-logo.svg'
 import sasenseiName from '../../assets/products/sasensei-name.svg'
 

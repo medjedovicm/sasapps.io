@@ -34,7 +34,7 @@ const Services: React.FC<Props> = ({ location }: Props) => {
       <div className="container main">
         <h3 className="custom-heading">Some text related to Service Here</h3>
         <ServiceItems />
-        <div className="text-center">
+        <div className="text-center contact-btn">
           <LinkButton path={'/contact-us'} label="Contact Us" />
         </div>
       </div>
