@@ -83,9 +83,8 @@ export const ServiceItems: React.FC = () => (
         <img src={sasjsEnhance} alt="SASjs Enhancement" />
         <h3>SASjs Enhancement</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu
-          orci massa. Aenean vehicula leo non augue porttitor, at suscipit dui
-          posuere.
+          We can add new features to SASjs (at a discounted rate) to support
+          particular use cases
         </p>
         <Link to={'/pricing'} title={'SAS Pricing'} className="service-link">
           https://sasapps.io/pricing/

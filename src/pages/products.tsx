@@ -55,12 +55,7 @@ export const ProductItems: React.FC = () => (
           style={{ width: '243px', height: '27px' }}
         />
         <h3>Data Controller for SAS</h3>
-        <p>
-          {' '}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu
-          orci massa. Aenean vehicula leo non augue porttitor, at suscipit dui
-          posuere.
-        </p>
+        <p>Enable Business Users to make controlled changes to data in SAS</p>
         <a className="service-link" href="https://datacontroller.io">
           https://datacontroller.io
         </a>
@@ -82,12 +77,7 @@ export const ProductItems: React.FC = () => (
           style={{ width: '176px', height: '31px' }}
         />
         <h3> SASensei</h3>
-        <p>
-          {' '}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu
-          orci massa. Aenean vehicula leo non augue porttitor, at suscipit dui
-          posuere.
-        </p>
+        <p>Global SAS Challenge Platform with over 5000 SAS players</p>
         <a className="service-link" href="https://sasensei.com">
           https://sasensei.com
         </a>
