@@ -72,7 +72,10 @@ export const SolutionItems: React.FC = () => (
           results.
         </p>
         <div className="wrapper">
-          <LinkButton path={'/euc-data-control/'} label="Find Out More" />
+          <LinkButton
+            path={'https://datacontroller.io'}
+            label="Find Out More"
+          />
         </div>
       </div>
     </div>
@@ -87,7 +90,10 @@ export const SolutionItems: React.FC = () => (
           modern SAS stack.
         </p>
         <div className="wrapper">
-          <LinkButton path={'/modernise-legacy-apps'} label="Find Out More" />
+          <LinkButton
+            path={'/modernising-legacy-sas-scl-af-applications'}
+            label="Find Out More"
+          />
         </div>
       </div>
     </div>

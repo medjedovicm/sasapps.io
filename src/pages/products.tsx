@@ -60,7 +60,10 @@ export const ProductItems: React.FC = () => (
           https://datacontroller.io
         </a>
         <div className="wrapper">
-          <LinkButton path={'/data-controller/'} label="Find Out More" />
+          <LinkButton
+            path={'https://datacontroller.io'}
+            label="Find Out More"
+          />
         </div>
       </div>
     </div>
@@ -82,7 +85,7 @@ export const ProductItems: React.FC = () => (
           https://sasensei.com
         </a>
         <div className="wrapper">
-          <LinkButton path={'/sas-sensei/'} label="Find Out More" />
+          <LinkButton path={'https://sasensei.com'} label="Find Out More" />
         </div>
       </div>
     </div>
@@ -95,15 +98,14 @@ export const ProductItems: React.FC = () => (
         />
         <h3>The SASjs Framework</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu
-          orci massa. Aenean vehicula leo non augue porttitor, at suscipit dui
-          posuere.
+          SASjs is a collection of open-source tools to accelerate SAS DevOps
+          and the development of SAS Powered Web Applications.
         </p>
         <a className="service-link" href="https://sasjs.io">
           https://sasjs.io
         </a>
         <div className="wrapper">
-          <LinkButton path={'/sas-js/'} label="Find Out More" />
+          <LinkButton path={'https://sasjs.io'} label="Find Out More" />
         </div>
       </div>
     </div>

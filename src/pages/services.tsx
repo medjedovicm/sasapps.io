@@ -49,10 +49,10 @@ export const ServiceItems: React.FC = () => (
         <img src={sasAppDelivery} alt="SAS App Delivery" />
         <h3>SAS App Delivery</h3>
         <p>
-        When not building actual SAS Apps, our team builds tools to
-        build SAS Apps faster!</p>
-        <p>You can build on our expertise too.
+          When not building actual SAS Apps, our team builds tools to build SAS
+          Apps faster!
         </p>
+        <p>You can build on our expertise too.</p>
         <Link to={'/projects'} title={'SAS Projects'} className="service-link">
           https://sasapps.io/projects/
         </Link>
@@ -66,15 +66,15 @@ export const ServiceItems: React.FC = () => (
         <img src={sasAppSupport} alt="SAS App Support" />
         <h3>SAS App Support</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu
-          orci massa. Aenean vehicula leo non augue porttitor, at suscipit dui
-          posuere.
+          Do you have existing SAS Powered Apps, but lack the resource to
+          support them? We offer fixed price plans to keep your interfaces
+          active.
         </p>
         <Link to={'/pricing'} title={'SAS Pricing'} className="service-link">
           https://sasapps.io/pricing/
         </Link>
         <div className="wrapper">
-          <LinkButton path={'/sas-app-support'} label="Find Out More" />
+          <LinkButton path={'/pricing'} label="Find Out More" />
         </div>
       </div>
     </div>
@@ -90,7 +90,7 @@ export const ServiceItems: React.FC = () => (
           https://sasapps.io/pricing/
         </Link>
         <div className="wrapper">
-          <LinkButton path={'/sasjs-enhancements'} label="Find Out More" />
+          <LinkButton path={'/pricing'} label="Find Out More" />
         </div>
       </div>
     </div>
