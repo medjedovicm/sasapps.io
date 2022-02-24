@@ -10,6 +10,7 @@ const Footer: React.FC = () => (
       <a href="/contact">Contact</a>
       <a href="/about">About Us</a>
       <a href="/blog/">Blog</a>
+      <a href="/slavery-statement/">Modern Slavery Statement</a>
     </div>
     <div className="bottom">
       <p>
