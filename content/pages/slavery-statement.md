@@ -16,7 +16,7 @@ Our commitment
 Modern slavery and human trafficking are fundamental violations of human rights and abhorrent crimes. We have a zero-tolerance approach to modern slavery and human trafficking in our business and are committed to improving our practices to ensure that modern slavery or human trafficking does not take place within Bowe IO's own business or in its direct and indirect supply chains.
 
 Supply Chain
-As an IT company, Concentra does not have an extensive range of local or international suppliers where modern slavery or human trafficking would generally be a material risk and none of our suppliers are key to our businesses’ success.
+As an IT company, Bowe IO Ltd does not have an extensive range of local or international suppliers where modern slavery or human trafficking would generally be a material risk and none of our suppliers are key to our businesses’ success.
 
 Bowe IO Ltd relies on its suppliers to self-audit or monitor their supply chains. Bowe IO Ltd does not require written certifications from suppliers expressly confirming and verifying their compliance with slavery and human trafficking laws, but Bowe IO Ltd may terminate its relationship with individuals or organisations who work on its behalf if it suspects breaches of the Act or other relevant anti-slavery and human trafficking legislation or of this policy.
 
