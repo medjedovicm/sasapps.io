@@ -40,10 +40,10 @@ Our demo will make use of the tools below - these need to be installed locally (
 
 ## Setup
 
-The first thing to do is clone the example project from github, as follows:
+The first thing to do is clone the [example project](https://github.com/sasjs/mario) from github, as follows:
 
 ```
-git clone https://github.com/sasjs/mario
+git clone git@github.com:sasjs/mario.git
 cd mario
 ```
 
