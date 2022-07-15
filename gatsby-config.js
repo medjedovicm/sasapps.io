@@ -15,13 +15,6 @@ module.exports = {
   pathPrefix: '/',
   plugins: [
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-172951413-1',
-        head: true,
-      },
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/posts/`,
@@ -98,6 +91,14 @@ module.exports = {
         workboxConfig: {
           globPatterns: ['**/*'],
         },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-matomo',
+      options: {
+        siteId: 8,
+        matomoUrl: 'https://analytics.4gl.io/',
+        siteUrl: 'https://rawsas.com/',
       },
     },
     {
