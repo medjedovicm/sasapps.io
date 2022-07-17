@@ -26,7 +26,7 @@ From there we iterate through multiple phases (checkpoints) to the final deliver
 * A handover and warranty period (X days over X months), and/or
 * An SLA for continued support and development
 
-Note that, in most cases, **we don't need access to your environment**! Just provide us the source code, the data _structure_, catalogs etc - and some time to interview your end users / any available technical specialists.  We'll deliver the source code directly to your preferred GIT provider (GitHub Enterprise, BitBucket, Gitlab etc), along with routines to auto-compile the app in preparation for automated (or manual) deployment to your SAS environment(s).
+Note that, in most cases, **we don't need access to your environment**! Just provide us the source code, the data _structure_, catalogs etc - and some time to interview your end users / any available technical specialists.  We'll deliver the source code directly to your preferred GIT provider (GitHub Enterprise, BitBucket, Gitlab etc), along with action / pipeline routines to compile & build the app in preparation for automated (or manual) deployment to your SAS environment(s).
 
 Sample data is a bonus - if not available, we would look to build up some meaningful test data for you as part of the project.
 
