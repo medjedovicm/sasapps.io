@@ -1,7 +1,8 @@
 ---
 title: Projects
 path: /projects/
-description: The SAS Apps approach to Project Delivery
+description: Are you looking to build a SAS Powered App?  Modernise a legacy AF/SCL or SAS/IntrNet application?  Perhaps, migrate an existing SAS 9, Stored Process driven interface to Viya?
+previewImg: '../assets/kanban.png'
 ---
 
 # SAS App Projects
@@ -25,6 +26,6 @@ In most cases, **we don't need access to your environment**! Just provide us the
 
 For questions, or to book a discovery call, contact [Allan Bowe](https://www.linkedin.com/in/allanbowe/).
 
-
+![](../assets/kanban.png)
 
 
