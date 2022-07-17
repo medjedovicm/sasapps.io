@@ -9,10 +9,10 @@ previewImg: '../assets/kanban.png'
 
 Are you looking to build a SAS Powered App?  Modernise a legacy AF/SCL or SAS/IntrNet application?  Perhaps, migrate an existing SAS 9, Stored Process driven interface to Viya?
 
-The SAS Apps Team have _significant_ experience with SAS App Development, being the creators and maintainers of:
+The SAS Apps Team are _somewhat_ experienced with SAS App Development - being tasked not just with the delivery & maintenance of customer projects, but also the extension and maintenance of:
 
 * [SASjs](https://github.com/sasjs) – an open source (MIT) DevOps framework for App Development on **all** SAS Platforms
-* The SCL Transcoding Kit – an accelerator for migrating large volumes of AF/SCL to SAS 9 or Viya
+* The [SCL Transcoding Kit](https://sasapps.io/modernising-legacy-sas-scl-af-applications) – an accelerator for migrating large volumes of AF/SCL to SAS 9 or Viya
 * [Data Controller](https://datacontroller.io) – a commercial data ingestion solution with enterprise data validation and audit capabilities
 
 We regular push apps (such as SAS tools, seed apps, and games) directly to GitHub:  https://github.com/topics/sasjs-app
