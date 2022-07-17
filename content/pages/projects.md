@@ -15,8 +15,7 @@ The SAS Apps Team have _significant_ experience with SAS App Development, being 
 * The SCL Transcoding Kit – an accelerator for migrating large volumes of AF/SCL to SAS 9 or Viya
 * [Data Controller](https://datacontroller.io) – a commercial data ingestion solution with enterprise data validation and audit capabilities
 
-We regular push apps (such as SAS tools, seed apps, and games) directly to github:
-https://github.com/topics/sasjs-app
+We regular push apps (such as SAS tools, seed apps, and games) directly to GitHub:  https://github.com/topics/sasjs-app
 
 Thanks to our plethora of existing tools, and extensive project experience, we can scope/estimate most projects **and** deliver an inital (functional) SAS-Powered interface in as little as 2-3 weeks.
 
