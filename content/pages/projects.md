@@ -18,9 +18,9 @@ The SAS Apps Team have _significant_ experience with SAS App Development, being 
 We regular push apps (such as SAS tools, seed apps, and games) directly to github:
 https://github.com/topics/sasjs-app
 
-Thanks to our existing tools and extensive project experience, we can scope/estimate most projects **and** deliver an inital (functional) SAS-Powered interface in as little as 2-3 weeks.
+Thanks to our plethora of existing tools, and extensive project experience, we can scope/estimate most projects **and** deliver an inital (functional) SAS-Powered interface in as little as 2-3 weeks.
 
-This includes frontend, backend, tests, user guide, developer guide, admin guide, code docs(frontend and backend), and full CI/CD pipeline into your preferred SAS environment - ie Viya, SAS 9 EBI, or Foundation SAS.
+This includes the frontend interface, backend SAS services/jobs/tests/database, user guide, developer guide, admin guide, frontend JS docs (typedoc) backend SAS docs (doxygen), and full CI/CD pipeline (YAML) into your preferred SAS environment - ie Viya, SAS 9 EBI, or Foundation SAS.
 
 From there we iterate through multiple phases (checkpoints) to the final deliverable, finishing up with:
 
