@@ -22,7 +22,12 @@ Thanks to our existing tools and extensive project experience, we can scope/esti
 
 This includes frontend, backend, tests, user guide, developer guide, admin guide, code docs(frontend and backend), and full CI/CD pipeline into your preferred SAS environment - ie Viya, SAS 9 EBI, or Foundation SAS.
 
-In most cases, **we don't need access to your environment**! Just provide us the source code, the data _structure_, catalogs etc - and some time to interview your end users / any available technical specialists.  Sample data is a bonus - if not available, we would look to build up some meaningful test data as part of the project.
+From there we iterate through multiple phases (checkpoints) to the final deliverable, finishing up with:
+
+* A handover and warranty period (X days over X months), and/or
+* An SLA for continued support and development
+
+Note that, in most cases, **we don't need access to your environment**! Just provide us the source code, the data _structure_, catalogs etc - and some time to interview your end users / any available technical specialists.  Sample data is a bonus - if not available, we would look to build up some meaningful test data as part of the project.
 
 For questions, or to book a discovery call, contact [Allan Bowe](https://www.linkedin.com/in/allanbowe/).
 
