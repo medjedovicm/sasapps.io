@@ -13,7 +13,7 @@ tags:
   - SAS
 ---
 
-[SASjs Server](https://server.sasjs.io) is the latest addition to the [SASjs](https://github.com/sasjs) product family, and closes an important gap - namely, the ability to perform DevOps and launch applications on regular Foundation (desktop or server, windows or linux) SAS.
+[SASjs Server](https://server.sasjs.io) is the latest addition to the [SASjs](https://sasjs.io) product family, and closes an important gap - namely, the ability to perform DevOps and launch applications on regular Foundation (desktop or server, windows or linux) SAS.
 
 This guide will show you how to install and configure SASjs on a VPS (Virtual Private Server), such as a Digital Ocean droplet.
 
