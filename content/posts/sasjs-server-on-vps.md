@@ -132,13 +132,12 @@ echo "PORT=443" >> .env
 echo "PROTOCOL=https" >> .env
 echo "CERT_CHAIN=/opt/certificates/fullchain.pem" >> .env
 echo "PRIVATE_KEY=/opt/certificates/privkey.pem" >> .env
-# enable the api-linux application to run under a
-# non admin account on port 443
+# enable api-linux to run on port 443
 # re-run whenever SASjs Server is re-installed
 setcap 'cap_net_bind_service=+ep' /home/sasjssrv/api-linux
 ```
 
-That's the setup. Now - the launch, using the designated system account.  Be aware that anyone running code or Stored Programs will be executing under this OS identity.
+That's the setup. Now, the launch - using the designated system account.  Be aware that anyone running code or Stored Programs will be executing under this OS identity.
 
 ```bash
 # switch to system user
