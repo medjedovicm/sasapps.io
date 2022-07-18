@@ -1,0 +1,179 @@
+---
+title: SASjs Server on VPS
+date: 2021-02-19T09:00:00.000Z
+layout: POST
+path: /sasjs-server-on-vps
+description: A complete guide to Installation & Configuration of SASjs Server on a VPS (Digital Ocean)
+category: SASjs Server
+featuredImage: ../assets/sasjs_server.png
+tags:
+  - SASjs
+  - SASjs Server
+  - SAS Admin
+---
+
+# SASjs Server on a Cloud VPS
+
+[SASjs Server](https://server.sasjs.io) is the latest addition to the SASjs product family, and closes an important gap - namely, the ability to perform DevOps and launch applications on regular Foundation (desktop or server, windows or linux) SAS.
+
+This guide will show you how to install and configure SASjs on a VPS (Virtual Private Server), such as a Digital Ocean droplet.
+
+## Introduction
+
+Like all other [SASjs tools](https://github.com/sasjs), SASjs Server is MIT open source and completely free for commercial use.  The latest release is always available on the [github releases](https://github.com/sasjs/server/releases) page.  The major features are:
+
+* Portal for 3rd Party Apps (AppStream)
+* Permissions by User or Group
+* Multiple runtimes (SAS, JS)
+* Online IDE (Studio)
+* Stored Programs
+* REST API
+* TLS
+
+One of the (many) nice things about SASjs Server is that it is extremely lightweight!  You can even run it on a $6 VPS, as shown here::
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aYufNmHLmBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+In this guide we show you exactly how to create a server image like the one above.  If you are planning multiple users, you might want to consider a slightly higher spec!  We have a dozen or so users on our $28 per month image, plus all our test suites, and the performance has been great.
+
+## Pre-Requisites
+
+Before you get started, be sure you can obtain the following:
+
+* The IP address of your VPS, with root SSH access, eg: `167.44.44.44`
+* A copy of SAS (or WPS) and the corresponding licence key
+* A domain (and access to the DNS panel), eg `mysas.mycompany.com`
+* A MongoDB connection string (you can provision one locally or use a free cloud instance)
+
+
+## Server Setup
+
+Let's get this machine configured! First we log in as root, eg:
+
+```bash
+# Enter as root using YOUR new server IP address
+ssh root@167.44.44.44
+```
+
+Next, we create a unix group (`sas`) and install the unzip utility:
+
+```bash
+# Create a sas group
+addgroup sas
+# update installed software
+apt update
+# unzip is used to unpack sasjs/server later
+apt install unzip
+# set the internal hostname
+hostnamectl set-hostname mysas-mycompany-com
+```
+
+## SAS Installation
+
+This part will vary depending on your service provider.  Follow the necessary instructions to install the basic software suite. You do NOT need any products beyond the basic SAS executable (`sas.exe` / `sas.sh`).
+
+## TLS
+
+Before proceeding with TLS (SSL) it is necessary to first update your DNS and add an "A record" pointing to your server IP.
+
+![](../assets/sasjs_server_dns.png)
+
+Once this is done, we can generate https certificates using `certbot` as follows:
+
+```bash
+snap install core; snap refresh core
+snap install --classic certbot
+ln -s /snap/bin/certbot /usr/bin/certbot
+# provide domain to terminal prompt WITHOUT https prefix, eg mysas.mycompany.com
+sudo certbot certonly --standalone
+
+# ensure members of the sas group can access the certs
+mkdir /opt/certificates
+cp /etc/letsencrypt/live/sas.4gl.io/fullchain.pem /opt/certificates/fullchain.pem
+cp /etc/letsencrypt/live/sas.4gl.io/privkey.pem /opt/certificates/privkey.pem
+chgrp -R sas /opt/certificates
+chmod -R g+r /opt/certificates
+```
+
+## System Account Creation
+
+SASjs Server uses a System Account at backend. In this step we configure the account and home directory.
+
+Now, create all the users and their properties, eg:
+
+```bash
+# Make the user account (eg sasjssrv)
+adduser --disabled-password --gecos "" sasjssrv
+# Add to `sas` group
+adduser sasjssrv sas
+```
+
+## SASjs Installation & Configuration
+
+Here's the exciting part - the SASjs config!  The instructions below provide a FULL deployment, including TLS / server mode / JS runtime option.  If any part of this is not relevant for your use case, you can simply omit it.
+
+```bash
+# change into the folder.  Remain as root to keep files protected.
+cd /home/sasjssrv
+
+# grab latest api server
+curl -L https://github.com/sasjs/server/releases/latest/download/linux.zip > linux.zip
+unzip linux.zip
+
+# Tell SASjs the location of your SAS executable
+echo "SAS_PATH=/path/to/your/sas.sh" > .env
+
+# If you would also like the option of a JS runtime, follow these steps:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+nvm install --lts
+echo "NODE_PATH=$(which node)" >> .env
+
+# If you want just sas, remove the js part below and ignore the step above
+echo "RUN_TIMES=sas,js" >> .env
+
+# Server Mode enables Users, Groups & Permissions
+echo "MODE=server" >> .env
+# DB connection string
+echo "DB_CONNECT=mongodb+srv://admin:admin@cluster0.YOURINSTANCE.mongodb.net/sasjs?retryWrites=true&w=majority" >> .env
+
+# Set up TLS to point at the certs generated previously
+echo "PORT=443" >> .env
+echo "PROTOCOL=https" >> .env
+echo "CERT_CHAIN=/opt/certificates/fullchain.pem" >> .env
+echo "PRIVATE_KEY=/opt/certificates/privkey.pem" >> .env
+# enable port 443 for the api-linux application
+# re-run whenever SASjs Server is re-installed
+setcap 'cap_net_bind_service=+ep' /home/sasjssrv/api-linux
+```
+
+You should now be able to access SASjs Server at your domain, eg `mysas.mycompany.com` using the default credentials (`secretuser`/`secretpassword`).  If there are problems connecting, check out the logs in the `/home/sasjssrv/sasjs_root/logs` directory.
+
+## Create the SASjs Users
+
+Users can be added manually using the rest api, or in bulk using SASjs Studio - here is some sample code!
+
+```sas
+data work.users;
+  infile cards dsd;
+  input username:$12. displayname:$32.;
+  putlog _all_;
+  call execute(
+    '%nrstr(%ms_createuser('!!username!!',demo123,displayname='!!displayname!!'))'
+  );
+cards4;
+sylvester,Sylvester Stallone
+rocky,Rocky Balboa
+john,John Johnston
+;;;;
+run;
+
+%ms_getusers(outds=work.users)
+
+%mp_ds2md(work.users)
+```
+
+Finally - don't forget to change the password for the secretuser, and request that other users do the same for theirs.
+
