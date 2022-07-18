@@ -64,8 +64,6 @@ addgroup sas
 apt update
 # unzip is used to unpack sasjs/server later
 apt install unzip
-# set the internal hostname
-hostnamectl set-hostname mysas-mycompany-com
 ```
 
 ## SAS Installation
@@ -122,6 +120,9 @@ unzip linux.zip
 
 # Tell SASjs the location of your SAS executable
 echo "SAS_PATH=/path/to/your/sas.sh" > .env
+# At this point you can already stop, and you
+# will have SASjs Server in desktop mode.
+
 
 # If you would also like the option of a JS runtime, follow these steps:
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
@@ -130,23 +131,32 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 nvm install --lts
 echo "NODE_PATH=$(which node)" >> .env
-
-# If you want just sas, remove the js part below and ignore the step above
 echo "RUN_TIMES=sas,js" >> .env
 
 # Server Mode enables Users, Groups & Permissions
+# But requires a Mongo DB connx string
 echo "MODE=server" >> .env
 # DB connection string
 echo "DB_CONNECT=mongodb+srv://admin:admin@cluster0.YOURINSTANCE.mongodb.net/sasjs?retryWrites=true&w=majority" >> .env
 
-# Set up TLS to point at the certs generated previously
+# For https, point at the certs generated previously
 echo "PORT=443" >> .env
 echo "PROTOCOL=https" >> .env
 echo "CERT_CHAIN=/opt/certificates/fullchain.pem" >> .env
 echo "PRIVATE_KEY=/opt/certificates/privkey.pem" >> .env
-# enable port 443 for the api-linux application
+# enable the api-linux application to run under a
+# non admin account on port 443
 # re-run whenever SASjs Server is re-installed
 setcap 'cap_net_bind_service=+ep' /home/sasjssrv/api-linux
+```
+
+That's the setup. Now - the launch, using the designated system account.  Be aware that anyone running code or Stored Programs will be executing under this OS identity.
+
+```
+# switch to system user
+sudo su - sasjssrv
+# launch SASjs Server
+nohup ./api-linux > server.log 2>&1 &
 ```
 
 You should now be able to access SASjs Server at your domain, eg `mysas.mycompany.com` using the default credentials (`secretuser`/`secretpassword`).  If there are problems connecting, check out the logs in the `/home/sasjssrv/sasjs_root/logs` directory.
@@ -176,4 +186,6 @@ run;
 ```
 
 Finally - don't forget to change the password for the secretuser, and request that other users do the same for theirs.
+
+If you'd like to perform additional configuration, just update the [name / value pairs](https://server.sasjs.io/settings/) in the `/home/sasjssrv/.env` file and restart the server.
 
