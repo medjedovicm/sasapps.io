@@ -1,5 +1,5 @@
 ---
-title: SASjs Server on VPS
+title: SASjs Server on Cloud VPS
 date: 2022-07-18T09:00:00.000Z
 layout: POST
 path: /sasjs-server-on-vps
@@ -10,17 +10,16 @@ tags:
   - SASjs
   - SASjs Server
   - SAS Admin
+  - SAS
 ---
 
-# SASjs Server on a Cloud VPS
-
-[SASjs Server](https://server.sasjs.io) is the latest addition to the SASjs product family, and closes an important gap - namely, the ability to perform DevOps and launch applications on regular Foundation (desktop or server, windows or linux) SAS.
+[SASjs Server](https://server.sasjs.io) is the latest addition to the [SASjs](https://github.com/sasjs) product family, and closes an important gap - namely, the ability to perform DevOps and launch applications on regular Foundation (desktop or server, windows or linux) SAS.
 
 This guide will show you how to install and configure SASjs on a VPS (Virtual Private Server), such as a Digital Ocean droplet.
 
 ## Introduction
 
-Like all other [SASjs tools](https://github.com/sasjs), SASjs Server is MIT open source and completely free for commercial use.  The latest release is always available on the [github releases](https://github.com/sasjs/server/releases) page.  The major features are:
+Like all [SASjs tools](https://github.com/sasjs), SASjs Server is MIT open source and hence completely free for commercial use.  The latest release is always available on the [github releases](https://github.com/sasjs/server/releases) page.  The major features are:
 
 * Portal for 3rd Party Apps (AppStream)
 * Permissions by User or Group
