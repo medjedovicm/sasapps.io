@@ -1,6 +1,6 @@
 ---
 title: SASjs Server on VPS
-date: 2021-02-19T09:00:00.000Z
+date: 2022-07-18T09:00:00.000Z
 layout: POST
 path: /sasjs-server-on-vps
 description: A complete guide to Installation & Configuration of SASjs Server on a VPS (Digital Ocean)
