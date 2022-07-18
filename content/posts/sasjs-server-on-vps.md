@@ -55,15 +55,15 @@ Let's get this machine configured! First we log in as root, eg:
 ssh root@167.44.44.44
 ```
 
-Next, we create a unix group (`sas`) and install the unzip utility:
+Next, we create a unix group (`sas`) and create the system user account / home directory:
 
 ```bash
 # Create a sas group
 addgroup sas
-# update installed software
-apt update
-# unzip is used to unpack sasjs/server later
-apt install unzip
+# Make the user account (eg sasjssrv)
+adduser --disabled-password --gecos "" sasjssrv
+# Add to `sas` group
+adduser sasjssrv sas
 ```
 
 ## SAS Installation
@@ -86,24 +86,12 @@ ln -s /snap/bin/certbot /usr/bin/certbot
 sudo certbot certonly --standalone
 
 # ensure members of the sas group can access the certs
+# update the paths below according to the actual domain!
 mkdir /opt/certificates
-cp /etc/letsencrypt/live/sas.4gl.io/fullchain.pem /opt/certificates/fullchain.pem
-cp /etc/letsencrypt/live/sas.4gl.io/privkey.pem /opt/certificates/privkey.pem
+cp /etc/letsencrypt/live/mysas.mycompany.com/fullchain.pem /opt/certificates/fullchain.pem
+cp /etc/letsencrypt/live/mysas.mycompany.com/privkey.pem /opt/certificates/privkey.pem
 chgrp -R sas /opt/certificates
 chmod -R g+r /opt/certificates
-```
-
-## System Account Creation
-
-SASjs Server uses a System Account at backend. In this step we configure the account and home directory.
-
-Now, create all the users and their properties, eg:
-
-```bash
-# Make the user account (eg sasjssrv)
-adduser --disabled-password --gecos "" sasjssrv
-# Add to `sas` group
-adduser sasjssrv sas
 ```
 
 ## SASjs Installation & Configuration
@@ -116,12 +104,13 @@ cd /home/sasjssrv
 
 # grab latest api server
 curl -L https://github.com/sasjs/server/releases/latest/download/linux.zip > linux.zip
+# unzip can be installed with `apt install unzip`
 unzip linux.zip
 
 # Tell SASjs the location of your SAS executable
 echo "SAS_PATH=/path/to/your/sas.sh" > .env
 # At this point you can already stop, and you
-# will have SASjs Server in desktop mode.
+# will have SASjs Server in desktop mode!
 
 
 # If you would also like the option of a JS runtime, follow these steps:
@@ -152,7 +141,7 @@ setcap 'cap_net_bind_service=+ep' /home/sasjssrv/api-linux
 
 That's the setup. Now - the launch, using the designated system account.  Be aware that anyone running code or Stored Programs will be executing under this OS identity.
 
-```
+```bash
 # switch to system user
 sudo su - sasjssrv
 # launch SASjs Server
