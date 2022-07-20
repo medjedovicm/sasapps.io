@@ -35,7 +35,7 @@ Our support plans are based on our ability to quickly understand and troubleshoo
 
 The price is "per customer", not "per app" - so if a customer has three apps, only one plan is needed.  The level is based on the status of the "trickiest to support" app - so if one of those is an in-house, non SASjs app then "Plan C" support would be offered.
 
-Unlimited support is provided, remotely, with an SLA of 1 business day.  Support does not include development activities, nor can it be used to resolve issues that do not relate to SAS Apps (eg data quality, platform unavailability, hardware issues, acts of god and suchlike).  Support encompasses app troubleshooting, debugging, hotfixes, bugfixes, strategic advice, and general questions relating to SAS App development.
+Unlimited support is provided, remotely, with an SLA of 1 business day.  Support does not include training or development activities, nor can it be used to resolve issues that do not relate to SAS Apps (eg data quality, platform unavailability, hardware issues, acts of god and suchlike).  Support encompasses app troubleshooting, debugging, strategic advice, and general questions relating to SAS App development.
 
 |Plan|App Source|SASjs|Annual EUR|
 |---|---|---|---|---|

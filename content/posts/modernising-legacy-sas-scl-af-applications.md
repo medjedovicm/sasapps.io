@@ -82,5 +82,5 @@ Do you have legacy AF / SCL you'd like modernised? We'd love to help. Do [get in
 ## Additional resources
 
 - LinkedIn [Article](https://www.linkedin.com/pulse/easy-af-scl-modernisation-html5-sas-allan-bowe)
-- SAS AF/SCL [Slides](https://slides.com/allanbowe/sasaf)
+- SAS AF/SCL [Slides](https://slides.sasjs.io/af-scl/)
 - Info on [SLISTS](https://www.rawsas.com/slists-scl-lists-an-overview)
