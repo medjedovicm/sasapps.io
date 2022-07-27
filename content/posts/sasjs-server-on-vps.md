@@ -132,6 +132,15 @@ echo "PORT=443" >> .env
 echo "PROTOCOL=https" >> .env
 echo "CERT_CHAIN=/opt/certificates/fullchain.pem" >> .env
 echo "PRIVATE_KEY=/opt/certificates/privkey.pem" >> .env
+
+# Create a handy refresh script to update SASjs Server
+cat > refreshSASjs.sh <<EOL
+#bin/bash
+curl -L https://github.com/sasjs/server/releases/latest/download/linux.zip > linux.zip
+unzip -o linux.zip
+EOL
+chmod 774 refreshSASjs.sh
+
 # enable api-linux to run on port 443
 # re-run whenever SASjs Server is re-installed
 setcap 'cap_net_bind_service=+ep' /home/sasjssrv/api-linux
