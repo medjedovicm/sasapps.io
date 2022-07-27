@@ -38,11 +38,11 @@ Next, open the default configuration (`/etc/nginx/sites-available/default`) usin
 
 ```
 # List your backend SAS servers here
-#  (domain / internal IP + port)
+#  (internal/private IP + port)
 upstream mysasgrid {
-  server 104.248.193.59:5000;
-  server 159.223.218.234:5000;
-  server 164.92.221.74:5000;
+  server 10.110.0.8:5000;
+  server 10.110.0.11:5000;
+  server 10.110.0.10:5000;
 }
 
 server {
@@ -75,9 +75,9 @@ Once you have your `fullchain.pem` and `privkey.pem` files, update the text belo
 
 ```
 upstream mysasgrid {
-  server 104.248.193.59:5000;
-  server 159.223.218.234:5000;
-  server 164.92.221.74:5000;
+  server 10.110.0.8:5000;
+  server 10.110.0.11:5000;
+  server 10.110.0.10:5000;
 }
 
 server {
@@ -94,6 +94,8 @@ server {
 }
 ```
 
-You now have a load balancer that is configured to use TLS. Note that the SSL encryption terminates at the load balancer - the node traffic is running over http. If you do not trust your internal network, or if you are using external nodes, you may also configure SSL Passthrough - an article on that is available [here](https://www.cyberciti.biz/faq/configure-nginx-ssltls-passthru-with-tcp-load-balancing/).
+Save, re-run `sudo service nginx restart` and voila - you now have a load balancer that is configured to use TLS.
+
+Note that the SSL encryption terminates here at the load balancer - the node traffic runs over http. If you do not trust your internal network, or if you are using external nodes, you may also configure SSL Passthrough - an article on that is available [here](https://www.cyberciti.biz/faq/configure-nginx-ssltls-passthru-with-tcp-load-balancing/).
 
 
