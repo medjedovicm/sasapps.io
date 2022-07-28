@@ -37,7 +37,7 @@ sudo apt-get install nginx
 Next, open the default configuration (`/etc/nginx/sites-available/default`) using your preferred editor (`nano`, `vim`) and replace the contents with the text below.
 
 ```
-# List your backend SAS servers here
+# List of backend SASjs server instances
 #  (internal/private IP + port)
 upstream mysasgrid {
   server 10.110.0.8:5000;
@@ -94,7 +94,7 @@ server {
 }
 ```
 
-Save, re-run `sudo service nginx restart` and voila - you now have a load balancer that is configured to use TLS.
+Save, re-run `sudo service nginx restart` and voila - your load balancer is configured to use TLS 🔒🔒🔒
 
 Note that the SSL encryption terminates here at the load balancer - the node traffic runs over http. If you do not trust your internal network, or if you are using external nodes, you may also configure SSL Passthrough - an article on that is available [here](https://www.cyberciti.biz/faq/configure-nginx-ssltls-passthru-with-tcp-load-balancing/).
 
