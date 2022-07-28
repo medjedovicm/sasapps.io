@@ -15,7 +15,7 @@ tags:
 
 [SASjs Server](https://server.sasjs.io) does not ship with a load balancer.  However it does "play nicely" with existing load balancers such as nginx.
 
-In this guide we will demonstrate how to configure a load balancer against three instances of SASjs Server.
+In this guide we will demonstrate how to configure nginx against three instances of SASjs Server.
 
 Prerequisites:
 
@@ -71,7 +71,7 @@ If you are having troubles with `service nginx restart` be sure to check the log
 
 ## NGINX Setup with TLS
 
-To apply TLS / https to the load balancer, you need to create a certificate and key.  The easiest way to do this is to use the Let's Encrypt service.  An example of how to do this is provided in [SASjs Server on VPS](/sasjs-server-on-vps) article.
+To enable TLS (https) on the load balancer, you need to create a certificate and key.  The easiest way to do this is to use the Let's Encrypt service.  An example of how to do this is provided in [SASjs Server on VPS](/sasjs-server-on-vps) article.
 
 Once you have your `fullchain.pem` and `privkey.pem` files, update the text below and use to replace the contents of `/etc/nginx/sites-available/default`.
 
@@ -99,5 +99,76 @@ server {
 Save, re-run `sudo service nginx restart` and voila - your load balancer is configured to use TLS 🔒🔒🔒
 
 Note that the SSL encryption terminates here at the load balancer - the node traffic runs over http. If you do not trust your internal network, or if you are using external nodes, you may also configure SSL Passthrough - an article on that is available [here](https://www.cyberciti.biz/faq/configure-nginx-ssltls-passthru-with-tcp-load-balancing/).
+
+
+## NGINX Load Balancing Algorithms
+
+By default, nginx will send traffic to each server sequentially (Round Robin).  However, there may be reasons to use a different algorithm - for example, if you have servers with varying capacity, or reliability.
+
+Below are some examples of load balancing algorithms on nginx.
+
+### Weight
+
+You can assign specific weights to each node, to allow more traffic to be sent to the servers with higher capacity.
+
+For instance:
+
+```
+upstream mysasgrid {
+  server 10.110.0.8:5000 weight=1;
+  server 10.110.0.11:5000 weight=2;
+  server 10.110.0.10:5000 weight=6;
+}
+```
+
+In this case, the second server will receive twice as much traffic as the first.  The third will receive six times more traffic than the first.
+
+### Hash
+
+By taking a hash of the IP of the request, you can send ensure users are visiting the same SAS instance with each request.  This is useful if your app / use case depends on temporary / node-specific session management.
+
+If a server is down, it should be marked as such in order to redirect the requests.
+
+Example config:
+
+```
+upstream mysasgrid {
+  ip_hash;
+  server 10.110.0.8:5000;
+  server 10.110.0.11:5000 down;
+  server 10.110.0.10:5000;
+}
+```
+
+In this example the second server is marked as down.
+
+
+### Max Fails
+
+In the default case (Round Robin) requests are blindly forwarded to servers that are down / unresponsive.  The Max Fails algorithm deals with this using two parameters:
+
+* [`max_fails`](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#max_fails) - the number of consecutive failures before the server is marked as down.
+* [`fail_timeout`](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#fail_timeout) - how long to wait before the server is considered to be available again
+
+You can mix and match "Max Fails" with "Weight" and "Hash" algorithms.  Example:
+
+```
+upstream mysasgrid {
+  ip_hash;
+  server 10.110.0.8:5000 weight=1 max_fails=1 fail_timeout=10s;
+  server 10.110.0.11:5000 max_fails=1 fail_timeout=1s;
+  server 10.110.0.10:5000 weight=6 max_fails=2 fail_timeout=1h;
+}
+```
+
+In this config:
+
+* We are using IP hashing (each visitor will continue to use the same machine)
+* The third server will get six times as much traffic as the other two (default weight is 1)
+* If the third server fails twice, it will be out of action for 1 hour
+* If the first server fails once, it is out of action for 10 seconds
+
+
+As you can see, NGINX is highly configurable.  Further options / algorithms (such as [least_time](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#least_time) or [least_conn](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#least_conn)) are available if you take out a commercial subscription with nginx.
 
 
