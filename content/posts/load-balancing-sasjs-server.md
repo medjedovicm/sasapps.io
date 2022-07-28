@@ -13,14 +13,14 @@ tags:
   - SAS
 ---
 
-[SASjs Server](https://server.sasjs.io) does not ship with a load balancer.  However it does "play nicely" with existing load balancers such as nginx.
+[SASjs Server](https://server.sasjs.io) does not ship with a load balancer.  However it does "play nicely" with existing load balancers - such as nginx.
 
-In this guide we will demonstrate how to configure nginx against three instances of SASjs Server.
+In this guide we will demonstrate how to configure nginx against three backend instances of SASjs Server.
 
 Prerequisites:
 
 * 3 functional and identical instances of SASjs Server (setup steps [here](/sasjs-server-on-vps)).
-* A linux instance for the load balancer, with root access
+* A linux VPS for the load balancer, with root access
 * A domain with corresponding TLS certificates
 
 ![](../assets/loadbalance1.png)
@@ -53,7 +53,7 @@ server {
 }
 ```
 
-And finally, restart nginx:
+Finally, restart nginx:
 
 ```
 sudo service nginx restart
@@ -61,19 +61,21 @@ sudo service nginx restart
 
 That's it! 🚀🚀🚀
 
+<hr/>
+
 You should now be able to access the SASjs Server instances from the domain of the load balancer.  Simply run `%put &=syshostname;` in Studio to see the domain of each node:
 
 ![](../assets/loadbalance.gif)
 
 
-If you are having troubles with `service nginx restart` be sure to check the log file at `/var/log/nginx/error.log`.
+If you are having troubles be sure to check the log file at `/var/log/nginx/error.log`.
 
 
 ## NGINX Setup with TLS
 
-To enable TLS (https) on the load balancer, you need to create a certificate and key.  The easiest way to do this is to use the Let's Encrypt service.  An example of how to do this is provided in [SASjs Server on VPS](/sasjs-server-on-vps) article.
+To enable TLS (https) on the load balancer, you need to create a certificate and key.  The easiest way to do this is to use the Let's Encrypt service - an example is provided in [this article](/sasjs-server-on-vps).
 
-Once you have your `fullchain.pem` and `privkey.pem` files, update the text below and use to replace the contents of `/etc/nginx/sites-available/default`.
+Once you have your `fullchain.pem` and `privkey.pem`, update the text below and use to replace the contents of `/etc/nginx/sites-available/default` as follows:
 
 ```
 upstream mysasgrid {
@@ -98,12 +100,12 @@ server {
 
 Save, re-run `sudo service nginx restart` and voila - your load balancer is configured to use TLS 🔒🔒🔒
 
-Note that the SSL encryption terminates here at the load balancer - the node traffic runs over http. If you do not trust your internal network, or if you are using external nodes, you may also configure SSL Passthrough - an article on that is available [here](https://www.cyberciti.biz/faq/configure-nginx-ssltls-passthru-with-tcp-load-balancing/).
+Note that the SSL encryption terminates here at the load balancer - the node traffic runs over http. If you do not trust your internal network, or you are using external nodes, you may wish to configure SSL Passthrough - an article on that is [here](https://www.cyberciti.biz/faq/configure-nginx-ssltls-passthru-with-tcp-load-balancing/).
 
 
 ## NGINX Load Balancing Algorithms
 
-By default, nginx will send traffic to each server sequentially (Round Robin).  However, there may be reasons to use a different algorithm - for example, if you have servers with varying capacity, or reliability.
+By default, nginx will send traffic to each server sequentially (Round Robin).  However there may be reasons to use a different algorithm - for example, if you have servers with varying capacity, or reliability.
 
 Below are some examples of load balancing algorithms on nginx.
 
@@ -125,9 +127,9 @@ In this case, the second server will receive twice as much traffic as the first.
 
 ### Hash
 
-By taking a hash of the IP of the request, you can send ensure users are visiting the same SAS instance with each request.  This is useful if your app / use case depends on temporary / node-specific session management.
+By taking a hash of the IP of the request, you can route the requests for each visitor to the same SAS instance.  This is useful when your SAS app makes use of node-specific features, eg for session management.
 
-If a server is down, it should be marked as such in order to redirect the requests.
+Note that if a server is down, it may be marked as such in order to redirect the requests.
 
 Example config:
 
@@ -145,10 +147,10 @@ In this example the second server is marked as down.
 
 ### Max Fails
 
-In the default case (Round Robin) requests are blindly forwarded to servers that are down / unresponsive.  The Max Fails algorithm deals with this using two parameters:
+By default (Round Robin) requests are blindly forwarded to servers that are down / unresponsive.  The Max Fails algorithm deals with this using two parameters:
 
 * [`max_fails`](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#max_fails) - the number of consecutive failures before the server is marked as down.
-* [`fail_timeout`](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#fail_timeout) - how long to wait before the server is considered to be available again
+* [`fail_timeout`](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#fail_timeout) - how long to wait before the server is assumed to be back up.
 
 You can mix and match "Max Fails" with "Weight" and "Hash" algorithms.  Example:
 
