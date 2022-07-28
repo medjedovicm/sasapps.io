@@ -16,15 +16,28 @@ tags:
 
 [SASjs Server](https://server.sasjs.io) does not ship with a load balancer.  However it does "play nicely" with existing load balancers - such as nginx.  This enables deployment in a similar topology to that of legacy SAS/IntrNet servers or Stored Process Web Apps.
 
-In this guide we will demonstrate how to configure nginx against three backend instances of SASjs Server.
+![](../assets/loadbalance1.png)
 
-Prerequisites:
+In this guide we will demonstrate how to configure nginx against three backend instances of SASjs Server. The guidance should considered just that - a guide.  In reality, your implementation may cross managerial boundaries - eg infrastructure for firewall and load balancer activities, and the BI team for SASjs Server setup and configuration.
+
+Also, you may have formal approval processes to install software such as nginx (or existing software that does the same job), hoops to jump through to open up ports, and so on.
+
+Finally, your configuration may differ according to the nature of your application(s), load profile, server specs etc.
+
+The assumptions are:
+
+* You are a sysadmin and you have all necessary access rights
+* You do not have a load balancer already configured
+* You have the experience and authority to do all this stuff.
+
+The prerequisites are:
 
 * 3 functional and identical instances of SASjs Server (setup steps [here](/sasjs-server-on-vps)).
 * A linux VPS for the load balancer, with root access
 * A domain with corresponding TLS certificates
 
-![](../assets/loadbalance1.png)
+With that out of the way - let's proceed!
+
 
 
 ## NGINX Basic Setup
@@ -35,7 +48,7 @@ SSH onto the load balancing server.  If nginx is not installed, install as follo
 sudo apt-get install nginx
 ```
 
-Next, open the default configuration (`/etc/nginx/sites-available/default`) using your preferred editor (`nano`, `vim`) and replace the contents with the text below.
+Next, open the configuration ( eg `/etc/nginx/sites-available/default`) and using your preferred editor (`nano`, `vim`) and adjust the contents usuing the sample config below.
 
 ```
 # List of backend SASjs server instances
