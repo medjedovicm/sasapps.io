@@ -1,6 +1,6 @@
 ---
 title: Load Balancing with SASjs Server
-date: 2022-07-18T09:00:00.000Z
+date: 2022-07-28T09:00:00.000Z
 layout: POST
 path: /load-balancing-sasjs-server
 description: Configuring an nginx Load Balancer with multiple SASjs Server Instances
