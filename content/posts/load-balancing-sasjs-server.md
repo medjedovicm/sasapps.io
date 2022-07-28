@@ -14,7 +14,7 @@ tags:
   - SAS
 ---
 
-[SASjs Server](https://server.sasjs.io) does not ship with a load balancer.  However it does "play nicely" with existing load balancers - such as nginx.  This means that SASjs Server can be deployed in a very similar way to legacy SAS/IntrNet servers or Stored Process Web Apps.
+[SASjs Server](https://server.sasjs.io) does not ship with a load balancer.  However it does "play nicely" with existing load balancers - such as nginx.  This enables deployment of SASjs Server in a similar topology to that of legacy SAS/IntrNet servers or Stored Process Web Apps.
 
 In this guide we will demonstrate how to configure nginx against three backend instances of SASjs Server.
 
