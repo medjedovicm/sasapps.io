@@ -59,7 +59,9 @@ And finally, restart nginx:
 sudo service nginx restart
 ```
 
-That's it!  You should now be able to access the SASjs Server instances from the domain of the load balancer.  Simply run `%put &=syshostname;` in Studio to see the domain of each node:
+That's it! 🚀🚀🚀
+
+You should now be able to access the SASjs Server instances from the domain of the load balancer.  Simply run `%put &=syshostname;` in Studio to see the domain of each node:
 
 ![](../assets/loadbalance.gif)
 
