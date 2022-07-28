@@ -171,4 +171,14 @@ In this config:
 
 As you can see, NGINX is highly configurable.  Further options / algorithms (such as [least_time](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#least_time) or [least_conn](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#least_conn)) are available if you take out a commercial subscription with nginx.
 
+## Deploying SAS Apps on Load Balanced Platforms
 
+The key thing to remember is that the load balancer config above does not differentiate between web requests and SAS requests.  Therefore your app must be deployed to ALL the nodes in the cluster.
+
+If you would like to take security one step further, you could consider deploying the load balancer BEHIND the frontend application.  In this way, you can prevent end users from calling SAS services directly - by whitelisting the IP of the web server.  A topology for this is shown below:
+
+![](../assets/loadbalance2.png)
+
+This approach will only work if you are running an actual web server (eg NodeJS application) and frontend.  It won't work for single page applications.
+
+If you're interested to deploy such a solution, or you would like to partner with our team to deliver SAS Apps in other configurations, do [get in touch](/contact/)!
