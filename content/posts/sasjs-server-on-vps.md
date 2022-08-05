@@ -87,8 +87,9 @@ sudo certbot certonly --standalone
 # ensure members of the sas group can access the certs
 # update the paths below according to the actual domain!
 mkdir /opt/certificates
-cp /etc/letsencrypt/live/mysas.mycompany.com/fullchain.pem /opt/certificates/fullchain.pem
-cp /etc/letsencrypt/live/mysas.mycompany.com/privkey.pem /opt/certificates/privkey.pem
+cd /etc/letsencrypt/live/YOURDOMAIN.com
+cp fullchain.pem /opt/certificates/fullchain.pem
+cp privkey.pem /opt/certificates/privkey.pem
 chgrp -R sas /opt/certificates
 chmod -R g+r /opt/certificates
 ```
