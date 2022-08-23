@@ -120,7 +120,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 nvm install --lts
 echo "NODE_PATH=$(which node)" >> .env
-echo "RUN_TIMES=sas,js" >> .env
+echo "PYTHON_PATH=$(which python3)" >> .env
+echo "RUN_TIMES=sas,js,py" >> .env
 
 # Server Mode enables Users, Groups & Permissions
 # But requires a Mongo DB connx string
