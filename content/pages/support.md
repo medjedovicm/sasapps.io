@@ -22,8 +22,8 @@ Our support goal is to get you back up and running as soon as possible in the ca
 
 Support does not include training or development activities, nor can it be used to resolve issues that do not relate to SAS Apps (eg data quality, platform unavailability, hardware issues, acts of god and suchlike).
 
-Support Desk:  https://support.4gl.io
-Support Mailbox: support@4gl.io
+* Support Desk:  https://support.4gl.io
+* Support Mailbox: support@4gl.io
 
 
 ## Service Level Agreement
@@ -40,15 +40,16 @@ The severity level will be initially assigned by the client, and is subject to t
 The targets for measurement are the timings for Response Time and Resolution Time, per the table below.
 
 | Severity Level | Response Time | Resolution Time |
-|---|---|---|
+|:---:|:---:|:---:|
 | 1 | 2 hours | 8 hours (1 BD)|
 | 2 | 2 hours | 16 hours (2 BD)|
 | 3 | 4 hours | 4 BD |
 | 4 | 1 BD | 1-2 weeks |
 
-Response Time means the number of hours between the logging of the Support Request, and the time that a technician begins active work on the Support Request.  The beginning of active work by the technician can be evidenced by either the logon for Remote Access, or the e-mail by 4GL Ltd support staff.
 
-Resolution Time means the number of hours between the logging of the Support Request and the provision by 4GL Ltd of a fix, or satisfactory response.
+"Response Time" means the number of hours between the logging of the Support Request, and the time that a technician begins active work on the Support Request.  The beginning of active work by the technician can be evidenced by either the logon for Remote Access, or the e-mail by 4GL Ltd support staff.
+
+"Resolution Time" means the number of hours between the logging of the Support Request and the provision by 4GL Ltd of a fix, or satisfactory response.
 
 All times are deemed to be elapsed during UK Business hours (8am to 5pm), and following the UK holiday schedule.
 
