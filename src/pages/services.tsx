@@ -70,11 +70,11 @@ export const ServiceItems: React.FC = () => (
           support them? We offer fixed price plans to keep your interfaces
           active.
         </p>
-        <Link to={'/pricing'} title={'SAS Pricing'} className="service-link">
-          https://sasapps.io/pricing/
+        <Link to={'/support'} title={'SAS Support'} className="service-link">
+          https://sasapps.io/support/
         </Link>
         <div className="wrapper">
-          <LinkButton path={'/pricing'} label="Find Out More" />
+          <LinkButton path={'/support'} label="Find Out More" />
         </div>
       </div>
     </div>
