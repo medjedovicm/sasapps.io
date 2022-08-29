@@ -73,7 +73,13 @@ If a ticket cannot be resolved within the agreed SLA conditions, escalation has 
 
 Complaints on services should be directed to both the 4GL Ltd Engagement Manager and the client Application Owner.
 
+## Terms & Conditions
 
+* All amounts are VAT excluded
+* Any changes to these assumptions might result in a price and/or timing revision
+* On-demand invoicing is made monthly in arrears
+* All other invoicing is made annually in advance
+* Invoices are due within 30 days of the invoice date
 
 ## Appendix A - Points of Contact
 
